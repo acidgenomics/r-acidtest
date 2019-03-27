@@ -1,0 +1,30 @@
+Package: acidData
+Title: Acid Genomics data
+Description: Example minimal datasets from Acid Genomics. 
+Version: 0.1.0
+Date: 2019-03-27
+Authors@R: c(
+    person(
+        "Michael", "Steinbaugh",
+        email = "mike@steinbaugh.com",
+        role = c("aut", "cre"),
+        comment = c(ORCID = "0000-0002-2403-2221")
+    ),
+    person(
+        given = "Acid Genomics",
+        role = c("cph", "fnd")
+    ))
+URL: https://github.com/acidgenomics/acidData/
+BugReports: https://github.com/acidgenomics/acidData/issues/
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 3.4)
+Suggests:
+    S4Vectors,
+    SingleCellExperiment,
+    SummarizedExperiment,
+    tibble
+biocViews: Infrastructure
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1
