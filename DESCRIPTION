@@ -22,7 +22,9 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 3.4)
-Suggests: S4Vectors, SingleCellExperiment, SummarizedExperiment, tibble
+Suggests:
+    GenomicRanges, S4Vectors, SingleCellExperiment, SummarizedExperiment,
+    tibble
 biocViews: Infrastructure
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1

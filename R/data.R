@@ -6,11 +6,29 @@
 
 
 
+#' Example GRanges
+#' Genomic ranges.
+#' @examples
+#' data(gr)
+#' gr
+"gr"
+
+
+
 #' Example matrix
 #' @examples
 #' data(mat)
 #' mat
 "mat"
+
+
+
+#' makeNames test data
+#' Used to test syntactic naming functions.
+#' @examples
+#' data(mn)
+#' mn
+"mn"
 
 
 
