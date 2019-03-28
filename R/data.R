@@ -6,14 +6,6 @@
 
 
 
-#' Sexually dimorphic gender marker genes
-#' @examples
-#' data(gender_markers)
-#' gender_markers
-"gender_markers"
-
-
-
 #' Example matrix
 #' @examples
 #' data(mat)
@@ -69,6 +61,6 @@
 #' Transcript-level RNA-seq data set.
 #'
 #' @examples
-#' data(tx_se)
-#' tx_se
-"tx_se"
+#' data(txse)
+#' txse
+"txse"
