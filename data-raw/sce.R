@@ -1,12 +1,14 @@
 # Gene-level SingleCellExperiment example
-# 2018-11-28
+# 2019-03-28
 
 # Splatter params are derived from:
 # https://github.com/mikelove/zinbwave-deseq2/blob/master/zinbwave-deseq2.knit.md
 
+library(usethis)
 library(pryr)
+library(SingleCellExperiment)
+library(basejump)
 library(splatter)
-library(tidyverse)
 
 # Restrict to 2 MB.
 # Use `pryr::object_size()` instead of `utils::object.size()`.
@@ -79,4 +81,4 @@ object_size(sce)
 stopifnot(object_size(sce) < limit)
 validObject(sce)
 
-usethis::use_data(sce, compress = "xz", overwrite = TRUE)
+use_data(sce, compress = "xz", overwrite = TRUE)

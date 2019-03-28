@@ -1,7 +1,10 @@
 # Transcript-level SummarizedExperiment example
-# 2018-11-28
+# 2019-03-28
 
+library(usethis)
 library(pryr)
+library(SummarizedExperiment)
+library(basejump)
 
 # Restrict to 1 MB.
 # Use `pryr::object_size()` instead of `utils::object.size()`.
@@ -33,10 +36,7 @@ counts <- matrix(
 rowData <- tx2gene %>%
     as("DataFrame") %>%
     .[
-        match(
-            x = rownames(counts),
-            table = .[["transcriptID"]]
-        ),
+        match(x = rownames(counts), table = .[["transcriptID"]]),
         ,
         drop = FALSE
     ]
@@ -56,5 +56,5 @@ object_size(se)
 stopifnot(object_size(se) < limit)
 validObject(se)
 
-tx_se <- se
-usethis::use_data(tx_se, compress = "xz", overwrite = TRUE)
+txse <- se
+use_data(txse, compress = "xz", overwrite = TRUE)

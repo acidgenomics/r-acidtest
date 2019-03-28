@@ -1,13 +1,15 @@
 # Gene-level RangedSummarizedExperiment example
-# 2018-12-11
+# 2019-03-28
 
+library(usethis)
 library(pryr)
+library(SummarizedExperiment)
+library(basejump)
 library(DESeq2)
-library(tidyverse)
 
 # Restrict to 1 MB.
 # Use `pryr::object_size()` instead of `utils::object.size()`.
-limit <- structure(2e6, class = "object_size")
+limit <- structure(1e6, class = "object_size")
 
 organism <- "Homo sapiens"
 release <- 92L
@@ -58,4 +60,4 @@ object_size(rse)
 stopifnot(object_size(rse) < limit)
 validObject(rse)
 
-usethis::use_data(rse, compress = "xz", overwrite = TRUE)
+use_data(rse, compress = "xz", overwrite = TRUE)

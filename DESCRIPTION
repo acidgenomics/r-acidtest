@@ -1,8 +1,8 @@
-Package: acidData
-Title: Acid Genomics data
-Description: Reference data from Acid Genomics. 
+Package: acidtest
+Title: Acid Genomics test data
+Description: Reference data for unit testing from Acid Genomics. 
 Version: 0.1.0
-Date: 2019-03-27
+Date: 2019-03-28
 Authors@R: c(
     person(
         "Michael", "Steinbaugh",
@@ -15,18 +15,14 @@ Authors@R: c(
         role = c("cph", "fnd")
     ))
 URL:
-    https://aciddata.acidgenomics.com/,
-    https://github.com/acidgenomics/acidData/
-BugReports: https://github.com/acidgenomics/acidData/issues/
+    https://acidtest.acidgenomics.com/,
+    https://github.com/acidgenomics/acidtest/
+BugReports: https://github.com/acidgenomics/acidtest/issues/
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 3.4)
-Suggests:
-    S4Vectors,
-    SingleCellExperiment,
-    SummarizedExperiment,
-    tibble
+Suggests: S4Vectors, SingleCellExperiment, SummarizedExperiment, tibble
 biocViews: Infrastructure
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
