@@ -1,6 +1,6 @@
 Package: acidData
 Title: Acid Genomics data
-Description: Example minimal datasets from Acid Genomics. 
+Description: Reference data from Acid Genomics. 
 Version: 0.1.0
 Date: 2019-03-27
 Authors@R: c(
