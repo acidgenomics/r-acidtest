@@ -19,3 +19,7 @@ if (!require("BiocManager")) {
 BiocManager::install("remotes")
 BiocManager::install("acidgenomics/acidData")
 ```
+
+[Bioconductor]: https://bioconductor.org/
+[BiocManager]: https://cran.r-project.org/package=BiocManager
+[R]: https://www.r-project.org/
