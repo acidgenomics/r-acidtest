@@ -4,7 +4,7 @@
 [![AppVeyor CI build status](https://ci.appveyor.com/api/projects/status/or2o22215alx5xy8/branch/master?svg=true)](https://ci.appveyor.com/project/mjsteinbaugh/aciddata/branch/master)
 [![Repo status: active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
-Example minimal datasets for bioinformatics from [Acid Genomics].
+Example minimal datasets from [Acid Genomics].
 
 ## Installation
 
