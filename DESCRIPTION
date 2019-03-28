@@ -14,7 +14,9 @@ Authors@R: c(
         given = "Acid Genomics",
         role = c("cph", "fnd")
     ))
-URL: https://github.com/acidgenomics/acidData/
+URL:
+    https://aciddata.acidgenomics.com/,
+    https://github.com/acidgenomics/acidData/
 BugReports: https://github.com/acidgenomics/acidData/issues/
 License: MIT + file LICENSE
 Encoding: UTF-8
