@@ -19,10 +19,10 @@ env:
   global:
     - LINTR_COMMENT_BOT=true
 
-github_packages:
+r_github_packages:
   - acidgenomics/lintr
 
-aafter_success:
+after_success:
   - Rscript -e 'lintr::lint_package()'
 
 notifications:
