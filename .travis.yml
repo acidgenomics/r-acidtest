@@ -22,8 +22,8 @@ env:
 github_packages:
   - acidgenomics/lintr
 
-after_success:
-  - test $TRAVIS_OS_NAME = 'linux' && $TRAVIS_R_VERSION_STRING = 'release' && Rscript -e 'lintr::lint_package()'
+aafter_success:
+  - Rscript -e 'lintr::lint_package()'
 
 notifications:
   email:
