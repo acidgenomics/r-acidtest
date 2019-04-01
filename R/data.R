@@ -15,6 +15,14 @@
 
 
 
+#' Example log2 fold change matrix
+#' @examples
+#' data(lfc)
+#' lfc
+"lfc"
+
+
+
 #' Example matrix
 #' @examples
 #' data(mat)
