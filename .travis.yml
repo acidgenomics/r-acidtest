@@ -10,10 +10,10 @@ services:
   - docker
 
 before_install:
-  - docker pull "acidgenomics/bioc-release:20190414"
+  - docker pull acidgenomics/bioc-release
   - docker images
   - pwd
   - chmod +x travis-docker.sh
 
 script:
-  - docker run -ti --user bioc -v "${PWD}:/package" acidgenomics/bioc-release:20190414 bash "/package/travis-docker.sh"
+  - docker run -ti --user bioc -v $PWD:/travis acidgenomics/bioc-release bash /travis/travis-docker.sh
