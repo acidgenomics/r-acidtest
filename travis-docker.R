@@ -1,6 +1,7 @@
 #!/bin/sh
 
-setwd("/travis")
+# Note that BiocCheck requires directory name to match package name.
+setwd("/acidtest")
 
 # devtools::check(pkg = ".", document = FALSE)
 rcmdcheck::rcmdcheck(path = ".")
