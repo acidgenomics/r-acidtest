@@ -7,15 +7,11 @@ language: general
 services:
   - docker
 
-env:
-  global:
-    - IMAGE="${IMAGE}"
-
 before_install:
-  - docker pull "acidgenomics/${IMAGE}"
+  - docker pull "acidgenomics/bioc-release:20190414"
 
 script:
-  - docker run -v "$(pwd)":"/opt/$(basename $(pwd))" -it "$IMAGE" /bin/bash
+  - docker run -v "$(pwd)":"/opt/$(basename $(pwd))" -it "bioc-release:20190414" /bin/bash
   - cd /opt/acidtest
   - R CMD build .
   - R CMD check *tar.gz
