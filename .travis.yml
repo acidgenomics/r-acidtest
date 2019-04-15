@@ -1,5 +1,6 @@
-# https://github.com/travis-ci/travis-build/blob/master/lib/travis/build/script/r.rb
+# https://docs.travis-ci.com/user/docker/
 # https://www.jimhester.com/2017/10/13/docker/
+# https://github.com/travis-ci/travis-build/blob/master/lib/travis/build/script/r.rb
 # https://github.com/varemo/GSA_tutorial/blob/master/.travis.yml
 
 language: general
@@ -9,9 +10,12 @@ services:
 
 before_install:
   - docker pull "acidgenomics/bioc-release:20190414"
+  - docker container ls --all
+  - docker ps -a
 
 script:
-  - docker run -v "$(pwd)":"/opt/$(basename $(pwd))" -it "bioc-release:20190414" /bin/bash
-  - cd /opt/acidtest
-  - R CMD build .
-  - R CMD check *tar.gz
+  - ls /opt
+  # - docker run -v "$(pwd)":"/opt/$(basename $(pwd))" -it "bioc-release:20190414" /bin/bash
+  # - cd /opt/acidtest
+  # - R CMD build .
+  # - R CMD check *tar.gz
