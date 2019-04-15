@@ -2,7 +2,8 @@
 
 setwd("/travis")
 
-devtools::check()
-BiocCheck::BiocCheck(".")
-lintr::lint_package()
+# devtools::check(pkg = ".", document = FALSE)
+rcmdcheck::rcmdcheck(path = ".")
+BiocCheck::BiocCheck(package = ".")
+lintr::lint_package(path = ".")
 covr::report()
