@@ -1,5 +1,3 @@
-#!/bin/sh
-
 # Note that BiocCheck requires directory name to match package name.
 setwd("/acidtest")
 
