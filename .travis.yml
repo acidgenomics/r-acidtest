@@ -21,7 +21,8 @@ env:
     - R_LIBS_SITE=/usr/local/lib/R/site-library"
 
 script:
-  - docker run -ti --user bioc acidgenomics/bioc-release:20190414 bash
-  - ls "$PKG_DIR"
+  - chmod +x travis-docker.sh
+  - docker run -ti --user bioc -v "${PWD}:/package" acidgenomics/bioc-release:20190414 bash "/package/travis-docker.sh"
+  # - ls "$PKG_DIR"
   # - R CMD build .
   # - R CMD check *tar.gz
