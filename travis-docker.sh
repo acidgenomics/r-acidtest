@@ -1,3 +1,4 @@
-echo "hello world"
-echo "$PKG_DIR"
-ls "$PKG_DIR"
+#!/bin/sh
+
+R CMD build .
+R CMD check *tar.gz
