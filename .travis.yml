@@ -1,3 +1,4 @@
+# https://www.bioconductor.org/help/docker/#running
 # https://docs.travis-ci.com/user/docker/
 # https://www.jimhester.com/2017/10/13/docker/
 # https://github.com/travis-ci/travis-build/blob/master/lib/travis/build/script/r.rb
@@ -15,7 +16,8 @@ before_install:
   - docker ps -a
 
 script:
-  - ls /opt
+  - docker run -ti --user bioc acidgenomics/bioc-release:20190414 bash
+  # - ls /opt
   # - docker run -v "$(pwd)":"/opt/$(basename $(pwd))" -it "bioc-release:20190414" /bin/bash
   # - cd /opt/acidtest
   # - R CMD build .
