@@ -1,9 +1,3 @@
-# https://www.bioconductor.org/help/docker/#running
-# https://docs.travis-ci.com/user/docker/
-# https://www.jimhester.com/2017/10/13/docker/
-# https://github.com/travis-ci/travis-build/blob/master/lib/travis/build/script/r.rb
-# https://github.com/varemo/GSA_tutorial/blob/master/.travis.yml
-
 language: general
 
 services:
