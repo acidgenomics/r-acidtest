@@ -22,6 +22,6 @@ env:
 
 script:
   - docker run -ti --user bioc acidgenomics/bioc-release:20190414 bash
-  - cd "$PKG_DIR"
-  - R CMD build .
-  - R CMD check *tar.gz
+  - ls "$PKG_DIR"
+  # - R CMD build .
+  # - R CMD check *tar.gz
