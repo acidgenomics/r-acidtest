@@ -7,7 +7,6 @@ before_install:
   - docker pull acidgenomics/bioc-release
   - docker images
 
-# docker run --help
 script:
   - docker run -ti --user="bioc" --volume="$PWD:/acidtest" --workdir="/acidtest" acidgenomics/bioc-release Rscript -e 'source("travis-docker.R")'
 
