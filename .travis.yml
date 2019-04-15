@@ -10,22 +10,18 @@ services:
   - docker
 
 before_install:
-  - pwd
-  - realpath .
   - docker pull "acidgenomics/bioc-release:20190414"
   - docker images
-  - docker container ls --all
-  - docker ps -a
+  - pwd
 
 env:
   global:
+    - PKG_DIR="$PWD"
     - R_LIBS_USER="${HOME}/R/Library"
     - R_LIBS_SITE=/usr/local/lib/R/site-library"
 
 script:
   - docker run -ti --user bioc acidgenomics/bioc-release:20190414 bash
-  # - ls /opt
-  # - docker run -v "$(pwd)":"/opt/$(basename $(pwd))" -it "bioc-release:20190414" /bin/bash
-  # - cd /opt/acidtest
-  # - R CMD build .
-  # - R CMD check *tar.gz
+  - cd "$PKG_DIR"
+  - R CMD build .
+  - R CMD check *tar.gz
