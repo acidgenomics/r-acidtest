@@ -16,7 +16,7 @@ before_install:
 script:
   # - docker run -v R CMD build .
   # - docker run -v R CMD check .
-  - Rscript -e 'devtools::check()'
-  - Rscript -e 'BiocCheck::BiocCheck(".", quit-with-status = TRUE)'
-  - Rscript -e 'lintr::lint_package()'
-  - Rscript -e 'covr::report()'
+  - docker run -v Rscript -e 'devtools::check()'
+  # - Rscript -e 'BiocCheck::BiocCheck(".", quit-with-status = TRUE)'
+  # - Rscript -e 'lintr::lint_package()'
+  # - Rscript -e 'covr::report()'
