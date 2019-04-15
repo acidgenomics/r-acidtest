@@ -1,22 +1,21 @@
 # https://github.com/travis-ci/travis-build/blob/master/lib/travis/build/script/r.rb
+# https://www.jimhester.com/2017/10/13/docker/
 # https://github.com/varemo/GSA_tutorial/blob/master/.travis.yml
 
 language: general
 
-# language: r
-# sudo: required
-
 services:
   - docker
 
-# https://cloud.docker.com/u/acidgenomics/repository/docker/acidgenomics/bioc-release
+env:
+  global:
+    - IMAGE="${IMAGE}"
+
 before_install:
-  - docker pull acidgenomics/bioc-release:20190414
+  - docker pull "acidgenomics/${IMAGE}"
 
 script:
-  # - docker run -v R CMD build .
-  # - docker run -v R CMD check .
-  - docker run -v Rscript -e 'devtools::check()'
-  # - Rscript -e 'BiocCheck::BiocCheck(".", quit-with-status = TRUE)'
-  # - Rscript -e 'lintr::lint_package()'
-  # - Rscript -e 'covr::report()'
+  - docker run -v "$(pwd)":"/opt/$(basename $(pwd))" -it "$IMAGE" /bin/bash
+  - cd /opt/acidtest
+  - R CMD build .
+  - R CMD check *tar.gz
