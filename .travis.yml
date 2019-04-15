@@ -16,4 +16,4 @@ before_install:
   - chmod +x travis-docker.sh
 
 script:
-  - docker run -ti --user bioc -v $PWD:/travis acidgenomics/bioc-release bash /travis/travis-docker.sh
+  - docker run -ti --user bioc -v $PWD:/travis acidgenomics/bioc-release Rscript -e '/travis/travis-docker.R'
