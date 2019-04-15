@@ -10,10 +10,9 @@ services:
   - docker
 
 before_install:
+  - pwd
   - docker pull acidgenomics/bioc-release
   - docker images
-  - pwd
-  - chmod +x travis-docker.sh
 
 script:
   - docker run -ti --user bioc -v $PWD:/travis acidgenomics/bioc-release Rscript -e '/travis/travis-docker.R'
