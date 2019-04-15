@@ -10,6 +10,7 @@ services:
 
 before_install:
   - docker pull "acidgenomics/bioc-release:20190414"
+  - docker images
   - docker container ls --all
   - docker ps -a
 
