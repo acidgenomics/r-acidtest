@@ -24,7 +24,7 @@ environment:
     - configuration: oldrel
       R_VERSION: oldrel
     - configuration: devel
-      R_VERSION: devel
+      R_VERSION: 3.6.0rc
 
 matrix:
   allow_failures:
