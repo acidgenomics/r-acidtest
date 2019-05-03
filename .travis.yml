@@ -3,12 +3,15 @@ language: general
 services:
   - docker
 
-before_install:
-  - docker pull acidgenomics/bioc-release
-  - docker images
-
-script:
-  - docker run -ti --user="bioc" --volume="$PWD:/acidtest" --workdir="/acidtest" acidgenomics/bioc-release Rscript -e 'source("travis-docker.R")'
+jobs:
+  include:
+    - stage: test
+      name: "bioc-3.8"
+      script:
+        - docker pull acidgenomics/basejump-bioc-3.8
+        - docker images
+        - df -h
+        - docker run -ti --volume="$PWD:/acidtest" --workdir="/acidtest" acidgenomics/basejump-bioc-3.8 Rscript -e 'source("travis-docker.R")'
 
 notifications:
   email:
