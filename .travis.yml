@@ -14,7 +14,7 @@ before_install:
 jobs:
   include:
     - stage: test
-      name: "basejump-latest"
+      name: "basejump"
       script: ./travis-docker.sh
 
 after_failure:
