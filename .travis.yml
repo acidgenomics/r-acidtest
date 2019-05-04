@@ -8,7 +8,6 @@ branches:
     - master
 
 before_install:
-  - env | sort
   - chmod +x travis-docker.sh
 
 jobs:
@@ -18,6 +17,7 @@ jobs:
       script: ./travis-docker.sh
 
 after_failure:
+  - env | sort
   - df -h
 
 notifications:
