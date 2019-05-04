@@ -18,18 +18,6 @@ environment:
     GCC_PATH: mingw_64
     R_ARCH: x64
     USE_RTOOLS: true
-  matrix:
-    - configuration: oldrel
-      R_VERSION: oldrel
-    - configuration: release
-      R_VERSION: release
-    - configuration: devel
-      R_VERSION: devel
-
-matrix:
-  allow_failures:
-    - configuration: devel
-  fast_finish: true
 
 build_script:
   - travis-tool.sh install_deps
