@@ -5,14 +5,13 @@ services:
 
 before_install:
   - env | sort
+  - chmod +x travis-docker.sh
 
 jobs:
   include:
     - stage: test
       name: "basejump-latest"
-      script:
-        - chmod +x travis-docker.sh
-        - ./travis-docker.sh
+      script: ./travis-docker.sh
 
 after_failure:
   - df -h
