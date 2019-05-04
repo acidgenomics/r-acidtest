@@ -3,16 +3,16 @@ language: general
 services:
   - docker
 
-branches:
-  only:
-    - master
+jobs:
+  include:
+    - stage: test
+      name: "basejump-latest"
+      script:
+        - chmod +x travis-docker.sh
+        - ./travis-docker.sh
 
-before_install:
-  - docker pull acidgenomics/bioc-release
-  - docker images
-
-script:
-  - docker run -ti --user="bioc" --volume="$PWD:/acidtest" --workdir="/acidtest" acidgenomics/bioc-release Rscript -e 'source("travis-docker.R")'
+after_failure:
+  - df -h
 
 notifications:
   email:
