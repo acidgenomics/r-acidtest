@@ -1,4 +1,3 @@
-env | sort
 pkg="acidtest"
 image="acidgenomics/basejump"
 docker pull "$image"

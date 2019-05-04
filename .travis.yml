@@ -3,6 +3,9 @@ language: general
 services:
   - docker
 
+before_install:
+  - env | sort
+
 jobs:
   include:
     - stage: test
