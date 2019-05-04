@@ -8,10 +8,8 @@ jobs:
     - stage: test
       name: "bioc-3.8"
       script:
-        - docker pull acidgenomics/basejump-bioc-3.8
-        - docker images
-        - df -h
-        - docker run -ti --volume="$PWD:/acidtest" --workdir="/acidtest" acidgenomics/basejump-bioc-3.8 Rscript -e 'source("travis-docker.R")'
+        - docker pull acidgenomics/bioconductor:3.8
+        - docker run -ti --volume="$PWD:/acidtest" --workdir="/acidtest" acidgenomics/bioconductor:3.8 Rscript -e 'source("travis-docker.R")'
 
 notifications:
   email:
