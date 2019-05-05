@@ -1,8 +1,8 @@
 Package: acidtest
 Title: Acid Genomics test data
 Description: Reference data for unit testing from Acid Genomics. 
-Version: 0.1.1
-Date: 2019-04-01
+Version: 0.1.2
+Date: 2019-05-05
 Authors@R: c(
     person(
         "Michael", "Steinbaugh",
@@ -21,9 +21,12 @@ BugReports: https://github.com/acidgenomics/acidtest/issues/
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Depends: R (>= 3.4)
+Depends: R (>= 3.5)
 Suggests:
-    GenomicRanges, S4Vectors, SingleCellExperiment, SummarizedExperiment,
+    GenomicRanges,
+    S4Vectors,
+    SingleCellExperiment,
+    SummarizedExperiment,
     tibble
 biocViews: Infrastructure
 Roxygen: list(markdown = TRUE)
