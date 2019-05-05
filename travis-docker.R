@@ -1,3 +1,5 @@
+#!/usr/bin/env Rscript
+
 Sys.setenv(TZ = "America/New_York")
 options(
     deparse.max.lines = 3L,
