@@ -15,6 +15,15 @@
 
 
 
+#' Example IRanges
+#' Integer ranges.
+#' @examples
+#' data(ir)
+#' ir
+"ir"
+
+
+
 #' Example log2 fold change matrix
 #' @examples
 #' data(lfc)
