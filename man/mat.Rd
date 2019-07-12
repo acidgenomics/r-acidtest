@@ -13,6 +13,7 @@ Example \code{matrix} object.
 }
 \examples{
 data(mat)
+class(mat)
 mat
 }
 \keyword{datasets}

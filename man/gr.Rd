@@ -12,6 +12,7 @@ gr
 Example \code{GRanges} object.
 }
 \examples{
+suppressPackageStartupMessages(library(GenomicRanges))
 data(gr)
 class(gr)
 gr

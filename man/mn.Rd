@@ -14,6 +14,6 @@ Example \code{list} data used to test syntactic naming functions.
 \examples{
 data(mn)
 class(mn)
-mn
+names(mn)
 }
 \keyword{datasets}

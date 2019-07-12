@@ -3,6 +3,7 @@
 #' Example Bioconductor S4 `DataFrame` object.
 #'
 #' @examples
+#' suppressPackageStartupMessages(library(DataFrame))
 #' data(df)
 #' class(df)
 #' df
@@ -27,6 +28,7 @@
 #' Example `GRanges` object.
 #'
 #' @examples
+#' suppressPackageStartupMessages(library(GenomicRanges))
 #' data(gr)
 #' class(gr)
 #' gr
@@ -64,6 +66,7 @@
 #'
 #' @examples
 #' data(mat)
+#' class(mat)
 #' mat
 "mat"
 
@@ -76,7 +79,7 @@
 #' @examples
 #' data(mn)
 #' class(mn)
-#' mn
+#' names(mn)
 "mn"
 
 
@@ -89,6 +92,7 @@
 #' identifiers and Ensembl annotations.
 #'
 #' @examples
+#' suppressPackageStartupMessages(library(SummarizedExperiment))
 #' data(rse)
 #' class(rse)
 #' rse
@@ -103,6 +107,7 @@
 #' @seealso `scater::sc_example_counts`.
 #'
 #' @examples
+#' suppressPackageStartupMessages(library(SingleCellExperiment))
 #' data(sce)
 #' class(sce)
 #' sce
@@ -139,6 +144,7 @@
 #' Example `SummarizedExperiment` containing transcript-level RNA-seq data.
 #'
 #' @examples
+#' suppressPackageStartupMessages(library(SummarizedExperiment))
 #' data(txse)
 #' class(txse)
 #' txse

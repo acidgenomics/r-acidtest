@@ -16,6 +16,7 @@ Generated with \code{DESeq2::makeExampleDESeqDataSet()}. Contains actual gene
 identifiers and Ensembl annotations.
 }
 \examples{
+suppressPackageStartupMessages(library(SummarizedExperiment))
 data(rse)
 class(rse)
 rse

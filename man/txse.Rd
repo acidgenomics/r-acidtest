@@ -12,6 +12,7 @@ txse
 Example \code{SummarizedExperiment} containing transcript-level RNA-seq data.
 }
 \examples{
+suppressPackageStartupMessages(library(SummarizedExperiment))
 data(txse)
 class(txse)
 txse

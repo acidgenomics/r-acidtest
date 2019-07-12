@@ -12,6 +12,7 @@ sce
 Example \code{SingleCellExperiment} containing gene-level RNA-seq data.
 }
 \examples{
+suppressPackageStartupMessages(library(SingleCellExperiment))
 data(sce)
 class(sce)
 sce
