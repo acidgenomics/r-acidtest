@@ -12,7 +12,7 @@ df
 Example Bioconductor S4 \code{DataFrame} object.
 }
 \examples{
-suppressPackageStartupMessages(library(DataFrame))
+suppressPackageStartupMessages(library(S4Vectors))
 data(df)
 class(df)
 df
