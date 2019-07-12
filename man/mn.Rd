@@ -3,18 +3,17 @@
 \docType{data}
 \name{mn}
 \alias{mn}
-\title{makeNames test data
-Used to test syntactic naming functions.}
+\title{Make names}
 \format{An object of class \code{list} of length 7.}
 \usage{
 mn
 }
 \description{
-makeNames test data
-Used to test syntactic naming functions.
+Example \code{list} data used to test syntactic naming functions.
 }
 \examples{
 data(mn)
+class(mn)
 mn
 }
 \keyword{datasets}

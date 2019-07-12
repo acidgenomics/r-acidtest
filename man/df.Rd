@@ -3,16 +3,17 @@
 \docType{data}
 \name{df}
 \alias{df}
-\title{Example DataFrame}
+\title{Data frame}
 \format{An object of class \code{DataFrame} with 4 rows and 4 columns.}
 \usage{
 df
 }
 \description{
-Example DataFrame
+Example Bioconductor S4 \code{DataFrame} object.
 }
 \examples{
 data(df)
+class(df)
 df
 }
 \keyword{datasets}

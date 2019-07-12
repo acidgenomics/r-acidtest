@@ -3,16 +3,17 @@
 \docType{data}
 \name{sce}
 \alias{sce}
-\title{Example SingleCellExperiment}
+\title{Single cell experiment}
 \format{An object of class \code{SingleCellExperiment} with 500 rows and 100 columns.}
 \usage{
 sce
 }
 \description{
-Gene-level single-cell RNA-seq data set.
+Example \code{SingleCellExperiment} containing gene-level RNA-seq data.
 }
 \examples{
 data(sce)
+class(sce)
 sce
 }
 \seealso{

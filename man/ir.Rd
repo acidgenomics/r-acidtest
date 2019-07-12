@@ -3,18 +3,17 @@
 \docType{data}
 \name{ir}
 \alias{ir}
-\title{Example IRanges
-Integer ranges.}
+\title{Integer ranges}
 \format{An object of class \code{IRanges} of length 3.}
 \usage{
 ir
 }
 \description{
-Example IRanges
-Integer ranges.
+Examples \code{IRanges} object.
 }
 \examples{
 data(ir)
+class(ir)
 ir
 }
 \keyword{datasets}

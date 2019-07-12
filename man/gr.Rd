@@ -3,18 +3,17 @@
 \docType{data}
 \name{gr}
 \alias{gr}
-\title{Example GRanges
-Genomic ranges.}
+\title{Genomic ranges}
 \format{An object of class \code{GRanges} of length 5.}
 \usage{
 gr
 }
 \description{
-Example GRanges
-Genomic ranges.
+Example \code{GRanges} object.
 }
 \examples{
 data(gr)
+class(gr)
 gr
 }
 \keyword{datasets}

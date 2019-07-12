@@ -3,16 +3,17 @@
 \docType{data}
 \name{txse}
 \alias{txse}
-\title{Example transcript-level SummarizedExperiment}
+\title{Transcript-level summarized experiment}
 \format{An object of class \code{SummarizedExperiment} with 6 rows and 4 columns.}
 \usage{
 txse
 }
 \description{
-Transcript-level RNA-seq data set.
+Example \code{SummarizedExperiment} containing transcript-level RNA-seq data.
 }
 \examples{
 data(txse)
+class(txse)
 txse
 }
 \keyword{datasets}
