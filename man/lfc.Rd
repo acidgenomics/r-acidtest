@@ -3,16 +3,17 @@
 \docType{data}
 \name{lfc}
 \alias{lfc}
-\title{Example log2 fold change matrix}
+\title{Log fold change}
 \format{An object of class \code{matrix} with 8 rows and 4 columns.}
 \usage{
 lfc
 }
 \description{
-Example log2 fold change matrix
+Example \code{matrix} containing log base 2 fold change values.
 }
 \examples{
 data(lfc)
+class(lfc)
 lfc
 }
 \keyword{datasets}

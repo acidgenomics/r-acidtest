@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Example SingleCellExperiment — sce • acidtest</title>
+<title>Single cell experiment — sce • acidtest</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -34,9 +34,9 @@
 
   <link href="../extra.css" rel="stylesheet">
   
-<meta property="og:title" content="Example SingleCellExperiment — sce" />
+<meta property="og:title" content="Single cell experiment — sce" />
 
-<meta property="og:description" content="Gene-level single-cell RNA-seq data set." />
+<meta property="og:description" content="Example SingleCellExperiment containing gene-level RNA-seq data." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -68,7 +68,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">acidtest</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.4</span>
       </span>
     </div>
 
@@ -108,14 +108,14 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Example SingleCellExperiment</h1>
+    <h1>Single cell experiment</h1>
     <small class="dont-index">Source: <a href='https://github.com/acidgenomics/acidtest/blob/master/R/data.R'><code>R/data.R</code></a></small>
     <div class="hidden name"><code>sce.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Gene-level single-cell RNA-seq data set.</p>
+    <p>Example <code>SingleCellExperiment</code> containing gene-level RNA-seq data.</p>
     
     </div>
 
@@ -131,15 +131,20 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>sce</span>)
-<span class='no'>sce</span></div><div class='output co'>#&gt; <span class='message'>Loading required package: SingleCellExperiment</span></div><div class='output co'>#&gt; class: SingleCellExperiment 
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/message.html'>suppressPackageStartupMessages</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>SingleCellExperiment</span>))
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>sce</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>sce</span>)</div><div class='output co'>#&gt; [1] "SingleCellExperiment"
+#&gt; attr(,"package")
+#&gt; [1] "SingleCellExperiment"</div><div class='input'><span class='no'>sce</span></div><div class='output co'>#&gt; class: SingleCellExperiment 
 #&gt; dim: 500 100 
 #&gt; metadata(1): date
 #&gt; assays(1): counts
 #&gt; rownames(500): gene1 gene2 ... gene499 gene500
 #&gt; rowData names(5): geneID geneName geneBiotype broadClass entrezID
 #&gt; colnames(100): cell001 cell002 ... cell099 cell100
-#&gt; colData names(2): expLibSize sampleID</div></pre>
+#&gt; colData names(2): expLibSize sampleID
+#&gt; reducedDimNames(0):
+#&gt; spikeNames(0):</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

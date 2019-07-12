@@ -3,16 +3,17 @@
 \docType{data}
 \name{tbl}
 \alias{tbl}
-\title{Example tibble}
+\title{Tibble}
 \format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 4 rows and 5 columns.}
 \usage{
 tbl
 }
 \description{
-Example tibble
+Example \code{tbl_df} object.
 }
 \examples{
 data(tbl)
+class(tbl)
 tbl
 }
 \keyword{datasets}
