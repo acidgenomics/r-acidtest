@@ -1,92 +1,151 @@
-#' Example DataFrame
+#' Data frame
+#'
+#' Example Bioconductor S4 `DataFrame` object.
+#'
 #' @examples
+#' suppressPackageStartupMessages(library(S4Vectors))
 #' data(df)
+#' class(df)
 #' df
 "df"
 
 
 
-#' Example GRanges
-#' Genomic ranges.
+#' Data table
+#'
+#' Example `data.table` object.
+#'
 #' @examples
+#' data(dt)
+#' class(dt)
+#' dt
+"dt"
+
+
+
+#' Genomic ranges
+#'
+#' Example `GRanges` object.
+#'
+#' @examples
+#' suppressPackageStartupMessages(library(GenomicRanges))
 #' data(gr)
+#' class(gr)
 #' gr
 "gr"
 
 
 
-#' Example log2 fold change matrix
+#' Integer ranges
+#'
+#' Examples `IRanges` object.
+#'
+#' @examples
+#' data(ir)
+#' class(ir)
+#' ir
+"ir"
+
+
+
+#' Log fold change
+#'
+#' Example `matrix` containing log base 2 fold change values.
+#'
 #' @examples
 #' data(lfc)
+#' class(lfc)
 #' lfc
 "lfc"
 
 
 
-#' Example matrix
+#' Matrix
+#'
+#' Example `matrix` object.
+#'
 #' @examples
 #' data(mat)
+#' class(mat)
 #' mat
 "mat"
 
 
 
-#' makeNames test data
-#' Used to test syntactic naming functions.
+#' Make names
+#'
+#' Example `list` data used to test syntactic naming functions.
+#'
 #' @examples
 #' data(mn)
-#' mn
+#' class(mn)
+#' names(mn)
 "mn"
 
 
 
-#' Example SummarizedExperiment
+#' Summarized experiment
 #'
-#' Gene-level RNA-seq data set.
+#' Example `SummarizedExperiment` containing gene-level RNA-seq data.
 #'
 #' Generated with `DESeq2::makeExampleDESeqDataSet()`. Contains actual gene
 #' identifiers and Ensembl annotations.
 #'
 #' @examples
+#' suppressPackageStartupMessages(library(SummarizedExperiment))
 #' data(rse)
+#' class(rse)
 #' rse
 "rse"
 
 
 
-#' Example SingleCellExperiment
+#' Single cell experiment
 #'
-#' Gene-level single-cell RNA-seq data set.
+#' Example `SingleCellExperiment` containing gene-level RNA-seq data.
 #'
 #' @seealso `scater::sc_example_counts`.
+#'
 #' @examples
+#' suppressPackageStartupMessages(library(SingleCellExperiment))
 #' data(sce)
+#' class(sce)
 #' sce
 "sce"
 
 
 
-#' Example sparseMatrix
+#' Sparse matrix
+#'
+#' Example `sparseMatrix` object.
+#'
 #' @examples
 #' data(sparse)
+#' class(sparse)
 #' sparse
 "sparse"
 
 
 
-#' Example tibble
+#' Tibble
+#'
+#' Example `tbl_df` object.
+#'
 #' @examples
 #' data(tbl)
+#' class(tbl)
 #' tbl
 "tbl"
 
 
 
-#' Example transcript-level SummarizedExperiment
+#' Transcript-level summarized experiment
 #'
-#' Transcript-level RNA-seq data set.
+#' Example `SummarizedExperiment` containing transcript-level RNA-seq data.
 #'
 #' @examples
+#' suppressPackageStartupMessages(library(SummarizedExperiment))
 #' data(txse)
+#' class(txse)
 #' txse
 "txse"

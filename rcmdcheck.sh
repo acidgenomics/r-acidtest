@@ -42,9 +42,6 @@ Rscript -e "BiocCheck::BiocCheck( \
 
 rm "$PKG_TARBALL"
 
-echo "Coverage"
-Rscript -e "covr::package_coverage()"
-
 echo "lintr"
 Rscript -e "if (packageVersion(\"base\") >= \"3.6\") \
     lintr::lint_package(path = \".\")"
