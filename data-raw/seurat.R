@@ -61,7 +61,6 @@ stopifnot(py_module_available(module = "umap"))
 # Use `pryr::object_size()` instead of `utils::object.size()`.
 limit <- structure(1e6, class = "object_size")
 
-# seurat =======================================================================
 data(pbmc_small, package = "Seurat")
 object_size(pbmc_small)
 stopifnot(object_size(pbmc_small) < limit)
@@ -89,28 +88,4 @@ gr <- gr[which]
 # Note that `rowRanges` method is defined by pointillism.
 rowRanges(seurat) <- gr
 
-# seurat_all_markers ===========================================================
-seurat_all_markers <- SeuratMarkersPerCluster(
-    object = FindAllMarkers(seurat),
-    ranges = rowRanges(seurat)
-)
-
-# known_markers_small ==========================================================
-data(cell_type_markers)
-seurat_known_markers <- KnownMarkers(
-    markers = seurat_all_markers,
-    known = cell_type_markers$homoSapiens
-)
-export(
-    x = seurat_known_markers,
-    file = file.path("inst", "extdata", "cell_type_markers.csv")
-)
-
-# Save =========================================================================
-usethis::use_data(
-    seurat,
-    seurat_all_markers,
-    seurat_known_markers,
-    compress = "xz",
-    overwrite = TRUE
-)
+usethis::use_data(seurat, compress = "xz", overwrite = TRUE)
