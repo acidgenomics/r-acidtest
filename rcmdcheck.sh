@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -Eeuxo pipefail
 
-# Package checks
+# R package checks
 # Updated 2019-07-16.
 #
 # See also:
@@ -10,6 +10,7 @@ set -Eeuxo pipefail
 # - Travis CI recipe
 #   https://github.com/travis-ci/travis-build/blob/master/lib/travis/build/script/r.rb
 
+# Don't require suggested packages to be installed.
 export _R_CHECK_FORCE_SUGGESTS_=false
 
 # Bug fix for `Sys.timezone()` when `timedatectl` is installed.
@@ -52,6 +53,6 @@ echo "travis_fold:start:lints"
 ./lints.R
 echo "travis_fold:end:lints"
 
-# > echo "travis_fold:start:coverage"
-# > ./coverage.R
-# > echo "travis_fold:end:coverage"
+echo "travis_fold:start:coverage"
+./coverage.R
+echo "travis_fold:end:coverage"
