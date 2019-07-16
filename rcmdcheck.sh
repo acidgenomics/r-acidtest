@@ -2,12 +2,15 @@
 set -Eeuxo pipefail
 
 # Package checks
+# Updated 2019-07-16.
 #
 # See also:
 # - R CMD build --help
 # - R CMD check --help
 # - Travis CI recipe
 #   https://github.com/travis-ci/travis-build/blob/master/lib/travis/build/script/r.rb
+
+export _R_CHECK_FORCE_SUGGESTS_=false
 
 # Bug fix for `Sys.timezone()` when `timedatectl` is installed.
 # https://github.com/rocker-org/rocker-versioned/issues/89
