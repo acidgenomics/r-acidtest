@@ -1,3 +1,6 @@
+# Example matrices.
+# Updated 2019-07-16.
+
 mat <- matrix(
     data = seq(1L:16L),
     nrow = 4L,

@@ -1,5 +1,5 @@
-# Gene-level SingleCellExperiment example
-# 2019-03-28
+# Gene-level SingleCellExperiment example.
+# Updated 2019-07-16.
 
 # Splatter params are derived from:
 # https://github.com/mikelove/zinbwave-deseq2/blob/master/zinbwave-deseq2.knit.md

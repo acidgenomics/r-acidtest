@@ -1,7 +1,8 @@
-# nolint start
+# Example log2 fold change matrix.
+# Updated 2019-07-16.
 
-# log2 fold change matrix
 # Order was randomized using `sample()`.
+# nolint start
 lfc <- matrix(
     data = c(
         -2.00, -1.25,  0.00,  0.25,  0.25,  0.50,  2.00,  4.00,
@@ -17,5 +18,4 @@ lfc <- matrix(
         paste0("contrast", seq_len(4L))
     )
 )
-
 # nolint end

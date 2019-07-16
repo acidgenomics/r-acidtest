@@ -1,3 +1,6 @@
+# Example IRanges.
+# Updated 2019-07-16.
+
 library(IRanges)
 library(usethis)
 
