@@ -1,3 +1,9 @@
+## acidtest 0.1.5 (2019-07-16)
+
+- Added `seurat` example, migrated from pointillism package.
+- Resaved `sce` based on new `seurat` object.
+- Archived source code for previous `sce` as `sce_splatter.R`.
+
 ## acidtest 0.1.4 (2019-07-12)
 
 - Added `dt` example `data.table` object.
