@@ -1,75 +1,40 @@
-# Gene-level SingleCellExperiment example
-# 2019-03-28
-
-# Splatter params are derived from:
-# https://github.com/mikelove/zinbwave-deseq2/blob/master/zinbwave-deseq2.knit.md
+# Create SingleCellExperiment object from Seurat.
+# Updated 2019-07-16.
 
 library(usethis)
 library(pryr)
-library(SingleCellExperiment)
-library(basejump)
-library(splatter)
+library(pointillism)  # 0.3.2
 
-# Restrict to 2 MB.
+# Restrict to 1 MB.
 # Use `pryr::object_size()` instead of `utils::object.size()`.
-limit <- structure(2e6, class = "object_size")
+limit <- structure(1e6, class = "object_size")
 
-organism <- "Homo sapiens"
-release <- 92L
+data(seurat, package = "acidtest")
+sce <- as(seurat, "SingleCellExperiment")
+sce <- convertSymbolsToGenes(sce)
 
-# Use splatter to generate an example dataset with simulated counts.
-# Note: These DE params are natural log scale.
-params <- newSplatParams() %>%
-    setParam(name = "batchCells", value = 100L) %>%
-    setParam(name = "nGenes", value = 500L) %>%
-    setParam(name = "de.facLoc", value = 1L) %>%
-    setParam(name = "de.facScale", value = 0.25) %>%
-    # Add more dropout (to test zinbwave weights and DE).
-    setParam(name = "dropout.type", value = "experiment") %>%
-    setParam(name = "dropout.mid", value = 3L)
-sce <- splatSimulate(
-    params = params,
-    group.prob = c(0.5, 0.5),
-    method = "groups"
-)
+# Assays.
+stopifnot(identical(assayNames(sce), c("counts", "logcounts")))
+# > assays(sce) <- assays(sce)["counts"]
 
-# Sanitize the dimnames into camel case.
-sce <- camel(sce, rownames = TRUE, colnames = TRUE)
+# Dimensionality reduction.
+stopifnot(identical(reducedDimNames(sce), c("PCA", "TSNE", "UMAP")))
+reducedDims(sce) <- reducedDims(sce)["UMAP"]
+reducedDimNames(sce) <- camel(reducedDimNames(sce))
 
-# Prepare column data.
-colData(sce) <- camel(colData(sce))
-# Add `sampleID` column. Note that `sampleName` is recommended, but if it is
-# not defined, it should be generated from the `sampleID` automatically.
-sce$sampleID <- factor(gsub("group", "sample", camel(sce$group)))
-sce$batch <- NULL
-sce$cell <- NULL
-sce$group <- NULL
+# Column data.
+cd <- colData(sce) %>% .[, "groups", drop = FALSE]
+cd$sampleID <- factor(gsub("g", "sample", camel(cd$groups)))
+cd <- cd[, "sampleID", drop = FALSE]
+colData(sce) <- cd
 
-# Pad the zeros in rows and columns.
-# Note that this needs to come after setting up `colData`, otherwise will
-# error because `sampleID` column is not defined.
-sce <- autopadZeros(sce)
-
-# Just slot the raw counts, as a sparse matrix.
-counts <- counts(sce)
-counts <- as(counts, "sparseMatrix")
-assays(sce) <- list(counts = counts)
-
-# Prepare row data.
-rowRanges <- makeGRangesFromEnsembl(organism, release = release)
-rowRanges <- rowRanges[
-    i = seq_len(nrow(sce)),
-    j = c("geneID", "geneName", "geneBiotype", "broadClass", "entrezID")
-]
-# Relevel the factor columns, to save disk space.
-rowRanges <- relevelRowRanges(rowRanges)
-# Note that we're keeping the original rownames from dds_small, and they won't
-# match the `geneID` column in rowRanges. This is intentional, for unit testing.
-names(rowRanges) <- rownames(sce)
-rowRanges(sce) <- rowRanges
-
-# Stash minimal metadata.
+# Metadata.
 metadata(sce) <- list(date = Sys.Date())
+
+# Row ranges.
+# Drop "vst." columns.
+keep <- !grepl(pattern = "^vst.", x = colnames(mcols(rowRanges(sce))))
+mcols(rowRanges(sce)) <- mcols(rowRanges(sce))[keep]
 
 # Report the size of each slot in bytes.
 vapply(

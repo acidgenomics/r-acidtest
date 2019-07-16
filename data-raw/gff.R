@@ -1,4 +1,5 @@
 # Create minimal example GFF/GTF files.
+# Updated 2019-07-16.
 
 # Note that these commands are memory hungry and don't always work well on a
 # low power virtual machine.

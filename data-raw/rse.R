@@ -1,5 +1,5 @@
-# Gene-level RangedSummarizedExperiment example
-# 2019-03-28
+# Gene-level RangedSummarizedExperiment example.
+# Updated 2019-07-16.
 
 library(usethis)
 library(pryr)
