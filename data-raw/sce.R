@@ -20,6 +20,7 @@ stopifnot(identical(assayNames(sce), c("counts", "logcounts")))
 # Dimensionality reduction.
 stopifnot(identical(reducedDimNames(sce), c("PCA", "TSNE", "UMAP")))
 reducedDims(sce) <- reducedDims(sce)["UMAP"]
+reducedDimNames(sce) <- camel(reducedDimNames(sce))
 
 # Column data.
 cd <- colData(sce) %>% .[, "groups", drop = FALSE]
