@@ -115,6 +115,18 @@
 
 
 
+#' Seurat
+#'
+#' Example `Seurat` (v3) object.
+#'
+#' @examples
+#' data(seurat)
+#' class(seurat)
+#' seurat
+"seurat"
+
+
+
 #' Sparse matrix
 #'
 #' Example `sparseMatrix` object.
