@@ -12,8 +12,10 @@ dt
 Example \code{data.table} object.
 }
 \examples{
-data(dt)
-class(dt)
-dt
+if (requireNamespace("data.table", quietly = TRUE)) {
+    data(dt)
+    class(dt)
+    dt
+}
 }
 \keyword{datasets}

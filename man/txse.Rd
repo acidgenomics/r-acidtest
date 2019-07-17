@@ -12,9 +12,10 @@ txse
 Example \code{SummarizedExperiment} containing transcript-level RNA-seq data.
 }
 \examples{
-suppressPackageStartupMessages(library(SummarizedExperiment))
-data(txse)
-class(txse)
-txse
+if (requireNamespace("SummarizedExperiment", quietly = TRUE)) {
+    data(txse)
+    class(txse)
+    txse
+}
 }
 \keyword{datasets}

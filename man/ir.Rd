@@ -12,8 +12,10 @@ ir
 Examples \code{IRanges} object.
 }
 \examples{
-data(ir)
-class(ir)
-ir
+if (requireNamespace("IRanges", quietly = TRUE)) {
+    data(ir)
+    class(ir)
+    ir
+}
 }
 \keyword{datasets}

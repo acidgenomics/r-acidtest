@@ -68,7 +68,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">acidtest</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5</span>
       </span>
     </div>
 
@@ -127,10 +127,11 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>sparse</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>sparse</span>)</div><div class='output co'>#&gt; [1] "dgCMatrix"
-#&gt; attr(,"package")
-#&gt; [1] "Matrix"</div><div class='input'><span class='no'>sparse</span></div><div class='output co'>#&gt; 4 x 4 sparse Matrix of class "dgCMatrix"
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"Matrix"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
+    <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>sparse</span>)
+    <span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>sparse</span>)
+    <span class='no'>sparse</span>
+}</div><div class='output co'>#&gt; 4 x 4 sparse Matrix of class "dgCMatrix"
 #&gt;                 sample1 sample2 sample3 sample4
 #&gt; ENSG00000000001       1       5       9      13
 #&gt; ENSG00000000002       2       6      10      14

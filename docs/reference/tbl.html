@@ -68,7 +68,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">acidtest</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5</span>
       </span>
     </div>
 
@@ -127,8 +127,11 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>tbl</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>tbl</span>)</div><div class='output co'>#&gt; [1] "tbl_df"     "tbl"        "data.frame"</div><div class='input'><span class='no'>tbl</span></div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 4 x 5</span><span>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"tibble"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
+    <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>tbl</span>)
+    <span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>tbl</span>)
+    <span class='no'>tbl</span>
+}</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 4 x 5</span><span>
 #&gt;   rowname         sample1 sample2 sample3 sample4
 #&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>             </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>   </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>   </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>   </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>
 #&gt; </span><span style='color: #BCBCBC;'>1</span><span> ENSG00000000001       1       5       9      13

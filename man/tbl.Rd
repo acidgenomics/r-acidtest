@@ -12,8 +12,10 @@ tbl
 Example \code{tbl_df} object.
 }
 \examples{
-data(tbl)
-class(tbl)
-tbl
+if (requireNamespace("tibble", quietly = TRUE)) {
+    data(tbl)
+    class(tbl)
+    tbl
+}
 }
 \keyword{datasets}

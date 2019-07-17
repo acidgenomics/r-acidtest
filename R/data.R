@@ -3,10 +3,11 @@
 #' Example Bioconductor S4 `DataFrame` object.
 #'
 #' @examples
-#' suppressPackageStartupMessages(library(S4Vectors))
-#' data(df)
-#' class(df)
-#' df
+#' if (requireNamespace("S4Vectors", quietly = TRUE)) {
+#'     data(df)
+#'     class(df)
+#'     df
+#' }
 "df"
 
 
@@ -16,9 +17,11 @@
 #' Example `data.table` object.
 #'
 #' @examples
-#' data(dt)
-#' class(dt)
-#' dt
+#' if (requireNamespace("data.table", quietly = TRUE)) {
+#'     data(dt)
+#'     class(dt)
+#'     dt
+#' }
 "dt"
 
 
@@ -28,10 +31,11 @@
 #' Example `GRanges` object.
 #'
 #' @examples
-#' suppressPackageStartupMessages(library(GenomicRanges))
-#' data(gr)
-#' class(gr)
-#' gr
+#' if (requireNamespace("GenomicRanges", quietly = TRUE)) {
+#'     data(gr)
+#'     class(gr)
+#'     gr
+#' }
 "gr"
 
 
@@ -41,9 +45,11 @@
 #' Examples `IRanges` object.
 #'
 #' @examples
-#' data(ir)
-#' class(ir)
-#' ir
+#' if (requireNamespace("IRanges", quietly = TRUE)) {
+#'     data(ir)
+#'     class(ir)
+#'     ir
+#' }
 "ir"
 
 
@@ -92,10 +98,11 @@
 #' identifiers and Ensembl annotations.
 #'
 #' @examples
-#' suppressPackageStartupMessages(library(SummarizedExperiment))
-#' data(rse)
-#' class(rse)
-#' rse
+#' if (requireNamespace("SummarizedExperiment", quietly = TRUE)) {
+#'     data(rse)
+#'     class(rse)
+#'     rse
+#' }
 "rse"
 
 
@@ -107,10 +114,11 @@
 #' @seealso `scater::sc_example_counts`.
 #'
 #' @examples
-#' suppressPackageStartupMessages(library(SingleCellExperiment))
-#' data(sce)
-#' class(sce)
-#' sce
+#' if (requireNamespace("SingleCellExperiment", quietly = TRUE)) {
+#'     data(sce)
+#'     class(sce)
+#'     sce
+#' }
 "sce"
 
 
@@ -120,9 +128,11 @@
 #' Example `Seurat` (v3) object.
 #'
 #' @examples
-#' data(seurat)
-#' class(seurat)
-#' seurat
+#' if (requireNamespace("Seurat", quietly = TRUE)) {
+#'     data(seurat)
+#'     class(seurat)
+#'     seurat
+#' }
 "seurat"
 
 
@@ -132,9 +142,11 @@
 #' Example `sparseMatrix` object.
 #'
 #' @examples
-#' data(sparse)
-#' class(sparse)
-#' sparse
+#' if (requireNamespace("Matrix", quietly = TRUE)) {
+#'     data(sparse)
+#'     class(sparse)
+#'     sparse
+#' }
 "sparse"
 
 
@@ -144,9 +156,11 @@
 #' Example `tbl_df` object.
 #'
 #' @examples
-#' data(tbl)
-#' class(tbl)
-#' tbl
+#' if (requireNamespace("tibble", quietly = TRUE)) {
+#'     data(tbl)
+#'     class(tbl)
+#'     tbl
+#' }
 "tbl"
 
 
@@ -156,8 +170,9 @@
 #' Example `SummarizedExperiment` containing transcript-level RNA-seq data.
 #'
 #' @examples
-#' suppressPackageStartupMessages(library(SummarizedExperiment))
-#' data(txse)
-#' class(txse)
-#' txse
+#' if (requireNamespace("SummarizedExperiment", quietly = TRUE)) {
+#'     data(txse)
+#'     class(txse)
+#'     txse
+#' }
 "txse"

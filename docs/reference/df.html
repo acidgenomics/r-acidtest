@@ -68,7 +68,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">acidtest</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5</span>
       </span>
     </div>
 
@@ -127,11 +127,11 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/message.html'>suppressPackageStartupMessages</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>S4Vectors</span>))
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>df</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>df</span>)</div><div class='output co'>#&gt; [1] "DataFrame"
-#&gt; attr(,"package")
-#&gt; [1] "S4Vectors"</div><div class='input'><span class='no'>df</span></div><div class='output co'>#&gt; DataFrame with 4 rows and 4 columns
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"S4Vectors"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
+    <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>df</span>)
+    <span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>df</span>)
+    <span class='no'>df</span>
+}</div><div class='output co'>#&gt; DataFrame with 4 rows and 4 columns
 #&gt;                   sample1   sample2   sample3   sample4
 #&gt;                 &lt;integer&gt; &lt;integer&gt; &lt;integer&gt; &lt;integer&gt;
 #&gt; ENSG00000000001         1         5         9        13
