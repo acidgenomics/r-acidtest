@@ -12,9 +12,10 @@ df
 Example Bioconductor S4 \code{DataFrame} object.
 }
 \examples{
-suppressPackageStartupMessages(library(S4Vectors))
-data(df)
-class(df)
-df
+if (requireNamespace("S4Vectors", quietly = TRUE)) {
+    data(df)
+    class(df)
+    df
+}
 }
 \keyword{datasets}

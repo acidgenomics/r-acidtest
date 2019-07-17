@@ -4,7 +4,7 @@
 \name{sce}
 \alias{sce}
 \title{Single cell experiment}
-\format{An object of class \code{SingleCellExperiment} with 500 rows and 100 columns.}
+\format{An object of class \code{SingleCellExperiment} with 230 rows and 80 columns.}
 \usage{
 sce
 }
@@ -12,10 +12,11 @@ sce
 Example \code{SingleCellExperiment} containing gene-level RNA-seq data.
 }
 \examples{
-suppressPackageStartupMessages(library(SingleCellExperiment))
-data(sce)
-class(sce)
-sce
+if (requireNamespace("SingleCellExperiment", quietly = TRUE)) {
+    data(sce)
+    class(sce)
+    sce
+}
 }
 \seealso{
 \code{scater::sc_example_counts}.

@@ -12,9 +12,10 @@ gr
 Example \code{GRanges} object.
 }
 \examples{
-suppressPackageStartupMessages(library(GenomicRanges))
-data(gr)
-class(gr)
-gr
+if (requireNamespace("GenomicRanges", quietly = TRUE)) {
+    data(gr)
+    class(gr)
+    gr
+}
 }
 \keyword{datasets}

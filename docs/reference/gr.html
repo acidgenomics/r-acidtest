@@ -68,7 +68,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">acidtest</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5</span>
       </span>
     </div>
 
@@ -127,11 +127,11 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/message.html'>suppressPackageStartupMessages</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>GenomicRanges</span>))
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>gr</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>gr</span>)</div><div class='output co'>#&gt; [1] "GRanges"
-#&gt; attr(,"package")
-#&gt; [1] "GenomicRanges"</div><div class='input'><span class='no'>gr</span></div><div class='output co'>#&gt; GRanges object with 5 ranges and 2 metadata columns:
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"GenomicRanges"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
+    <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>gr</span>)
+    <span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>gr</span>)
+    <span class='no'>gr</span>
+}</div><div class='output co'>#&gt; GRanges object with 5 ranges and 2 metadata columns:
 #&gt;                   seqnames              ranges strand |          geneID
 #&gt;                      &lt;Rle&gt;           &lt;IRanges&gt;  &lt;Rle&gt; |     &lt;character&gt;
 #&gt;   ENSG00000000003        X 100627109-100639991      - | ENSG00000000003

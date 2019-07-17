@@ -12,8 +12,10 @@ seurat
 Example \code{Seurat} (v3) object.
 }
 \examples{
-data(seurat)
-class(seurat)
-seurat
+if (requireNamespace("Seurat", quietly = TRUE)) {
+    data(seurat)
+    class(seurat)
+    seurat
+}
 }
 \keyword{datasets}

@@ -12,8 +12,10 @@ sparse
 Example \code{sparseMatrix} object.
 }
 \examples{
-data(sparse)
-class(sparse)
-sparse
+if (requireNamespace("Matrix", quietly = TRUE)) {
+    data(sparse)
+    class(sparse)
+    sparse
+}
 }
 \keyword{datasets}
