@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Data frame — df • acidtest</title>
+<title>Summarized experiment — SummarizedExperiment • acidtest</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -34,9 +34,9 @@
 
   <link href="../extra.css" rel="stylesheet">
   
-<meta property="og:title" content="Data frame — df" />
+<meta property="og:title" content="Summarized experiment — SummarizedExperiment" />
 
-<meta property="og:description" content="Example Bioconductor S4 DataFrame object." />
+<meta property="og:description" content="Modified version of the SummarizedExperiment() documentation example." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -68,7 +68,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">acidtest</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
       </span>
     </div>
 
@@ -108,36 +108,30 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Data frame</h1>
-    <small class="dont-index">Source: <a href='https://github.com/acidgenomics/acidtest/blob/master/R/data.R'><code>R/data.R</code></a></small>
-    <div class="hidden name"><code>df.Rd</code></div>
+    <h1>Summarized experiment</h1>
+    <small class="dont-index">Source: <a href='https://github.com/acidgenomics/acidtest/blob/master/R/SummarizedExperiment.R'><code>R/SummarizedExperiment.R</code></a></small>
+    <div class="hidden name"><code>SummarizedExperiment.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Example Bioconductor S4 <code>DataFrame</code> object.</p>
+    <p>Modified version of the <code>SummarizedExperiment()</code> documentation example.</p>
     
     </div>
 
-    <pre class="usage"><span class='no'>df</span></pre>
+    <pre class="usage"><span class='no'>SummarizedExperiment</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>An object of class <code>DataFrame</code> with 4 rows and 4 columns.</p>
+    <p>An object of class <code>SummarizedExperiment</code> with 50 rows and 4 columns.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"S4Vectors"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
-    <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>df</span>)
-    <span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>df</span>)
-    <span class='no'>df</span>
-}</div><div class='output co'>#&gt; DataFrame with 4 rows and 4 columns
-#&gt;                   sample1   sample2   sample3   sample4
-#&gt;                 &lt;integer&gt; &lt;integer&gt; &lt;integer&gt; &lt;integer&gt;
-#&gt; ENSG00000000001         1         5         9        13
-#&gt; ENSG00000000002         2         6        10        14
-#&gt; ENSG00000000003         3         7        11        15
-#&gt; ENSG00000000004         4         8        12        16</div></pre>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"SummarizedExperiment"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
+    <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>SummarizedExperiment</span>)
+    <span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>SummarizedExperiment</span>)
+    <span class='no'>SummarizedExperiment</span>
+}</div><div class='output co'>#&gt; <span class='warning'>Warning: data set ‘SummarizedExperiment’ not found</span></div><div class='output co'>#&gt; <span class='error'>Error in eval(expr, envir, enclos): object 'SummarizedExperiment' not found</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

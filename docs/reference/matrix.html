@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Transcript-level summarized experiment — txse • acidtest</title>
+<title>Matrix — matrix • acidtest</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -34,9 +34,9 @@
 
   <link href="../extra.css" rel="stylesheet">
   
-<meta property="og:title" content="Transcript-level summarized experiment — txse" />
+<meta property="og:title" content="Matrix — matrix" />
 
-<meta property="og:description" content="Example SummarizedExperiment containing transcript-level RNA-seq data." />
+<meta property="og:description" content="Example matrix object." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -68,7 +68,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">acidtest</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
       </span>
     </div>
 
@@ -108,38 +108,34 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Transcript-level summarized experiment</h1>
-    <small class="dont-index">Source: <a href='https://github.com/acidgenomics/acidtest/blob/master/R/data.R'><code>R/data.R</code></a></small>
-    <div class="hidden name"><code>txse.Rd</code></div>
+    <h1>Matrix</h1>
+    <small class="dont-index">Source: <a href='https://github.com/acidgenomics/acidtest/blob/master/R/matrix.R'><code>R/matrix.R</code></a></small>
+    <div class="hidden name"><code>matrix.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Example <code>SummarizedExperiment</code> containing transcript-level RNA-seq data.</p>
+    <p>Example <code>matrix</code> object.</p>
     
     </div>
 
-    <pre class="usage"><span class='no'>txse</span></pre>
+    <pre class="usage"><span class='no'>matrix</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>An object of class <code>SummarizedExperiment</code> with 6 rows and 4 columns.</p>
+    <p>An object of class <code>matrix</code> with 4 rows and 4 columns.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"SummarizedExperiment"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
-    <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>txse</span>)
-    <span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>txse</span>)
-    <span class='no'>txse</span>
-}</div><div class='output co'>#&gt; class: SummarizedExperiment 
-#&gt; dim: 6 4 
-#&gt; metadata(1): date
-#&gt; assays(1): counts
-#&gt; rownames(6): ENST00000494424 ENST00000496771 ... ENST00000371588
-#&gt;   ENST00000413082
-#&gt; rowData names(2): transcriptID geneID
-#&gt; colnames(4): sample1 sample2 sample3 sample4
-#&gt; colData names(0):</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>matrix</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: data set ‘matrix’ not found</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>matrix</span>)</div><div class='output co'>#&gt; [1] "function"</div><div class='input'><span class='no'>matrix</span></div><div class='output co'>#&gt; function (data = NA, nrow = 1, ncol = 1, byrow = FALSE, dimnames = NULL) 
+#&gt; {
+#&gt;     if (is.object(data) || !is.atomic(data)) 
+#&gt;         data &lt;- as.vector(data)
+#&gt;     .Internal(matrix(data, nrow, ncol, byrow, dimnames, missing(nrow), 
+#&gt;         missing(ncol)))
+#&gt; }
+#&gt; &lt;bytecode: 0x7f8f8209d6b0&gt;
+#&gt; &lt;environment: namespace:base&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

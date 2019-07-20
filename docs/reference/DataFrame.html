@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Genomic ranges — gr • acidtest</title>
+<title>Data frame — DataFrame • acidtest</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -34,9 +34,9 @@
 
   <link href="../extra.css" rel="stylesheet">
   
-<meta property="og:title" content="Genomic ranges — gr" />
+<meta property="og:title" content="Data frame — DataFrame" />
 
-<meta property="og:description" content="Example GRanges object." />
+<meta property="og:description" content="Example Bioconductor S4 DataFrame object." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -68,7 +68,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">acidtest</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
       </span>
     </div>
 
@@ -108,46 +108,30 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Genomic ranges</h1>
-    <small class="dont-index">Source: <a href='https://github.com/acidgenomics/acidtest/blob/master/R/data.R'><code>R/data.R</code></a></small>
-    <div class="hidden name"><code>gr.Rd</code></div>
+    <h1>Data frame</h1>
+    <small class="dont-index">Source: <a href='https://github.com/acidgenomics/acidtest/blob/master/R/DataFrame.R'><code>R/DataFrame.R</code></a></small>
+    <div class="hidden name"><code>DataFrame.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Example <code>GRanges</code> object.</p>
+    <p>Example Bioconductor S4 <code>DataFrame</code> object.</p>
     
     </div>
 
-    <pre class="usage"><span class='no'>gr</span></pre>
+    <pre class="usage"><span class='no'>DataFrame</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>An object of class <code>GRanges</code> of length 5.</p>
+    <p>An object of class <code>DataFrame</code> with 4 rows and 4 columns.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"GenomicRanges"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
-    <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>gr</span>)
-    <span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>gr</span>)
-    <span class='no'>gr</span>
-}</div><div class='output co'>#&gt; GRanges object with 5 ranges and 2 metadata columns:
-#&gt;                   seqnames              ranges strand |          geneID
-#&gt;                      &lt;Rle&gt;           &lt;IRanges&gt;  &lt;Rle&gt; |     &lt;character&gt;
-#&gt;   ENSG00000000003        X 100627109-100639991      - | ENSG00000000003
-#&gt;   ENSG00000000005        X 100584802-100599885      + | ENSG00000000005
-#&gt;   ENSG00000000419       20   50934867-50958555      - | ENSG00000000419
-#&gt;   ENSG00000000457        1 169849631-169894267      - | ENSG00000000457
-#&gt;   ENSG00000000460        1 169662007-169854080      + | ENSG00000000460
-#&gt;                      geneName
-#&gt;                   &lt;character&gt;
-#&gt;   ENSG00000000003      TSPAN6
-#&gt;   ENSG00000000005        TNMD
-#&gt;   ENSG00000000419        DPM1
-#&gt;   ENSG00000000457       SCYL3
-#&gt;   ENSG00000000460    C1orf112
-#&gt;   -------
-#&gt;   seqinfo: 357 sequences from GRCh38 genome</div></pre>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"S4Vectors"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
+    <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>DataFrame</span>)
+    <span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>DataFrame</span>)
+    <span class='no'>DataFrame</span>
+}</div><div class='output co'>#&gt; <span class='warning'>Warning: data set ‘DataFrame’ not found</span></div><div class='output co'>#&gt; <span class='error'>Error in eval(expr, envir, enclos): object 'DataFrame' not found</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
