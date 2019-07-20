@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>News • acidtest</title>
+<title>Version 0.2 • acidtest</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -34,7 +34,7 @@
 
   <link href="../extra.css" rel="stylesheet">
   
-<meta property="og:title" content="News" />
+<meta property="og:title" content="Version 0.2" />
 
 
 
@@ -52,7 +52,7 @@
   </head>
 
   <body>
-    <div class="container template-news-index">
+    <div class="container template-news">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -103,17 +103,34 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Release notes</h1>
+      <h1>Changelog <small>0.2</small></h1>
+      
     </div>
-    <ul>
-    <li><a href="news-0.2.html">Version 0.2</a></li>
-    <li><a href="news-0.1.html">Version 0.1</a></li>
-    </ul>
-  </div>
-</div>
 
+    <div id="acidtest-0-2-0-2019-07-20" class="section level2">
+<h2 class="hasAnchor">
+<a href="#acidtest-0-2-0-2019-07-20" class="anchor"></a>acidtest 0.2.0 (2019-07-20)</h2>
+<ul>
+<li>Disabled lazy data loading.</li>
+<li>Spelled out object class names to make example data more straightforward.</li>
+<li>Saved additional <code>SingleCellExperiment</code> and <code>SummarizedExperiment</code> examples.</li>
+<li>There’s no currently no supported way to redirect old data names, so these changes are breaking.</li>
+</ul>
+</div>
+  </div>
+
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <div id="tocnav">
+      <h2>Contents</h2>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="#acidtest-0-2-0-2019-07-20">0.2.0</a></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
 
 
       <footer>
