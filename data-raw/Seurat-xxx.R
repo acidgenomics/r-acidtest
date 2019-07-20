@@ -1,5 +1,5 @@
 # Seurat example data.
-# Updated 2019-07-16.
+# Updated 2019-07-20.
 
 library(pryr)
 library(reticulate)
@@ -53,28 +53,28 @@ stopifnot(object_size(pbmc_small) < limit)
 
 # The Seurat wiki describes the changes in v3.0.
 # https://github.com/satijalab/seurat/wiki
-seurat <- pbmc_small
+Seurat <- pbmc_small
 
 # Add UMAP dimensional reduction to example object.
 # Alternatively, can use `features` here instead.
-seurat <- RunUMAP(seurat, dims = seq_len(10L))
+Seurat <- RunUMAP(Seurat, dims = seq_len(10L))
 
 # Slot row ranges into the Seurat object.
 rowRanges <- makeGRangesFromEnsembl(
     organism = "Homo sapiens",
     genomeBuild = "GRCh37"
 )
-x <- rownames(seurat)
+x <- rownames(Seurat)
 table <- make.unique(as.character(rowRanges$geneName))
 names(rowRanges) <- table
 stopifnot(all(x %in% table))
 which <- match(x = x, table = table)
 rowRanges <- rowRanges[which] %>% relevelRowRanges()
 stopifnot(object_size(rowRanges) < limit)
-rowRanges(seurat) <- rowRanges
+rowRanges(Seurat) <- rowRanges
 
-object_size(seurat)
-stopifnot(object_size(seurat) < limit)
-validObject(seurat)
+object_size(Seurat)
+stopifnot(object_size(Seurat) < limit)
+validObject(Seurat)
 
-usethis::use_data(seurat, compress = "xz", overwrite = TRUE)
+usethis::use_data(Seurat, compress = "xz", overwrite = TRUE)
