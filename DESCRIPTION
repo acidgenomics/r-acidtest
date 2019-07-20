@@ -25,6 +25,7 @@ Depends: R (>= 3.5)
 Suggests:
     GenomicRanges,
     IRanges,
+    Matrix,
     S4Vectors,
     SingleCellExperiment,
     SummarizedExperiment,
