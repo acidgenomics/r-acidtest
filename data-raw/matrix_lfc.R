@@ -1,15 +1,14 @@
-# Example log2 fold change matrix.
-# Updated 2019-07-16.
-
+library(usethis)
 # Order was randomized using `sample()`.
-# nolint start
-lfc <- matrix(
+matrix_lfc <- matrix(
+    # nolint start
     data = c(
         -2.00, -1.25,  0.00,  0.25,  0.25,  0.50,  2.00,  4.00,
          2.00,  0.25, -1.25, -2.00,  0.50,  0.25,  4.00,  0.00,
          0.50,  4.00, -1.25,  0.25,  0.00,  0.25,  2.00, -2.00,
          4.00,  0.50, -2.00,  2.00,  0.25, -1.25,  0.25,  0.00
     ),
+    # nolint end
     nrow = 8L,
     ncol = 4L,
     byrow = FALSE,
@@ -18,4 +17,4 @@ lfc <- matrix(
         paste0("contrast", seq_len(4L))
     )
 )
-# nolint end
+use_data(matrix_lfc, compress = "xz", overwrite = TRUE)

@@ -1,6 +1,3 @@
-# Gene-level RangedSummarizedExperiment example.
-# Updated 2019-07-16.
-
 library(usethis)
 library(pryr)
 library(SummarizedExperiment)
@@ -60,4 +57,5 @@ object_size(rse)
 stopifnot(object_size(rse) < limit)
 validObject(rse)
 
-use_data(rse, compress = "xz", overwrite = TRUE)
+RangedSummarizedExperiment <- rse
+use_data(RangedSummarizedExperiment, compress = "xz", overwrite = TRUE)

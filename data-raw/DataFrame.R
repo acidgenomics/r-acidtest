@@ -1,0 +1,5 @@
+library(usethis)
+library(S4Vectors)
+data(matrix)
+DataFrame <- DataFrame(matrix)
+use_data(DataFrame, compress = "xz", overwrite = TRUE)

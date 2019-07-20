@@ -1,6 +1,3 @@
-# Seurat example data.
-# Updated 2019-07-20.
-
 library(pryr)
 library(reticulate)
 library(Matrix)

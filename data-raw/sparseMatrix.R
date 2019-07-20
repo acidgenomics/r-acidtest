@@ -1,0 +1,7 @@
+library(usethis)
+library(Matrix)
+i <- c(1L, 3L:8L)
+j <- c(2L, 9L, 6L:10L)
+x <- 7 * (1:7)
+sparseMatrix <- sparseMatrix(i = i, j = j, x = x)
+use_data(sparseMatrix, compress = "xz", overwrite = TRUE)

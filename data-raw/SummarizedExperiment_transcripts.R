@@ -1,6 +1,3 @@
-# Transcript-level SummarizedExperiment example.
-# Updated 2019-07-16.
-
 library(usethis)
 library(pryr)
 library(SummarizedExperiment)
@@ -56,5 +53,5 @@ object_size(se)
 stopifnot(object_size(se) < limit)
 validObject(se)
 
-txse <- se
-use_data(txse, compress = "xz", overwrite = TRUE)
+SummarizedExperiment_transcripts
+use_data(SummarizedExperiment_transcripts, compress = "xz", overwrite = TRUE)

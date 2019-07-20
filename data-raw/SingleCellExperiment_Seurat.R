@@ -46,4 +46,5 @@ object_size(sce)
 stopifnot(object_size(sce) < limit)
 validObject(sce)
 
-use_data(sce, compress = "xz", overwrite = TRUE)
+SingleCellExperiment_Seurat
+use_data(SingleCellExperiment_Seurat, compress = "xz", overwrite = TRUE)
