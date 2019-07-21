@@ -1,5 +1,7 @@
 library(usethis)
 # Order was randomized using `sample()`.
+nrow <- 8L
+ncol <- 4L
 matrix_lfc <- matrix(
     # nolint start
     data = c(
@@ -9,12 +11,12 @@ matrix_lfc <- matrix(
          4.00,  0.50, -2.00,  2.00,  0.25, -1.25,  0.25,  0.00
     ),
     # nolint end
-    nrow = 8L,
-    ncol = 4L,
+    nrow = nrow,
+    ncol = ncol,
     byrow = FALSE,
     dimnames = list(
-        paste0("gene", seq_len(8L)),
-        paste0("contrast", seq_len(4L))
+        sprintf("gene%02d", seq_len(nrow)),
+        sprintf("contrast%02d", seq_len(ncol))
     )
 )
 use_data(matrix_lfc, compress = "xz", overwrite = TRUE)

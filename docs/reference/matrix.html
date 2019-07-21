@@ -127,15 +127,12 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>matrix</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: data set ‘matrix’ not found</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>matrix</span>)</div><div class='output co'>#&gt; [1] "function"</div><div class='input'><span class='no'>matrix</span></div><div class='output co'>#&gt; function (data = NA, nrow = 1, ncol = 1, byrow = FALSE, dimnames = NULL) 
-#&gt; {
-#&gt;     if (is.object(data) || !is.atomic(data)) 
-#&gt;         data &lt;- as.vector(data)
-#&gt;     .Internal(matrix(data, nrow, ncol, byrow, dimnames, missing(nrow), 
-#&gt;         missing(ncol)))
-#&gt; }
-#&gt; &lt;bytecode: 0x7f8f8209d6b0&gt;
-#&gt; &lt;environment: namespace:base&gt;</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>matrix</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>matrix</span>)</div><div class='output co'>#&gt; [1] "matrix"</div><div class='input'><span class='no'>matrix</span></div><div class='output co'>#&gt;                 sample1 sample2 sample3 sample4
+#&gt; ENSG00000000001       1       5       9      13
+#&gt; ENSG00000000002       2       6      10      14
+#&gt; ENSG00000000003       3       7      11      15
+#&gt; ENSG00000000004       4       8      12      16</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

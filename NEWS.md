@@ -1,4 +1,4 @@
-## acidtest 0.2.0 (2019-07-20)
+## acidtest 0.2.0 (2019-07-21)
 
 - Disabled lazy data loading.
 - Spelled out object class names to make example data more straightforward.
