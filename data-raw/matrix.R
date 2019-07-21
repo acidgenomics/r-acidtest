@@ -1,17 +1,14 @@
 library(usethis)
+nrow <- 4L
+ncol <- 4L
 matrix <- matrix(
-    data = seq(1L:16L),
-    nrow = 4L,
-    ncol = 4L,
-    byrow = FALSE,
+    data = seq(nrow * ncol),
+    nrow = nrow,
+    ncol = ncol,
+    byrow = TRUE,
     dimnames = list(
-        c(
-            "ENSG00000000001",
-            "ENSG00000000002",
-            "ENSG00000000003",
-            "ENSG00000000004"
-        ),
-        paste0("sample", seq_len(4L))
+        sprintf("gene%02d", seq_len(nrow)),
+        sprintf("sample%02d", seq_len(ncol))
     )
 )
 use_data(matrix, overwrite = TRUE, compress = "xz")
