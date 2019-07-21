@@ -24,7 +24,7 @@ params <- newSplatParams() %>%
     setParam(name = "nGenes", value = 500L) %>%
     setParam(name = "de.facLoc", value = 1L) %>%
     setParam(name = "de.facScale", value = 0.25) %>%
-    # Add more dropout (to test zinbwave weights and DE).
+    ## Add more dropout (to test zinbwave weights and DE).
     setParam(name = "dropout.type", value = "experiment") %>%
     setParam(name = "dropout.mid", value = 3L)
 sce <- splatSimulate(
