@@ -1,3 +1,4 @@
+library(usethis)
 library(SummarizedExperiment)
 nrow <- 50L
 ncol <- 4L
