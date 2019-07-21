@@ -3,8 +3,8 @@ library(pryr)
 library(SummarizedExperiment)
 library(basejump)
 
-# Restrict to 1 MB.
-# Use `pryr::object_size()` instead of `utils::object.size()`.
+## Restrict to 1 MB.
+## Use `pryr::object_size()` instead of `utils::object.size()`.
 limit <- structure(1e6, class = "object_size")
 
 organism <- "Homo sapiens"
@@ -13,7 +13,7 @@ release <- 92L
 tx2gene <- makeTx2GeneFromEnsembl(organism, release = release)
 print(tx2gene)
 
-# Pick transcripts that have gene overlaps, to test our aggregate code.
+## Pick transcripts that have gene overlaps, to test our aggregate code.
 transcripts <- c(
     "ENST00000494424",
     "ENST00000496771",
@@ -43,7 +43,7 @@ se <- SummarizedExperiment(
     metadata = list(date = Sys.Date())
 )
 
-# Size checks.
+## Size checks.
 vapply(
     X = coerceS4ToList(se),
     FUN = object_size,

@@ -1,16 +1,16 @@
-# Create minimal example GFF/GTF files.
-# Updated 2019-07-16.
+## Create minimal example GFF/GTF files.
+## Updated 2019-07-16.
 
-# Note that these commands are memory hungry and don't always work well on a
-# low power virtual machine.
+## Note that these commands are memory hungry and don't always work well on a
+## low power virtual machine.
 
-# Refer to koopa `download-gtf.sh` for URLs.
+## Refer to koopa `download-gtf.sh` for URLs.
 
-# Set the working directory to script path.
+## Set the working directory to script path.
 
 
 
-# Ensembl GRCh38 GTF ====
+## Ensembl GRCh38 GTF ==========================================================
 download.file(
     url = pasteURL(
         "ftp.ensembl.org",
@@ -24,14 +24,14 @@ download.file(
     destfile = "ensembl.gtf.gz"
 )
 gunzip("ensembl.gtf.gz", remove = FALSE, overwrite = TRUE)
-# Note that this manual cutoff can create issues with TxDb checks.
+## Note that this manual cutoff can create issues with TxDb checks.
 system2("head -n 1000 ensembl.gtf > ensembl_head.gtf")
 file.rename("ensembl_head.gtf", "ensembl.gtf")
 gzip("ensembl.gtf", overwrite = TRUE)
 
 
 
-# Ensembl GRCh38 GFF3 ====
+## Ensembl GRCh38 GFF3 =========================================================
 download.file(
     url = pasteURL(
         "ftp.ensembl.org",
@@ -51,7 +51,7 @@ gzip("ensembl.gff3", overwrite = TRUE)
 
 
 
-# GENCODE GRCh38 GTF ====
+## GENCODE GRCh38 GTF ====
 download.file(
     url = pasteURL(
         "ftp.ebi.ac.uk",
@@ -72,7 +72,7 @@ gzip("gencode.gtf", overwrite = TRUE)
 
 
 
-# GENCODE GRCh38 GFF3 ====
+## GENCODE GRCh38 GFF3 =========================================================
 download.file(
     url = pasteURL(
         "ftp.ebi.ac.uk",
@@ -94,7 +94,7 @@ gzip("gencode.gff3", overwrite = TRUE)
 
 
 
-# RefSeq GRCh38 GFF3 ====
+## RefSeq GRCh38 GFF3 ==========================================================
 download.file(
     url = pasteURL(
         "ftp.ncbi.nlm.nih.gov",
@@ -116,7 +116,7 @@ gzip("refseq.gff", overwrite = TRUE)
 
 
 
-# FlyBase GTF ====
+## FlyBase GTF =================================================================
 download.file(
     url = pasteURL(
         "ftp.flybase.net",
@@ -136,7 +136,7 @@ gzip("flybase.gtf", overwrite = TRUE)
 
 
 
-# WormBase GTF ====
+## WormBase GTF ================================================================
 download.file(
     url = pasteURL(
         "ftp.wormbase.org",
