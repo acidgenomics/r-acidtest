@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Seurat — Seurat • acidtest</title>
+<title>Single cell experiment — SingleCellExperiment • acidtest</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -34,9 +34,9 @@
 
   <link href="../extra.css" rel="stylesheet">
   
-<meta property="og:title" content="Seurat — Seurat" />
+<meta property="og:title" content="Single cell experiment — SingleCellExperiment" />
 
-<meta property="og:description" content="Example Seurat (v3) object." />
+<meta property="og:description" content="Example SingleCellExperiment containing gene-level RNA-seq data." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -108,39 +108,47 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Seurat</h1>
-    <small class="dont-index">Source: <a href='https://github.com/acidgenomics/acidtest/blob/master/R/Seurat.R'><code>R/Seurat.R</code></a></small>
-    <div class="hidden name"><code>Seurat.Rd</code></div>
+    <h1>Single cell experiment</h1>
+    <small class="dont-index">Source: <a href='https://github.com/acidgenomics/acidtest/blob/master/R/SingleCellExperiment.R'><code>R/SingleCellExperiment.R</code></a></small>
+    <div class="hidden name"><code>SingleCellExperiment.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Example <code>Seurat</code> (v3) object.</p>
+    <p>Example <code>SingleCellExperiment</code> containing gene-level RNA-seq data.</p>
     
     </div>
 
-    <pre class="usage"><span class='no'>Seurat</span></pre>
+    <pre class="usage"><span class='no'>SingleCellExperiment</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>An object of class <code>Seurat</code> with 230 rows and 80 columns.</p>
+    <p>An object of class <code>SingleCellExperiment</code> with 500 rows and 100 columns.</p>
+    
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'>
+<ul>
+<li><p><code>splatter::splatSimulate()</code>.</p></li>
+<li><p><code>scater::sc_example_counts</code>.</p></li>
+</ul>
+</div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"Seurat"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
-    <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>Seurat</span>)
-    <span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>Seurat</span>)
-    <span class='no'>Seurat</span>
-}</div><div class='output co'>#&gt; An object of class Seurat 
-#&gt; 230 features across 80 samples within 1 assay 
-#&gt; Active assay: RNA (230 features)
-#&gt;  3 dimensional reductions calculated: pca, tsne, umap</div></pre>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"SingleCellExperiment"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
+    <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>SingleCellExperiment</span>)
+    <span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>SingleCellExperiment</span>)
+    <span class='no'>SingleCellExperiment</span>
+}</div><div class='output co'>#&gt; <span class='warning'>Warning: data set ‘SingleCellExperiment’ not found</span></div><div class='output co'>#&gt; <span class='error'>Error in eval(expr, envir, enclos): object 'SingleCellExperiment' not found</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#see-also">See also</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>
