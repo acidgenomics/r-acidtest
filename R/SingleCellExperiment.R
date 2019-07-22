@@ -8,8 +8,8 @@
 #'
 #' @examples
 #' if (requireNamespace("SingleCellExperiment", quietly = TRUE)) {
-#'     data(SingleCellExperiment_splatter)
-#'     class(SingleCellExperiment_splatter)
-#'     SingleCellExperiment_splatter
+#'     data(SingleCellExperiment)
+#'     class(SingleCellExperiment)
+#'     SingleCellExperiment
 #' }
-"SingleCellExperiment_splatter"
+"SingleCellExperiment"

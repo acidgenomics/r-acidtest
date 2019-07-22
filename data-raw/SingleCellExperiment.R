@@ -1,5 +1,5 @@
 ## Gene-level SingleCellExperiment example.
-## Updated 2019-07-20.
+## Updated 2019-07-22.
 
 ## Splatter params are derived from:
 ## https://github.com/mikelove/zinbwave-deseq2/blob/master/zinbwave-deseq2.knit.md
@@ -81,5 +81,5 @@ object_size(sce)
 stopifnot(object_size(sce) < limit)
 validObject(sce)
 
-SingleCellExperiment_splatter <- sce
-use_data(SingleCellExperiment_splatter, compress = "xz", overwrite = TRUE)
+SingleCellExperiment <- sce
+use_data(SingleCellExperiment, compress = "xz", overwrite = TRUE)
