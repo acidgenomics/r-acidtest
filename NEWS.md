@@ -1,3 +1,11 @@
+## acidtest 0.2.0 (2019-07-21)
+
+- Disabled lazy data loading.
+- Spelled out object class names to make example data more straightforward.
+- Saved additional `SingleCellExperiment` and `SummarizedExperiment` examples.
+- There's no currently no supported way to redirect old data names, so these
+  changes are breaking.
+
 ## acidtest 0.1.5 (2019-07-16)
 
 - Added `seurat` example, migrated from pointillism package.
