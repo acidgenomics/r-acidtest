@@ -11,6 +11,9 @@ SingleCellExperiment
 \description{
 Example \code{SingleCellExperiment} containing gene-level RNA-seq data.
 }
+\note{
+Updated 2019-07-30.
+}
 \examples{
 if (requireNamespace("SingleCellExperiment", quietly = TRUE)) {
     data(SingleCellExperiment)
@@ -21,7 +24,7 @@ if (requireNamespace("SingleCellExperiment", quietly = TRUE)) {
 \seealso{
 \itemize{
 \item \code{splatter::splatSimulate()}.
-\item \code{scater::sc_example_counts}.
+\item \code{data(sc_example_counts, package = "scater")}.
 }
 }
 \keyword{datasets}
