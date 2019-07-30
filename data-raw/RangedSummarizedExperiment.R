@@ -4,9 +4,9 @@ library(SummarizedExperiment)
 library(basejump)
 library(DESeq2)
 
-## Restrict to 1 MB.
+## Restrict to 1.5 MB.
 ## Use `pryr::object_size()` instead of `utils::object.size()`.
-limit <- structure(1e6, class = "object_size")
+limit <- structure(1.5e6, class = "object_size")
 
 organism <- "Homo sapiens"
 release <- 92L
@@ -30,10 +30,7 @@ rse <- autopadZeros(rse, rownames = TRUE)
 ## Row data. Include real `geneID`, `geneName` columns to test mapping.
 rowRanges <- makeGRangesFromEnsembl(organism = organism, release = release)
 ## Subset to match the number of rows in the example.
-rowRanges <- rowRanges[
-    i = seq_len(nrow(rse)),
-    j = c("geneID", "geneName", "geneBiotype", "broadClass", "entrezID")
-]
+rowRanges <- rowRanges[seq_len(nrow(rse)), ]
 ## Relevel the factor columns, to save disk space.
 rowRanges <- relevelRowRanges(rowRanges)
 ## Note that we're keeping the original rownames from dds_small, and they won't
@@ -48,11 +45,7 @@ metadata(rse)[["date"]] <- Sys.Date()
 interestingGroups(rse) <- "condition"
 
 ## Size check.
-vapply(
-    X = coerceS4ToList(rse),
-    FUN = object_size,
-    FUN.VALUE = numeric(1L)
-)
+lapply(coerceS4ToList(rse), object_size)
 object_size(rse)
 stopifnot(object_size(rse) < limit)
 validObject(rse)

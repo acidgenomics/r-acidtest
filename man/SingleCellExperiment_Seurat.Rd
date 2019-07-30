@@ -11,6 +11,9 @@ SingleCellExperiment_Seurat
 \description{
 Example \code{SingleCellExperiment} containing gene-level RNA-seq data.
 }
+\note{
+Updated 2019-07-30.
+}
 \examples{
 if (requireNamespace("SingleCellExperiment", quietly = TRUE)) {
     data(SingleCellExperiment_Seurat)
@@ -20,7 +23,7 @@ if (requireNamespace("SingleCellExperiment", quietly = TRUE)) {
 }
 \seealso{
 \itemize{
-\item \code{Seurat::pbmc_small}.
+\item \code{data(pbmc_small, package = "Seurat")}.
 }
 }
 \keyword{datasets}
