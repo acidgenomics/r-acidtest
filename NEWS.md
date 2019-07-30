@@ -1,3 +1,8 @@
+## acidtest 0.2.1 (2019-07-30)
+
+- `RangedSummarizedExperiment`: Resaved with additional metadata columns in
+  `rowData` that are useful for unit testing in DESeqAnalysis package.
+
 ## acidtest 0.2.0 (2019-07-21)
 
 - Disabled lazy data loading.

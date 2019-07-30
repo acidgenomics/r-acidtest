@@ -68,7 +68,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">acidtest</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.1</span>
       </span>
     </div>
 
@@ -125,12 +125,16 @@
 
     <p>An object of class <code>SingleCellExperiment</code> with 500 rows and 100 columns.</p>
     
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+
+    <p>Updated 2019-07-30.</p>
+    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'>
 <ul>
-<li><p><code>splatter::splatSimulate()</code>.</p></li>
-<li><p><code>scater::sc_example_counts</code>.</p></li>
+<li><p><code><a href='https://rdrr.io/pkg/splatter/man/splatSimulate.html'>splatter::splatSimulate()</a></code>.</p></li>
+<li><p><code><a href='https://rdrr.io/r/utils/data.html'>data(sc_example_counts, package = "scater")</a></code>.</p></li>
 </ul>
 </div>
     
@@ -140,13 +144,24 @@
     <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>SingleCellExperiment</span>)
     <span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>SingleCellExperiment</span>)
     <span class='no'>SingleCellExperiment</span>
-}</div><div class='output co'>#&gt; <span class='warning'>Warning: data set ‘SingleCellExperiment’ not found</span></div><div class='output co'>#&gt; <span class='error'>Error in eval(expr, envir, enclos): object 'SingleCellExperiment' not found</span></div></pre>
+}</div><div class='output co'>#&gt; class: SingleCellExperiment 
+#&gt; dim: 500 100 
+#&gt; metadata(1): date
+#&gt; assays(1): counts
+#&gt; rownames(500): gene1 gene2 ... gene499 gene500
+#&gt; rowData names(5): geneID geneName geneBiotype broadClass entrezID
+#&gt; colnames(100): cell001 cell002 ... cell099 cell100
+#&gt; colData names(2): expLibSize sampleID
+#&gt; reducedDimNames(0):
+#&gt; spikeNames(0):</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#note">Note</a></li>
 
       <li><a href="#see-also">See also</a></li>
       
