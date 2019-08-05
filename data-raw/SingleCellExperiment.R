@@ -1,5 +1,5 @@
 ## Gene-level SingleCellExperiment example.
-## Updated 2019-07-22.
+## Updated 2019-08-05.
 
 ## Splatter params are derived from:
 ## https://github.com/mikelove/zinbwave-deseq2/blob/master/zinbwave-deseq2.knit.md
@@ -35,19 +35,15 @@ sce <- splatSimulate(
 
 ## Sanitize the dimnames into camel case.
 sce <- camel(sce, rownames = TRUE, colnames = TRUE)
+colData(sce) <- camel(colData(sce))
 
 ## Prepare column data.
-colData(sce) <- camel(colData(sce))
-## Add `sampleID` column. Note that `sampleName` is recommended, but if it is
-## not defined, it should be generated from the `sampleID` automatically.
-sce$sampleID <- factor(gsub("group", "sample", camel(sce$group)))
-sce$batch <- NULL
-sce$cell <- NULL
-sce$group <- NULL
+colData(sce) <- DataFrame(
+    sampleID = factor(gsub("group", "sample", camel(sce$group))),
+    row.names = colnames(sce)
+)
 
 ## Pad the zeros in rows and columns.
-## Note that this needs to come after setting up `colData`, otherwise will
-## error because `sampleID` column is not defined.
 sce <- autopadZeros(sce)
 
 ## Just slot the raw counts, as a sparse matrix.
@@ -57,10 +53,7 @@ assays(sce) <- list(counts = counts)
 
 ## Prepare row data.
 rowRanges <- makeGRangesFromEnsembl(organism, release = release)
-rowRanges <- rowRanges[
-    i = seq_len(nrow(sce)),
-    j = c("geneID", "geneName", "geneBiotype", "broadClass", "entrezID")
-]
+rowRanges <- rowRanges[seq_len(nrow(sce)), ]
 ## Relevel the factor columns, to save disk space.
 rowRanges <- relevelRowRanges(rowRanges)
 ## Note that we're keeping the original rownames from dds_small, and they won't
