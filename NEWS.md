@@ -1,3 +1,7 @@
+## acidtest 0.2.2 (2019-08-02)
+
+- `cell_data_set`: New example monocle3 `cell_data_set` S4 object.
+
 ## acidtest 0.2.1 (2019-07-30)
 
 - `RangedSummarizedExperiment`: Resaved with additional metadata columns in
