@@ -4,20 +4,22 @@
 [![AppVeyor CI build status](https://ci.appveyor.com/api/projects/status/or2o22215alx5xy8/branch/master?svg=true)](https://ci.appveyor.com/project/mjsteinbaugh/acidtest/branch/master)
 [![Repo status: active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
-Reference data for unit testing from [Acid Genomics].
+Reference data for unit testing from [Acid Genomics][].
 
 ## Installation
 
-### [Bioconductor][] method
+This is an [R][] package.
 
-We recommend installing the package with [BiocManager][].
+### [R][] method
 
 ```r
-if (!require("BiocManager")) {
-    install.packages("BiocManager")
+if (!requireNamespace("remotes", quietly = TRUE)) {
+    install.packages("remotes")
 }
-BiocManager::install("remotes")
-BiocManager::install("acidgenomics/acidtest")
+Sys.setenv(R_REMOTES_UPGRADE = "always")
+## Set `GITHUB_PAT` in `~/.Renviron` if you get a rate limit error.
+remotes::install_github("acidgenomics/acidtest")
+remotes::update_packages()
 ```
 
 [Acid Genomics]: https://acidgenomics.com/
