@@ -26,8 +26,18 @@ library(tidyverse)
 virtualenv_list()
 ## [1] "reticulate"
 
+## > virtualenv_create(envname = "reticulate")
+
 ## > source ~/.virtualenvs/reticulate/bin/activate
 use_virtualenv(virtualenv = "reticulate", required = TRUE)
+
+## > virtualenv_install(
+## >     envname = "reticulate",
+## >     packages = c(
+## >         "louvain",
+## >         "umap-learn"
+## >     )
+## > )
 
 py_config()
 
