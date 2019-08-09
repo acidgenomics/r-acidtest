@@ -1,5 +1,5 @@
 ## Gene-level SingleCellExperiment example.
-## Updated 2019-08-05.
+## Updated 2019-08-09.
 
 ## Splatter params are derived from:
 ## https://github.com/mikelove/zinbwave-deseq2/blob/master/zinbwave-deseq2.knit.md
@@ -44,7 +44,7 @@ colData(sce) <- DataFrame(
 )
 
 ## Pad the zeros in rows and columns.
-sce <- autopadZeros(sce)
+sce <- autopadZeros(sce, rownames = TRUE, colnames = TRUE)
 
 ## Just slot the raw counts, as a sparse matrix.
 counts <- counts(sce)
