@@ -1,3 +1,9 @@
+## acidtest 0.2.3 (2019-08-10)
+
+- `SingleCellExperiment`: Updated example to zero pad both row and column names.
+  Previously, only the column names were padded.
+- Improved reticulate documentation on how to process Seurat.
+
 ## acidtest 0.2.2 (2019-08-02)
 
 - `cell_data_set`: New example monocle3 `cell_data_set` S4 object.
