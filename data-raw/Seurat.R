@@ -7,11 +7,26 @@ library(Seurat)  # 3.0
 library(bcbioSingleCell)
 library(tidyverse)
 
+## Create virtualenv in shell:
+##
 ## ```sh
-## $ source ~/.virtualenvs/reticulate/bin/activate
-## $ pip install --upgrade pip
-## $ pip install umap-learn
-## $ deactivate
+## > python3 -m venv ~/.virtualenvs/reticulate
+## > source ~/.virtualenvs/reticulate/bin/activate
+## > pip install --upgrade pip
+## > pip install louvain umap-learn
+## > deactivate
+## ```
+##
+## Create virtualenv in R:
+##
+## ```r
+## > install.packages("reticulate")
+## > library(reticulate)
+## > virtualenv_create(envname = "reticulate")
+## > virtualenv_install(
+## >     envname = "reticulate",
+## >     packages = c("louvain", "umap-learn")
+## > )
 ## ```
 
 ## Check and make sure Python umap-learn is accessible to run UMAP.
@@ -22,27 +37,14 @@ library(tidyverse)
 ## https://github.com/satijalab/seurat/issues/486
 ##
 ## Can also set `RETICULATE_PYTHON` to python binary in `~/.Renviron`.
+## Use python3 installed at `/usr/local/bin/python3`.
 
 virtualenv_list()
-## [1] "reticulate"
-
-## > source ~/.virtualenvs/reticulate/bin/activate
 use_virtualenv(virtualenv = "reticulate", required = TRUE)
-
 py_config()
-
-## [Azure]
-## python:         /home/mike/.virtualenvs/reticulate/bin/python
-## libpython:      /usr/local/koopa/cellar/python/3.7.3/lib/libpython3.7m.so
-## pythonhome:     /usr/local/koopa/cellar/python/3.7.3:/usr/local/koopa/cellar/python/3.7.3
-## version:        3.7.3 (default, Jun 24 2019, 13:12:54)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
-## numpy:          /home/mike/.virtualenvs/reticulate/lib/python3.7/site-packages/numpy
-## numpy_version:  1.16.4
-
 stopifnot(py_module_available(module = "umap"))
 
 ## Restrict object size to 1 MB.
-## Use `pryr::object_size()` instead of `utils::object.size()`.
 limit <- structure(1e6, class = "object_size")
 
 data(pbmc_small, package = "Seurat")
