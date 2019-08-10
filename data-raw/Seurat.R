@@ -37,7 +37,6 @@ library(tidyverse)
 ## https://github.com/satijalab/seurat/issues/486
 ##
 ## Can also set `RETICULATE_PYTHON` to python binary in `~/.Renviron`.
-##
 ## Use python3 installed at `/usr/local/bin/python3`.
 
 virtualenv_list()
