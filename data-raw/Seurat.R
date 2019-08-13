@@ -26,7 +26,7 @@ library(tidyverse)
 ## > virtualenv_create(envname = "r-reticulate")
 ## > virtualenv_install(
 ## >     envname = "r-reticulate",
-## >     packages = c("louvain", "umap-learn")
+## >     packages = c("louvain", "numpy", "umap-learn")
 ## > )
 ## > virtualenv_list()
 ## ```
