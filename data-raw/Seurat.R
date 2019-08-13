@@ -12,6 +12,7 @@ library(tidyverse)
 ## https://github.com/satijalab/seurat/issues/486
 
 ## Point reticulate to python3 binary in `~/.Renviron`.
+## Point to `python3` and not `python`!
 ## This works consistently on systems with python2 installed by default (e.g. RHEL7).
 ## RETICULATE_PYTHON="/usr/local/bin/python3"
 
