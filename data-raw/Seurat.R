@@ -1,11 +1,9 @@
-library(usethis)
-library(pryr)
-library(reticulate)
-library(Matrix)
-library(splatter)
-library(Seurat)  # 3.0
-library(bcbioSingleCell)
-library(tidyverse)
+library(usethis)     # 1.5.1
+library(pryr)        # 0.1.4
+library(basejump)    # 0.11.8
+library(reticulate)  # 1.13
+library(Matrix)      # 1.2
+library(Seurat)      # 3.0
 
 ## Create virtualenv in shell:
 ##
