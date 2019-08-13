@@ -7,7 +7,12 @@ library(Seurat)  # 3.0
 library(bcbioSingleCell)
 library(tidyverse)
 
-## Set `RETICULATE_PYTHON` in `~/.Renviron`:
+## umap-learn via reticulate doesn't work well with conda.
+## Set up a Python 3 virtual environment instead.
+## https://github.com/satijalab/seurat/issues/486
+
+## Point reticulate to python3 binary in `~/.Renviron`.
+## This works consistently on systems with python2 installed by default (e.g. RHEL7).
 ## RETICULATE_PYTHON="/usr/local/bin/python3"
 
 ## Reticulate looks for `virtualenv` (Python 2) and will error out otherwise.
@@ -43,16 +48,8 @@ library(tidyverse)
 
 ## Check and make sure Python umap-learn is accessible to run UMAP.
 ## We're using this in the `Seurat::RunUMAP()` call below.
-##
-## umap-learn via reticulate doesn't work well with conda.
-## Set up a Python 3 virtual environment instead.
-## https://github.com/satijalab/seurat/issues/486
-##
-## Can also set `RETICULATE_PYTHON` to python binary in `~/.Renviron`.
-## Use python3 installed at `/usr/local/bin/python3`.
-
 virtualenv_list()
-use_virtualenv(virtualenv = "reticulate", required = TRUE)
+use_virtualenv(virtualenv = "r-reticulate", required = TRUE)
 py_config()
 stopifnot(py_module_available(module = "umap"))
 
