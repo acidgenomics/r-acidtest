@@ -19,10 +19,15 @@ library(tidyverse)
 ##
 ## Create virtualenv in R:
 ##
+## Set `RETICULATE_PYTHON` in `~/.Renviron`:
+## ```
+## RETICULATE_PYTHON="/usr/local/bin/python3"
+## ```
+##
 ## ```r
 ## > install.packages("reticulate")
 ## > library(reticulate)
-## > use_python("/usr/local/bin/python3")
+## > ## Check for Python 3.
 ## > py_config()
 ## > virtualenv_create(envname = "r-reticulate")
 ## > virtualenv_install(
