@@ -23,11 +23,13 @@ library(tidyverse)
 ## > install.packages("reticulate")
 ## > library(reticulate)
 ## > use_python("/usr/local/bin/python3")
+## > py_config()
 ## > virtualenv_create(envname = "r-reticulate")
 ## > virtualenv_install(
 ## >     envname = "r-reticulate",
 ## >     packages = c("louvain", "umap-learn")
 ## > )
+## > virtualenv_list()
 ## ```
 
 ## Check and make sure Python umap-learn is accessible to run UMAP.
