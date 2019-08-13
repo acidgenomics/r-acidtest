@@ -7,22 +7,16 @@ library(Seurat)  # 3.0
 library(bcbioSingleCell)
 library(tidyverse)
 
-## Create virtualenv in shell:
-##
-## ```sh
-## > python3 -m venv ~/.virtualenvs/reticulate
-## > source ~/.virtualenvs/reticulate/bin/activate
-## > pip install --upgrade pip
-## > pip install louvain umap-learn
-## > deactivate
-## ```
-##
-## Create virtualenv in R:
-##
 ## Set `RETICULATE_PYTHON` in `~/.Renviron`:
-## ```
 ## RETICULATE_PYTHON="/usr/local/bin/python3"
+
+## Reticulate looks for `virtualenv` (Python 2) and will error out otherwise.
+## ```sh
+## sudo pip install --upgrade pip
+## sudo pip install virtualenv
 ## ```
+
+## Create virtualenv in R (preferred):
 ##
 ## ```r
 ## > install.packages("reticulate")
@@ -35,6 +29,16 @@ library(tidyverse)
 ## >     packages = c("louvain", "umap-learn")
 ## > )
 ## > virtualenv_list()
+## ```
+
+## Create virtualenv in shell (alternate):
+##
+## ```sh
+## > python3 -m venv ~/.virtualenvs/r-reticulate
+## > source ~/.virtualenvs/r-reticulate/bin/activate
+## > pip install --upgrade pip
+## > pip install louvain umap-learn
+## > deactivate
 ## ```
 
 ## Check and make sure Python umap-learn is accessible to run UMAP.
