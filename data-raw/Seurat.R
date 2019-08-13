@@ -21,12 +21,23 @@ library(tidyverse)
 ## sudo pip install virtualenv
 ## ```
 
-## Create virtualenv in R (preferred):
+## Create virtualenv in shell (preferred):
+##
+## ```sh
+## > python3 -m venv ~/.virtualenvs/r-reticulate
+## > source ~/.virtualenvs/r-reticulate/bin/activate
+## > pip install --upgrade pip
+## > pip install louvain numpy umap-learn
+## > deactivate
+## ```
+
+## Create virtualenv in R (alternate):
 ##
 ## ```r
 ## > install.packages("reticulate")
 ## > library(reticulate)
 ## > ## Check for Python 3.
+## > ## Don't continue if this returns python2, which happens on RHEL7.
 ## > py_config()
 ## > virtualenv_create(envname = "r-reticulate")
 ## > virtualenv_install(
@@ -34,16 +45,6 @@ library(tidyverse)
 ## >     packages = c("louvain", "numpy", "umap-learn")
 ## > )
 ## > virtualenv_list()
-## ```
-
-## Create virtualenv in shell (alternate):
-##
-## ```sh
-## > python3 -m venv ~/.virtualenvs/r-reticulate
-## > source ~/.virtualenvs/r-reticulate/bin/activate
-## > pip install --upgrade pip
-## > pip install louvain umap-learn
-## > deactivate
 ## ```
 
 ## Check and make sure Python umap-learn is accessible to run UMAP.
