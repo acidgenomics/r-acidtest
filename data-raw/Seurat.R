@@ -78,7 +78,8 @@ table <- make.unique(as.character(rowRanges$geneName))
 names(rowRanges) <- table
 stopifnot(all(x %in% table))
 which <- match(x = x, table = table)
-rowRanges <- rowRanges[which] %>% relevelRowRanges()
+rowRanges <- rowRanges[which]
+rowRanges <- relevel(rowRanges)
 stopifnot(object_size(rowRanges) < limit)
 rowRanges(Seurat) <- rowRanges
 
