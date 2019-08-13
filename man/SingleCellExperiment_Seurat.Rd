@@ -12,7 +12,7 @@ SingleCellExperiment_Seurat
 Example \code{SingleCellExperiment} containing gene-level RNA-seq data.
 }
 \note{
-Updated 2019-07-30.
+Updated 2019-08-13.
 }
 \examples{
 if (requireNamespace("SingleCellExperiment", quietly = TRUE)) {

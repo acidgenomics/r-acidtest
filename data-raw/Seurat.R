@@ -1,9 +1,9 @@
-library(usethis)     # 1.5.1
-library(pryr)        # 0.1.4
-library(basejump)    # 0.11.8
-library(reticulate)  # 1.13
-library(Matrix)      # 1.2
-library(Seurat)      # 3.0
+library(usethis)      # 1.5.1
+library(pryr)         # 0.1.4
+library(basejump)     # 0.11.8
+library(reticulate)   # 1.13
+library(Seurat)       # 3.0.2
+library(pointillism)  # 0.4.0
 
 ## umap-learn via reticulate doesn't work well with conda.
 ## Set up a Python 3 virtual environment instead.
@@ -59,7 +59,7 @@ py_config()
 ## version:        3.7.4 (default, Jul 30 2019, 18:46:24)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
 ## numpy:          /home/mike/.virtualenvs/r-reticulate/lib/python3.7/site-packages/numpy
 ## numpy_version:  1.17.0
-## 
+##
 ## python versions found:
 ##  /home/mike/.virtualenvs/r-reticulate/bin/python
 ##  /usr/local/bin/python
