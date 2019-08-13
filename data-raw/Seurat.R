@@ -52,6 +52,22 @@ library(tidyverse)
 virtualenv_list()
 use_virtualenv(virtualenv = "r-reticulate", required = TRUE)
 py_config()
+
+## Should see something like this:
+## python:         /home/mike/.virtualenvs/r-reticulate/bin/python
+## libpython:      /usr/local/koopa/cellar/python/3.7.4/lib/libpython3.7m.so
+## pythonhome:     /usr/local/koopa/cellar/python/3.7.4:/usr/local/koopa/cellar/python/3.7.4
+## version:        3.7.4 (default, Jul 30 2019, 18:46:24)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+## numpy:          /home/mike/.virtualenvs/r-reticulate/lib/python3.7/site-packages/numpy
+## numpy_version:  1.17.0
+## 
+## python versions found:
+##  /home/mike/.virtualenvs/r-reticulate/bin/python
+##  /usr/local/bin/python
+##  /usr/bin/python
+##  /usr/local/bin/python3
+
+## Now we're ready to check and see if UMAP is available.
 stopifnot(py_module_available(module = "umap"))
 
 ## Restrict object size to 1 MB.
