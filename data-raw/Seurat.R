@@ -22,9 +22,9 @@ library(tidyverse)
 ## ```r
 ## > install.packages("reticulate")
 ## > library(reticulate)
-## > virtualenv_create(envname = "reticulate")
+## > virtualenv_create(envname = "r-reticulate")
 ## > virtualenv_install(
-## >     envname = "reticulate",
+## >     envname = "r-reticulate",
 ## >     packages = c("louvain", "umap-learn")
 ## > )
 ## ```
