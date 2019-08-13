@@ -1,3 +1,9 @@
+## acidtest 0.2.4 (2019-08-13)
+
+- Resaved `Seurat` and `SingleCellExperiment_Seurat` objects.
+- Added additional comments regarding how to configure reticulate and UMAP to
+  generate an example `Seurat` object with dimension reduction applied.
+
 ## acidtest 0.2.3 (2019-08-10)
 
 - `SingleCellExperiment`: Updated example to zero pad both row and column names.

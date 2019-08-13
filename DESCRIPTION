@@ -1,8 +1,8 @@
 Package: acidtest
 Title: Acid Genomics test data
 Description: Reference data for unit testing from Acid Genomics. 
-Version: 0.2.3
-Date: 2019-08-10
+Version: 0.2.4
+Date: 2019-08-13
 Authors@R: c(
     person(
         "Michael", "Steinbaugh",
