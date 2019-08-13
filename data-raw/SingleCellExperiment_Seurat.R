@@ -1,16 +1,13 @@
-## Create SingleCellExperiment object from Seurat.
-## Updated 2019-07-16.
-
 library(usethis)
 library(pryr)
-library(pointillism)  # 0.3.2
+library(pointillism)  # 0.4.0
 
 ## Restrict to 1 MB.
 ## Use `pryr::object_size()` instead of `utils::object.size()`.
 limit <- structure(1e6, class = "object_size")
 
-data(seurat, package = "acidtest")
-sce <- as(seurat, "SingleCellExperiment")
+data(Seurat, package = "acidtest")
+sce <- as(Seurat, "SingleCellExperiment")
 sce <- convertSymbolsToGenes(sce)
 
 ## Assays.
@@ -37,14 +34,10 @@ keep <- !grepl(pattern = "^vst.", x = colnames(mcols(rowRanges(sce))))
 mcols(rowRanges(sce)) <- mcols(rowRanges(sce))[keep]
 
 ## Report the size of each slot in bytes.
-vapply(
-    X = coerceS4ToList(sce),
-    FUN = object_size,
-    FUN.VALUE = numeric(1L)
-)
+lapply(coerceS4ToList(sce), object_size)
 object_size(sce)
 stopifnot(object_size(sce) < limit)
 validObject(sce)
 
-SingleCellExperiment_Seurat
+SingleCellExperiment_Seurat <- sce
 use_data(SingleCellExperiment_Seurat, compress = "xz", overwrite = TRUE)

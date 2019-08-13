@@ -1,47 +1,72 @@
-library(usethis)
-library(pryr)
-library(reticulate)
-library(Matrix)
-library(splatter)
-library(Seurat)  # 3.0
-library(bcbioSingleCell)
-library(tidyverse)
+library(usethis)      # 1.5.1
+library(pryr)         # 0.1.4
+library(basejump)     # 0.11.8
+library(reticulate)   # 1.13
+library(Seurat)       # 3.0.2
+library(pointillism)  # 0.4.0
 
-## Create virtualenv in shell:
+## umap-learn via reticulate doesn't work well with conda.
+## Set up a Python 3 virtual environment instead.
+## https://github.com/satijalab/seurat/issues/486
+
+## Point reticulate to python3 binary in `~/.Renviron`.
+## Point to `python3` and not `python`!
+## This works consistently on systems with python2 installed by default (e.g. RHEL7).
+## RETICULATE_PYTHON="/usr/local/bin/python3"
+
+## Reticulate looks for `virtualenv` (Python 2) and will error out otherwise.
+## ```sh
+## sudo pip install --upgrade pip
+## sudo pip install virtualenv
+## ```
+
+## Create virtualenv in shell (preferred):
 ##
 ## ```sh
-## > python3 -m venv ~/.virtualenvs/reticulate
-## > source ~/.virtualenvs/reticulate/bin/activate
+## > python3 -m venv ~/.virtualenvs/r-reticulate
+## > source ~/.virtualenvs/r-reticulate/bin/activate
 ## > pip install --upgrade pip
-## > pip install louvain umap-learn
+## > pip install louvain numpy umap-learn
 ## > deactivate
 ## ```
-##
-## Create virtualenv in R:
+
+## Create virtualenv in R (alternate):
 ##
 ## ```r
 ## > install.packages("reticulate")
 ## > library(reticulate)
-## > virtualenv_create(envname = "reticulate")
+## > ## Check for Python 3.
+## > ## Don't continue if this returns python2, which happens on RHEL7.
+## > py_config()
+## > virtualenv_create(envname = "r-reticulate")
 ## > virtualenv_install(
-## >     envname = "reticulate",
-## >     packages = c("louvain", "umap-learn")
+## >     envname = "r-reticulate",
+## >     packages = c("louvain", "numpy", "umap-learn")
 ## > )
+## > virtualenv_list()
 ## ```
 
 ## Check and make sure Python umap-learn is accessible to run UMAP.
 ## We're using this in the `Seurat::RunUMAP()` call below.
-##
-## umap-learn via reticulate doesn't work well with conda.
-## Set up a Python 3 virtual environment instead.
-## https://github.com/satijalab/seurat/issues/486
-##
-## Can also set `RETICULATE_PYTHON` to python binary in `~/.Renviron`.
-## Use python3 installed at `/usr/local/bin/python3`.
-
 virtualenv_list()
-use_virtualenv(virtualenv = "reticulate", required = TRUE)
+use_virtualenv(virtualenv = "r-reticulate", required = TRUE)
 py_config()
+
+## Should see something like this:
+## python:         /home/mike/.virtualenvs/r-reticulate/bin/python
+## libpython:      /usr/local/koopa/cellar/python/3.7.4/lib/libpython3.7m.so
+## pythonhome:     /usr/local/koopa/cellar/python/3.7.4:/usr/local/koopa/cellar/python/3.7.4
+## version:        3.7.4 (default, Jul 30 2019, 18:46:24)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+## numpy:          /home/mike/.virtualenvs/r-reticulate/lib/python3.7/site-packages/numpy
+## numpy_version:  1.17.0
+##
+## python versions found:
+##  /home/mike/.virtualenvs/r-reticulate/bin/python
+##  /usr/local/bin/python
+##  /usr/bin/python
+##  /usr/local/bin/python3
+
+## Now we're ready to check and see if UMAP is available.
 stopifnot(py_module_available(module = "umap"))
 
 ## Restrict object size to 1 MB.
@@ -69,7 +94,8 @@ table <- make.unique(as.character(rowRanges$geneName))
 names(rowRanges) <- table
 stopifnot(all(x %in% table))
 which <- match(x = x, table = table)
-rowRanges <- rowRanges[which] %>% relevelRowRanges()
+rowRanges <- rowRanges[which]
+rowRanges <- relevel(rowRanges)
 stopifnot(object_size(rowRanges) < limit)
 rowRanges(Seurat) <- rowRanges
 
