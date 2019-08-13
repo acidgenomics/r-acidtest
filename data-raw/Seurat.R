@@ -22,6 +22,7 @@ library(tidyverse)
 ## ```r
 ## > install.packages("reticulate")
 ## > library(reticulate)
+## > use_python("/usr/local/bin/python3")
 ## > virtualenv_create(envname = "r-reticulate")
 ## > virtualenv_install(
 ## >     envname = "r-reticulate",
