@@ -32,7 +32,7 @@ rowRanges <- makeGRangesFromEnsembl(organism = organism, release = release)
 ## Subset to match the number of rows in the example.
 rowRanges <- rowRanges[seq_len(nrow(rse)), ]
 ## Relevel the factor columns, to save disk space.
-rowRanges <- relevelRowRanges(rowRanges)
+rowRanges <- droplevels(rowRanges)
 ## Note that we're keeping the original rownames from dds_small, and they won't
 ## match the `geneID` column in rowRanges. This is intentional, for unit tests.
 names(rowRanges) <- rownames(rse)

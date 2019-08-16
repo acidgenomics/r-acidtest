@@ -95,7 +95,7 @@ names(rowRanges) <- table
 stopifnot(all(x %in% table))
 which <- match(x = x, table = table)
 rowRanges <- rowRanges[which]
-rowRanges <- relevel(rowRanges)
+rowRanges <- droplevels(rowRanges)
 stopifnot(object_size(rowRanges) < limit)
 rowRanges(Seurat) <- rowRanges
 

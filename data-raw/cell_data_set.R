@@ -82,8 +82,8 @@ topCells <- counts %>%
 cds <- cds[topGenes, topCells]
 
 ## Relevel the factors to decrease object size.
-rowData(cds) <- relevel(rowData(cds))
-colData(cds) <- relevel(colData(cds))
+rowData(cds) <- droplevels(rowData(cds))
+colData(cds) <- droplevels(colData(cds))
 
 slotNames(cds)
 ##  [1] "preprocess_aux"      "reduce_dim_aux"
