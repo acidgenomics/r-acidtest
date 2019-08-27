@@ -1,3 +1,7 @@
+## acidtest 0.2.6 (2019-08-27)
+
+- Updated R dependency to 3.6.
+
 ## acidtest 0.2.4 (2019-08-13)
 
 - Resaved `Seurat` and `SingleCellExperiment_Seurat` objects.
