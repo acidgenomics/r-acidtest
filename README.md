@@ -10,8 +10,6 @@ Reference data for unit testing.
 
 This is an [R][] package.
 
-### [R][] method
-
 ```r
 if (!requireNamespace("remotes", quietly = TRUE)) {
     install.packages("remotes")
@@ -22,7 +20,5 @@ remotes::install_github("acidgenomics/acidtest")
 remotes::update_packages()
 ```
 
-[Acid Genomics]: https://acidgenomics.com/
-[Bioconductor]: https://bioconductor.org/
-[BiocManager]: https://cran.r-project.org/package=BiocManager
-[R]: https://www.r-project.org/
+[acid genomics]: https://acidgenomics.com/
+[r]: https://www.r-project.org/
