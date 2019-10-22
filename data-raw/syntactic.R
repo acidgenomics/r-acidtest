@@ -16,8 +16,7 @@ syntactic <- list(
         "tx2gene",
         "TX2GeneID",
         "worfdbHTMLRemap",
-        123L,
-        NA
+        123L
     ),
     character_named = c(
         Item.A = "hello world",
