@@ -1,4 +1,8 @@
-## acidtest 0.2.6 (2019-08-27)
+## acidtest 0.2.6 (2019-10-21)
+
+- No longer checking against `NA` for syntactic functions.
+
+## acidtest 0.2.5 (2019-08-27)
 
 - Updated R dependency to 3.6.
 

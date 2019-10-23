@@ -1,9 +1,9 @@
 library(usethis)      # 1.5.1
 library(pryr)         # 0.1.4
-library(basejump)     # 0.11.8
+library(basejump)     # 0.11.11
 library(reticulate)   # 1.13
-library(Seurat)       # 3.0.2
-library(pointillism)  # 0.4.0
+library(Seurat)       # 3.1.0
+library(pointillism)  # 0.4.1
 
 ## umap-learn via reticulate doesn't work well with conda.
 ## Set up a Python 3 virtual environment instead.
