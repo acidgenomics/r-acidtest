@@ -1,14 +1,19 @@
+## Seurat example object.
+## Updated 2019-10-25.
+
 library(usethis)      # 1.5.1
 library(pryr)         # 0.1.4
-library(basejump)     # 0.11.11
+library(basejump)     # 0.11.19
 library(reticulate)   # 1.13
-library(Seurat)       # 3.1.0
-library(pointillism)  # 0.4.1
+library(Seurat)       # 3.1.1
+library(pointillism)  # 0.4.2
 
 ## umap-learn via reticulate doesn't work well with conda.
 ## Set up a Python 3 virtual environment instead.
 ## https://github.com/satijalab/seurat/issues/486
 
+
+## FIXME Safe to take this out?
 ## Reticulate looks for `virtualenv` (Python 2) and will error out otherwise.
 ##
 ## ```sh
@@ -22,22 +27,41 @@ library(pointillism)  # 0.4.1
 ## python3 -m venv ~/.virtualenvs/r-reticulate
 ## source ~/.virtualenvs/r-reticulate/bin/activate
 ## pip install --upgrade pip
-## pip install louvain numpy umap-learn
+##
+## ## scikit-learn can fail unless we install Cython manually first.
+## pip install Cython
+##
+## pip install numpy
+## pip install scikit-learn
+## pip install louvain
+##
+## LLVM 7+ is now required.
+##
+## RHEL 7-specific:
+## sudo yum install -y 'llvm7*'
+## export LLVM_CONFIG="/usr/bin/llvm-config-7.0-64"
+##
+## pip install llvmlite
+##
+## pip install numba
+##
+## pip install umap-learn
 ## deactivate
 ## ```
+
+## 2019-10-25: Hitting a numba timeout on pypi.org (Azure RHEL)
 
 ## Create virtualenv in R (alternate):
 ##
 ## ```r
 ## install.packages("reticulate")
 ## library(reticulate)
-## ## Check for Python 3.
-## ## Don't continue if this returns python2, which happens on RHEL7.
+## ## Check for Python 3. Don't continue if this returns Python 2.
 ## py_config()
 ## virtualenv_create(envname = "r-reticulate")
 ## virtualenv_install(
 ##     envname = "r-reticulate",
-##     packages = c("louvain", "numpy", "umap-learn")
+##     packages = c("louvain", "umap-learn")
 ## )
 ## virtualenv_list()
 ## ```
