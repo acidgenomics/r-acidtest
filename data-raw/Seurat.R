@@ -37,14 +37,12 @@ library(pointillism)  # 0.4.2
 ##
 ## LLVM 7+ is now required.
 ##
-## RHEL 7-specific:
-## sudo yum install -y 'llvm7*'
-## export LLVM_CONFIG="/usr/bin/llvm-config-7.0-64"
+## RHEL 7-specific LLVM fix:
+## > sudo yum install -y 'llvm7*'
+## > export LLVM_CONFIG="/usr/bin/llvm-config-7.0-64"
 ##
 ## pip install llvmlite
-##
 ## pip install numba
-##
 ## pip install umap-learn
 ## deactivate
 ## ```
