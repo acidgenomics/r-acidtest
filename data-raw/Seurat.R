@@ -12,15 +12,6 @@ library(pointillism)  # 0.4.2
 ## Set up a Python 3 virtual environment instead.
 ## https://github.com/satijalab/seurat/issues/486
 
-
-## FIXME Safe to take this out?
-## Reticulate looks for `virtualenv` (Python 2) and will error out otherwise.
-##
-## ```sh
-## sudo pip install --upgrade pip
-## sudo pip install virtualenv
-## ```
-
 ## Create virtualenv in shell (preferred):
 ##
 ## ```sh
