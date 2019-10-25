@@ -9,11 +9,6 @@ library(pointillism)  # 0.4.1
 ## Set up a Python 3 virtual environment instead.
 ## https://github.com/satijalab/seurat/issues/486
 
-## Point reticulate to python3 binary in `~/.Renviron`.
-## Point to `python3` and not `python`!
-## This works consistently on systems with python2 installed by default (e.g. RHEL7).
-## RETICULATE_PYTHON="/usr/local/bin/python3"
-
 ## Reticulate looks for `virtualenv` (Python 2) and will error out otherwise.
 ## ```sh
 ## sudo pip install --upgrade pip
