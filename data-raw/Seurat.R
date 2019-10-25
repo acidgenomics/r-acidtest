@@ -84,6 +84,17 @@ py_config()
 ##  /usr/bin/python
 ##  /usr/local/bin/python3
 
+## macOS (10.14.6) 2019-10-15:
+##
+## python:         /Users/mike/.virtualenvs/r-reticulate/bin/python
+## libpython:      /usr/local/opt/python/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib
+## pythonhome:     /usr/local/opt/python/Frameworks/Python.framework/Versions/3.7:/usr/local/opt/python/Frameworks/Python.framework/Versions/3.7
+## version:        3.7.4 (default, Sep  7 2019, 18:27:02)  [Clang 10.0.1 (clang-1001.0.46.4)]
+## numpy:          /Users/mike/.virtualenvs/r-reticulate/lib/python3.7/site-packages/numpy
+## numpy_version:  1.17.3
+##
+## NOTE: Python version was forced by use_python function
+
 ## Now we're ready to check and see if UMAP is available.
 stopifnot(py_module_available(module = "umap"))
 
