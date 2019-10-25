@@ -35,19 +35,16 @@ library(pointillism)  # 0.4.2
 ## pip install scikit-learn
 ## pip install louvain
 ##
-## LLVM 7+ is now required.
-##
-## RHEL 7-specific LLVM fix:
-## > sudo yum install -y 'llvm7*'
-## > export LLVM_CONFIG="/usr/bin/llvm-config-7.0-64"
-##
+## ## LLVM 7+ is now required.
+## ## RHEL 7-specific LLVM fix:
+## ## > sudo yum install -y 'llvm7*'
+## ## > export LLVM_CONFIG="/usr/bin/llvm-config-7.0-64"
 ## pip install llvmlite
+##
 ## pip install numba
 ## pip install umap-learn
 ## deactivate
 ## ```
-
-## 2019-10-25: Hitting a numba timeout on pypi.org (Azure RHEL)
 
 ## Create virtualenv in R (alternate):
 ##
@@ -70,21 +67,18 @@ virtualenv_list()
 use_virtualenv(virtualenv = "r-reticulate", required = TRUE)
 py_config()
 
-## Should see something like this:
-## python:         /home/mike/.virtualenvs/r-reticulate/bin/python
-## libpython:      /usr/local/koopa/cellar/python/3.7.4/lib/libpython3.7m.so
-## pythonhome:     /usr/local/koopa/cellar/python/3.7.4:/usr/local/koopa/cellar/python/3.7.4
-## version:        3.7.4 (default, Jul 30 2019, 18:46:24)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
-## numpy:          /home/mike/.virtualenvs/r-reticulate/lib/python3.7/site-packages/numpy
-## numpy_version:  1.17.0
+## Azure RHEL 7 (2019-10-25):
 ##
-## python versions found:
-##  /home/mike/.virtualenvs/r-reticulate/bin/python
-##  /usr/local/bin/python
-##  /usr/bin/python
-##  /usr/local/bin/python3
+## python:         /home/mike/.virtualenvs/r-reticulate/bin/python
+## libpython:      /usr/local/koopa/cellar/python/3.8.0/lib/libpython3.8.so
+## pythonhome:     /usr/local/koopa/cellar/python/3.8.0:/usr/local/koopa/cellar/python/3.8.0
+## version:        3.8.0 (default, Oct 16 2019, 11:45:19)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+## numpy:          /home/mike/.virtualenvs/r-reticulate/lib/python3.8/site-packages/numpy
+## numpy_version:  1.17.3
+##
+## NOTE: Python version was forced by use_python function
 
-## macOS (10.14.6) 2019-10-15:
+## macOS 10.14.6 (2019-10-15):
 ##
 ## python:         /Users/mike/.virtualenvs/r-reticulate/bin/python
 ## libpython:      /usr/local/opt/python/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib
