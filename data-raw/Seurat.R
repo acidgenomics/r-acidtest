@@ -10,6 +10,7 @@ library(pointillism)  # 0.4.1
 ## https://github.com/satijalab/seurat/issues/486
 
 ## Reticulate looks for `virtualenv` (Python 2) and will error out otherwise.
+##
 ## ```sh
 ## sudo pip install --upgrade pip
 ## sudo pip install virtualenv
