@@ -1,5 +1,5 @@
 ## Seurat example object.
-## Updated 2019-10-25.
+## Updated 2019-10-30.
 
 library(usethis)      # 1.5.1
 library(pryr)         # 0.1.4
@@ -55,6 +55,7 @@ library(pointillism)  # 0.4.2
 ## Check and make sure Python umap-learn is accessible to run UMAP.
 ## We're using this in the `Seurat::RunUMAP()` call below.
 virtualenv_list()
+# [1] "base"         "r-reticulate"
 use_virtualenv(virtualenv = "r-reticulate", required = TRUE)
 py_config()
 
@@ -96,7 +97,17 @@ Seurat <- pbmc_small
 
 ## Add UMAP dimensional reduction to example object.
 ## Alternatively, can use `features` here instead.
-Seurat <- RunUMAP(Seurat, dims = seq_len(10L))
+Seurat <- RunUMAP(
+    object = Seurat,
+    ## Note that this now defaults to "uwot".
+    ## umap.method = "umap-learn",
+    dims = seq_len(10L)
+)
+
+## You may see this error:
+## Error in py_call_impl(callable, dots$args, dots$keywords) :
+## IndexError: Failed in nopython mode pipeline (step: analyzing bytecode)
+## list index out of range
 
 ## Slot row ranges into the Seurat object.
 rowRanges <- makeGRangesFromEnsembl(

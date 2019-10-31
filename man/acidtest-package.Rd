@@ -7,7 +7,7 @@
 \title{acidtest
 Reference data for unit testing from Acid Genomics.}
 \description{
-Reference data for unit testing from Acid Genomics.
+Reference data for unit testing.
 }
 \seealso{
 Useful links:

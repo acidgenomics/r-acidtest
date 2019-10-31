@@ -1,5 +1,5 @@
-library(usethis)
-library(IRanges)
+library(usethis)  # 1.5.1
+library(IRanges)  # 2.20.0
 IRanges <- IRanges(
     c(1L, 10L, 20L),
     width = 5L,
