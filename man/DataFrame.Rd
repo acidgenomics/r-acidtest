@@ -4,7 +4,7 @@
 \name{DataFrame}
 \alias{DataFrame}
 \title{Data frame}
-\format{An object of class \code{DataFrame} with 4 rows and 4 columns.}
+\format{An object of class \code{DFrame} with 4 rows and 4 columns.}
 \usage{
 DataFrame
 }
