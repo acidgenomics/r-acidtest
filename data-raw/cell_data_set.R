@@ -1,35 +1,50 @@
 ## cell_data_set example
-## Updated 2019-08-02.
+## Updated 2019-10-30.
+
+## This is currently failing to save with Bioconductor 3.10, due to changes in
+## SingleCellExperiment that now cause validity checks to fail.
+## See related issue on GitHub:
+## https://github.com/cole-trapnell-lab/monocle3/issues/246
 
 ## See also:
 ## - https://cole-trapnell-lab.github.io/monocle3/monocle3_docs/
-## - https://github.com/cole-trapnell-lab/monocle3/blob/master/examples/c_elegans_L2.R
-## - https://github.com/cole-trapnell-lab/monocle3/blob/master/examples/c_elegans_embryo.R
+## - https://github.com/cole-trapnell-lab/monocle3/blob/master/examples/
+##       c_elegans_L2.R
+## - https://github.com/cole-trapnell-lab/monocle3/blob/master/examples/
+##       c_elegans_embryo.R
 
 library(usethis)     # 1.5.1
 library(pryr)        # 0.1.4
 library(magrittr)    # 1.5
 library(reticulate)  # 1.13
-library(goalie)      # 0.3.0
-library(basejump)    # 0.11.3
+library(goalie)      # 0.4.0
+library(basejump)    # 0.11.20
 library(Matrix)      # 1.2-17
-library(monocle3)    # 0.1.2
+library(monocle3)    # 0.2.0
 library(dplyr)       # 0.8.3
 
 cores <- getOption("mc.cores")
 
 virtualenv_list()
-## [1] "default"    "reticulate"
+## [1] "base"    "r-reticulate"
 
-use_virtualenv(virtualenv = "reticulate", required = TRUE)
+use_virtualenv(virtualenv = "r-reticulate", required = TRUE)
 
 py_config()
-## python:         /home/mike/.virtualenvs/reticulate/bin/python
-## libpython:      /usr/local/koopa/cellar/python/3.7.4/lib/libpython3.7m.so
-## pythonhome:     /usr/local/koopa/cellar/python/3.7.4:/usr/local/koopa/cellar/python/3.7.4
-## version:        3.7.4 (default, Jul 30 2019, 18:46:24)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
-## numpy:          /home/mike/.virtualenvs/reticulate/lib/python3.7/site-packages/numpy
-## numpy_version:  1.17.0
+## python:         /home/mike/.virtualenvs/r-reticulate/bin/python
+## libpython:      /usr/local/koopa/cellar/python/3.8.0/lib/libpython3.8.so
+## pythonhome:     /usr/local/koopa/cellar/python/3.8.0:/usr/local/koopa/cellar/python/3.8.0
+## version:        3.8.0 (default, Oct 16 2019, 11:45:19)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+## numpy:          /home/mike/.virtualenvs/r-reticulate/lib/python3.8/site-packages/numpy
+## numpy_version:  1.17.3
+## leidenalg:      [NOT FOUND]
+##
+## python versions found:
+##  /home/mike/.virtualenvs/r-reticulate/bin/python
+##  /usr/local/bin/python
+##  /usr/bin/python
+##  /usr/local/bin/python3
+##  /home/mike/.virtualenvs/base/bin/python
 
 ## Restrict object size to 2 MB.
 ## Use `pryr::object_size()` instead of `utils::object.size()`.
