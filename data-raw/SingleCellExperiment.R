@@ -1,18 +1,14 @@
-## FIXME Need to zero pad the gene annotations here.s
-
-
-
 ## Gene-level SingleCellExperiment example.
-## Updated 2019-08-09.
+## Updated 2019-10-30.
 
 ## Splatter params are derived from:
 ## https://github.com/mikelove/zinbwave-deseq2/blob/master/zinbwave-deseq2.knit.md
 
-library(usethis)
-library(pryr)
-library(SingleCellExperiment)
-library(basejump)
-library(splatter)
+library(usethis)               # 1.5.1
+library(pryr)                  # 0.1.4
+library(SingleCellExperiment)  # 1.8.0
+library(basejump)              # 0.11.20
+library(splatter)              # 1.10.0
 
 ## Restrict to 2 MB.
 ## Use `pryr::object_size()` instead of `utils::object.size()`.
@@ -38,8 +34,8 @@ sce <- splatSimulate(
 )
 
 ## Sanitize the dimnames into camel case.
-sce <- camel(sce, rownames = TRUE, colnames = TRUE)
-colData(sce) <- camel(colData(sce))
+sce <- camelCase(sce, rownames = TRUE, colnames = TRUE)
+colData(sce) <- camelCase(colData(sce))
 
 ## Prepare column data.
 colData(sce) <- DataFrame(
@@ -69,11 +65,7 @@ rowRanges(sce) <- rowRanges
 metadata(sce) <- list(date = Sys.Date())
 
 ## Report the size of each slot in bytes.
-vapply(
-    X = coerceS4ToList(sce),
-    FUN = object_size,
-    FUN.VALUE = numeric(1L)
-)
+lapply(coerceS4ToList(sce), object_size)
 object_size(sce)
 stopifnot(object_size(sce) < limit)
 validObject(sce)

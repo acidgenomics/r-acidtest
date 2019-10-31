@@ -1,5 +1,5 @@
-library(usethis)
-library(Matrix)
+library(usethis)  # 1.5.1
+library(Matrix)   # 1.2-17
 i <- c(1L, 3L:8L)
 j <- c(2L, 9L, 6L:10L)
 x <- 7 * (1:7)

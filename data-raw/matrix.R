@@ -1,4 +1,4 @@
-library(usethis)
+library(usethis)  # 1.5.1
 nrow <- 4L
 ncol <- 4L
 matrix <- matrix(
