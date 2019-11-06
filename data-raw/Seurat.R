@@ -24,7 +24,6 @@ library(pointillism)  # 0.4.2
 ##
 ## pip install numpy
 ## pip install scikit-learn
-## pip install louvain
 ##
 ## ## LLVM 7+ is now required.
 ## ## RHEL 7-specific LLVM fix:
@@ -34,6 +33,7 @@ library(pointillism)  # 0.4.2
 ##
 ## pip install numba
 ## pip install umap-learn
+## pip install louvain
 ## deactivate
 ## ```
 

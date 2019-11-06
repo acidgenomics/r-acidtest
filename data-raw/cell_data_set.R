@@ -1,5 +1,5 @@
 ## cell_data_set example
-## Updated 2019-10-30.
+## Updated 2019-11-06.
 
 ## This is currently failing to save with Bioconductor 3.10, due to changes in
 ## SingleCellExperiment that now cause validity checks to fail.
@@ -31,20 +31,17 @@ virtualenv_list()
 use_virtualenv(virtualenv = "r-reticulate", required = TRUE)
 
 py_config()
+
+## Azure VM
+##
 ## python:         /home/mike/.virtualenvs/r-reticulate/bin/python
 ## libpython:      /usr/local/koopa/cellar/python/3.8.0/lib/libpython3.8.so
 ## pythonhome:     /usr/local/koopa/cellar/python/3.8.0:/usr/local/koopa/cellar/python/3.8.0
 ## version:        3.8.0 (default, Oct 16 2019, 11:45:19)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
 ## numpy:          /home/mike/.virtualenvs/r-reticulate/lib/python3.8/site-packages/numpy
 ## numpy_version:  1.17.3
-## leidenalg:      [NOT FOUND]
 ##
-## python versions found:
-##  /home/mike/.virtualenvs/r-reticulate/bin/python
-##  /usr/local/bin/python
-##  /usr/bin/python
-##  /usr/local/bin/python3
-##  /home/mike/.virtualenvs/base/bin/python
+## NOTE: Python version was forced by use_python function
 
 ## Restrict object size to 2 MB.
 ## Use `pryr::object_size()` instead of `utils::object.size()`.
@@ -78,10 +75,8 @@ cds <- new_cell_data_set(
     gene_metadata = gene_metadata
 )
 
-## Subset to include only the top 500 cells and genes.
+## Subset to include only the top cells and genes by number of reads.
 counts <- counts(cds)
-
-## Seurat: 230 genes, 80 cells.
 
 topGenes <- counts %>%
     Matrix::rowSums(.) %>%
