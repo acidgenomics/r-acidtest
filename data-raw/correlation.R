@@ -31,36 +31,3 @@ cor[["SummarizedExperiment_y"]] <- se2
 
 correlation <- cor
 use_data(correlation, compress = "xz", overwrite = TRUE)
-
-
-
-
-
-
-## vector ====
-x <- cor[["vector_x"]]
-y <- cor[["vector_y"]]
-
-head(x)
-head(y)
-
-cor(x = x, y = y)
-
-## matrix ====
-x <- cor[["matrix_x"]]
-y <- cor[["matrix_y"]]
-
-head(x)
-head(y)
-
-cor(x)
-correlation(x)
-
-cor(x = c(x), y = c(y))
-correlation(x, y)
-
-## SummarizedExperiment ====
-x <- cor[["SummarizedExperiment_x"]]
-y <- cor[["SummarizedExperiment_y"]]
-
-correlation(x = x, i = 1L, j = 2L)
