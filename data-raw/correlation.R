@@ -1,4 +1,5 @@
-suppressPackageStartupMessages(library(SummarizedExperiment))
+library(usethis)               # 1.5.1
+library(SummarizedExperiment)  # 1.16.0
 
 nrow <- 10L
 ncol <- 10L
@@ -27,6 +28,12 @@ se2 <- SummarizedExperiment(
 )
 cor[["SummarizedExperiment_x"]] <- se1
 cor[["SummarizedExperiment_y"]] <- se2
+
+correlation <- cor
+use_data(correlation, compress = "xz", overwrite = TRUE)
+
+
+
 
 
 
