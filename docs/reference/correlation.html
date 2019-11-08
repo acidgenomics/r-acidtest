@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Integer ranges — IRanges • acidtest</title>
+<title>Correlation — correlation • acidtest</title>
 
 
 <!-- jquery -->
@@ -37,8 +37,8 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Integer ranges — IRanges" />
-<meta property="og:description" content="Examples IRanges object." />
+<meta property="og:title" content="Correlation — correlation" />
+<meta property="og:description" content="Example list data used to test correlation() methods." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -110,36 +110,29 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Integer ranges</h1>
-    <small class="dont-index">Source: <a href='https://github.com/acidgenomics/acidtest/blob/master/R/IRanges.R'><code>R/IRanges.R</code></a></small>
-    <div class="hidden name"><code>IRanges.Rd</code></div>
+    <h1>Correlation</h1>
+    <small class="dont-index">Source: <a href='https://github.com/acidgenomics/acidtest/blob/master/R/correlation.R'><code>R/correlation.R</code></a></small>
+    <div class="hidden name"><code>correlation.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Examples <code>IRanges</code> object.</p>
+    <p>Example <code>list</code> data used to test <code>correlation()</code> methods.</p>
     </div>
 
-    <pre class="usage"><span class='no'>IRanges</span></pre>
+    <pre class="usage"><span class='no'>correlation</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>An object of class <code>IRanges</code> of length 3.</p>
+    <p>An object of class <code>list</code> of length 6.</p>
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
-    <p>Updated 2019-07-30.</p>
+    <p>Updated 2019-11-08.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"IRanges"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
-    <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>IRanges</span>)
-    <span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>IRanges</span>)
-    <span class='no'>IRanges</span>
-}</div><div class='output co'>#&gt; IRanges object with 3 ranges and 1 metadata column:
-#&gt;         start       end     width |     score
-#&gt;     &lt;integer&gt; &lt;integer&gt; &lt;integer&gt; | &lt;integer&gt;
-#&gt;   a         1         5         5 |         1
-#&gt;   b        10        14         5 |         2
-#&gt;   c        20        24         5 |         3</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>correlation</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>correlation</span>)</div><div class='output co'>#&gt; [1] "list"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='no'>correlation</span>)</div><div class='output co'>#&gt; [1] "vector_x"               "vector_y"               "matrix_x"              
+#&gt; [4] "matrix_y"               "SummarizedExperiment_x" "SummarizedExperiment_y"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
