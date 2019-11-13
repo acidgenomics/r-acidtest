@@ -1,5 +1,5 @@
 ## cell_data_set example
-## Updated 2019-11-06.
+## Updated 2019-11-13.
 
 ## This is currently failing to save with Bioconductor 3.10, due to changes in
 ## SingleCellExperiment that now cause validity checks to fail.
@@ -26,7 +26,7 @@ library(dplyr)       # 0.8.3
 cores <- getOption("mc.cores")
 
 virtualenv_list()
-## [1] "base"    "r-reticulate"
+## [1] "r-reticulate"
 
 use_virtualenv(virtualenv = "r-reticulate", required = TRUE)
 
@@ -37,11 +37,16 @@ py_config()
 ## python:         /home/mike/.virtualenvs/r-reticulate/bin/python
 ## libpython:      /usr/local/koopa/cellar/python/3.8.0/lib/libpython3.8.so
 ## pythonhome:     /usr/local/koopa/cellar/python/3.8.0:/usr/local/koopa/cellar/python/3.8.0
-## version:        3.8.0 (default, Oct 16 2019, 11:45:19)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+## version:        3.8.0 (default, Nov 12 2019, 09:38:56)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
 ## numpy:          /home/mike/.virtualenvs/r-reticulate/lib/python3.8/site-packages/numpy
-## numpy_version:  1.17.3
+## numpy_version:  1.17.4
+## leidenalg:      [NOT FOUND]
 ##
-## NOTE: Python version was forced by use_python function
+## python versions found:
+##  /home/mike/.virtualenvs/r-reticulate/bin/python
+##  /usr/local/bin/python
+##  /usr/bin/python
+##  /usr/local/bin/python3
 
 ## Restrict object size to 2 MB.
 ## Use `pryr::object_size()` instead of `utils::object.size()`.
