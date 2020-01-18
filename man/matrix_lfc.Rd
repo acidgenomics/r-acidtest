@@ -12,7 +12,7 @@ matrix_lfc
 Example \code{matrix} containing log base 2 fold change values.
 }
 \note{
-Updated 2019-07-30.
+Updated 2020-01-18.
 }
 \examples{
 data(matrix_lfc)

@@ -1,7 +1,7 @@
 ## Note that this now returns "DFrame" instead of "DataFrame", as of
 ## Bioconductor 3.10 release.
 library(usethis)    # 1.5.1
-library(S4Vectors)  # 0.24.0
+library(S4Vectors)  # 0.24.2
 data(matrix)
-DataFrame <- DataFrame(matrix)
-use_data(DataFrame, compress = "xz", overwrite = TRUE)
+DFrame <- DataFrame(matrix)
+use_data(DFrame, compress = "xz", overwrite = TRUE)

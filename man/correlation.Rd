@@ -12,7 +12,7 @@ correlation
 Example \code{list} data used to test \code{correlation()} methods.
 }
 \note{
-Updated 2019-11-08.
+Updated 2020-01-18.
 }
 \examples{
 data(correlation)

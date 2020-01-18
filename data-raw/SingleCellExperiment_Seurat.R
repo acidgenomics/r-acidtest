@@ -1,6 +1,6 @@
 library(usethis)      # 1.5.1
 library(pryr)         # 0.1.4
-library(pointillism)  # 0.4.3
+library(pointillism)  # 0.4.5
 
 ## Restrict to 1 MB.
 ## Use `pryr::object_size()` instead of `utils::object.size()`.

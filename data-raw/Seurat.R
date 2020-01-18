@@ -1,12 +1,12 @@
 ## Seurat example object.
-## Updated 2019-10-30.
+## Updated 2020-01-18.
 
 library(usethis)      # 1.5.1
 library(pryr)         # 0.1.4
-library(basejump)     # 0.11.19
-library(reticulate)   # 1.13
-library(Seurat)       # 3.1.1
-library(pointillism)  # 0.4.2
+library(basejump)     # 0.11.24
+library(reticulate)   # 1.14
+library(Seurat)       # 3.1.2
+library(pointillism)  # 0.4.5
 
 ## umap-learn via reticulate doesn't work well with conda.
 ## Set up a Python 3 virtual environment instead.
@@ -15,26 +15,7 @@ library(pointillism)  # 0.4.2
 ## Create virtualenv in shell (preferred):
 ##
 ## ```sh
-## python3 -m venv ~/.virtualenvs/r-reticulate
-## source ~/.virtualenvs/r-reticulate/bin/activate
-## pip install --upgrade pip
-##
-## ## scikit-learn can fail unless we install Cython manually first.
-## pip install Cython
-##
-## pip install numpy
-## pip install scikit-learn
-##
-## ## LLVM 7+ is now required.
-## ## RHEL 7-specific LLVM fix:
-## ## > sudo yum install -y 'llvm7*'
-## ## > export LLVM_CONFIG="/usr/bin/llvm-config-7.0-64"
-## pip install llvmlite
-##
-## pip install numba
-## pip install umap-learn
-## pip install louvain
-## deactivate
+## venv-create-r-reticulate (from koopa)
 ## ```
 
 ## Create virtualenv in R (alternate):
@@ -42,7 +23,7 @@ library(pointillism)  # 0.4.2
 ## ```r
 ## install.packages("reticulate")
 ## library(reticulate)
-## ## Check for Python 3. Don't continue if this returns Python 2.
+## ## Check for Python 3.
 ## py_config()
 ## virtualenv_create(envname = "r-reticulate")
 ## virtualenv_install(
@@ -55,7 +36,7 @@ library(pointillism)  # 0.4.2
 ## Check and make sure Python umap-learn is accessible to run UMAP.
 ## We're using this in the `Seurat::RunUMAP()` call below.
 virtualenv_list()
-# [1] "base"         "r-reticulate"
+# [1] "r-reticulate"
 use_virtualenv(virtualenv = "r-reticulate", required = TRUE)
 py_config()
 
@@ -67,19 +48,15 @@ py_config()
 ## version:        3.8.0 (default, Oct 16 2019, 11:45:19)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
 ## numpy:          /home/mike/.virtualenvs/r-reticulate/lib/python3.8/site-packages/numpy
 ## numpy_version:  1.17.3
-##
-## NOTE: Python version was forced by use_python function
 
-## macOS 10.14.6 (2019-10-15):
+## macOS 10.14.6 (2020-01-18):
 ##
-## python:         /Users/mike/.virtualenvs/r-reticulate/bin/python
-## libpython:      /usr/local/opt/python/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib
-## pythonhome:     /usr/local/opt/python/Frameworks/Python.framework/Versions/3.7:/usr/local/opt/python/Frameworks/Python.framework/Versions/3.7
-## version:        3.7.4 (default, Sep  7 2019, 18:27:02)  [Clang 10.0.1 (clang-1001.0.46.4)]
-## numpy:          /Users/mike/.virtualenvs/r-reticulate/lib/python3.7/site-packages/numpy
-## numpy_version:  1.17.3
-##
-## NOTE: Python version was forced by use_python function
+## python:         /usr/local/python/virtualenvs/r-reticulate/bin/python
+## libpython:      /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/config-3.8-darwin/libpython3.8.dylib
+## pythonhome:     /Library/Frameworks/Python.framework/Versions/3.8:/Library/Frameworks/Python.framework/Versions/3.8
+## version:        3.8.1 (v3.8.1:1b293b6006, Dec 18 2019, 14:08:53)  [Clang 6.0 (clang-600.0.57)]
+## numpy:          /usr/local/python/virtualenvs/r-reticulate/lib/python3.8/site-packages/numpy
+## numpy_version:  1.18.1
 
 ## Now we're ready to check and see if UMAP is available.
 stopifnot(py_module_available(module = "umap"))
@@ -88,26 +65,21 @@ stopifnot(py_module_available(module = "umap"))
 limit <- structure(1e6, class = "object_size")
 
 data(pbmc_small, package = "Seurat")
-object_size(pbmc_small)
-stopifnot(object_size(pbmc_small) < limit)
 
 ## The Seurat wiki describes the changes in v3.0.
 ## https://github.com/satijalab/seurat/wiki
-Seurat <- pbmc_small
+Seurat <- UpdateSeuratObject(pbmc_small)
+object_size(Seurat)
+stopifnot(object_size(Seurat) < limit)
 
 ## Add UMAP dimensional reduction to example object.
 ## Alternatively, can use `features` here instead.
 Seurat <- RunUMAP(
     object = Seurat,
-    ## Note that this now defaults to "uwot".
-    ## umap.method = "umap-learn",
+    ## Note that this now defaults to "uwot" in Seurat 3.1.
+    umap.method = "umap-learn",
     dims = seq_len(10L)
 )
-
-## You may see this error:
-## Error in py_call_impl(callable, dots$args, dots$keywords) :
-## IndexError: Failed in nopython mode pipeline (step: analyzing bytecode)
-## list index out of range
 
 ## Slot row ranges into the Seurat object.
 rowRanges <- makeGRangesFromEnsembl(

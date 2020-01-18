@@ -2,7 +2,7 @@
 #'
 #' Example `SingleCellExperiment` containing gene-level RNA-seq data.
 #'
-#' @note Updated 2019-08-13.
+#' @note Updated 2020-01-18.
 #'
 #' @seealso
 #' - `data(pbmc_small, package = "Seurat")`.

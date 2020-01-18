@@ -1,5 +1,5 @@
 ## cell_data_set example
-## Updated 2019-11-13.
+## Updated 2020-01-18.
 
 ## This is currently failing to save with Bioconductor 3.10, due to changes in
 ## SingleCellExperiment that now cause validity checks to fail.
@@ -16,10 +16,10 @@
 library(usethis)     # 1.5.1
 library(pryr)        # 0.1.4
 library(magrittr)    # 1.5
-library(reticulate)  # 1.13
-library(goalie)      # 0.4.0
-library(basejump)    # 0.11.20
-library(Matrix)      # 1.2-17
+library(reticulate)  # 1.14
+library(goalie)      # 0.4.1
+library(basejump)    # 0.11.24
+library(Matrix)      # 1.2-18
 library(monocle3)    # 0.2.0
 library(dplyr)       # 0.8.3
 
@@ -32,21 +32,14 @@ use_virtualenv(virtualenv = "r-reticulate", required = TRUE)
 
 py_config()
 
-## Azure VM
+## macOS 10.14.6 (2020-01-18):
 ##
-## python:         /home/mike/.virtualenvs/r-reticulate/bin/python
-## libpython:      /usr/local/koopa/cellar/python/3.8.0/lib/libpython3.8.so
-## pythonhome:     /usr/local/koopa/cellar/python/3.8.0:/usr/local/koopa/cellar/python/3.8.0
-## version:        3.8.0 (default, Nov 12 2019, 09:38:56)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
-## numpy:          /home/mike/.virtualenvs/r-reticulate/lib/python3.8/site-packages/numpy
-## numpy_version:  1.17.4
-## leidenalg:      [NOT FOUND]
-##
-## python versions found:
-##  /home/mike/.virtualenvs/r-reticulate/bin/python
-##  /usr/local/bin/python
-##  /usr/bin/python
-##  /usr/local/bin/python3
+## python:         /usr/local/python/virtualenvs/r-reticulate/bin/python
+## libpython:      /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/config-3.8-darwin/libpython3.8.dylib
+## pythonhome:     /Library/Frameworks/Python.framework/Versions/3.8:/Library/Frameworks/Python.framework/Versions/3.8
+## version:        3.8.1 (v3.8.1:1b293b6006, Dec 18 2019, 14:08:53)  [Clang 6.0 (clang-600.0.57)]
+## numpy:          /usr/local/python/virtualenvs/r-reticulate/lib/python3.8/site-packages/numpy
+## numpy_version:  1.18.1
 
 ## Restrict object size to 2 MB.
 ## Use `pryr::object_size()` instead of `utils::object.size()`.
@@ -72,6 +65,16 @@ assert(
     hasValidDimnames(expression_data),
     hasValidDimnames(gene_metadata)
 )
+
+## If you hit this error below, reinstall monocle3.
+## > install_github("cole-trapnell-lab/monocle3", force = TRUE)
+##
+## Error in checkSlotAssignment(object, name, value) :
+## 'reducedDims' is not a slot in class "SingleCellExperiment"
+## Calls: new_cell_data_set ... .valid.Vector.length -> as -> asMethod ->
+##     slot<- -> checkSlotAssignment
+##
+## https://github.com/cole-trapnell-lab/monocle3/issues/246
 
 ## Example cell metadata contains cluster mappings, so skip loading that.
 cds <- new_cell_data_set(

@@ -1,8 +1,8 @@
 Package: acidtest
 Title: Acid Genomics test data
 Description: Reference data for unit testing. 
-Version: 0.2.8
-Date: 2019-11-08
+Version: 0.2.9
+Date: 2020-01-18
 Authors@R: c(
     person(
         "Michael", "Steinbaugh",
@@ -37,4 +37,4 @@ Remotes:
     cole-trapnell-lab/monocle3
 biocViews: Infrastructure
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.0.0
+RoxygenNote: 7.0.2
