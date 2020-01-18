@@ -12,7 +12,7 @@ Seurat
 Example \code{Seurat} (v3) object.
 }
 \note{
-Updated 2019-08-13.
+Updated 2020-01-18.
 }
 \examples{
 if (requireNamespace("Seurat", quietly = TRUE)) {

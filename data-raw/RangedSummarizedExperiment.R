@@ -1,7 +1,7 @@
 library(usethis)               # 1.5.1
 library(pryr)                  # 0.1.4
-library(SummarizedExperiment)  # 1.16.0
-library(basejump)              # 0.11.20
+library(SummarizedExperiment)  # 1.16.1
+library(basejump)              # 0.11.24
 library(DESeq2)                # 1.26.0
 
 ## Restrict to 1.5 MB.

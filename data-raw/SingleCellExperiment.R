@@ -1,13 +1,14 @@
 ## Gene-level SingleCellExperiment example.
-## Updated 2019-10-30.
-
+## Updated 2020-01-18.
+##
 ## Splatter params are derived from:
-## https://github.com/mikelove/zinbwave-deseq2/blob/master/zinbwave-deseq2.knit.md
+## https://github.com/mikelove/zinbwave-deseq2/blob/master/
+##     zinbwave-deseq2.knit.md
 
 library(usethis)               # 1.5.1
 library(pryr)                  # 0.1.4
 library(SingleCellExperiment)  # 1.8.0
-library(basejump)              # 0.11.20
+library(basejump)              # 0.11.24
 library(splatter)              # 1.10.0
 
 ## Restrict to 2 MB.

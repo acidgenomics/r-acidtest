@@ -12,7 +12,7 @@ tbl_df
 Example \code{tbl_df} object.
 }
 \note{
-Updated 2019-07-30.
+Updated 2020-01-18.
 }
 \examples{
 if (requireNamespace("tibble", quietly = TRUE)) {

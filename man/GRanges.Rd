@@ -12,7 +12,7 @@ GRanges
 Example \code{GRanges} object.
 }
 \note{
-Updated 2019-07-30.
+Updated 2020-01-18.
 }
 \examples{
 if (requireNamespace("GenomicRanges", quietly = TRUE)) {

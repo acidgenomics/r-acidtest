@@ -1,5 +1,5 @@
 library(usethis)               # 1.5.1
-library(SummarizedExperiment)  # 1.16.0
+library(SummarizedExperiment)  # 1.16.1
 
 nrow <- 10L
 ncol <- 10L

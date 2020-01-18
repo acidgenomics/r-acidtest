@@ -9,10 +9,10 @@
 sparseMatrix
 }
 \description{
-Example \code{sparseMatrix} object.
+Example \code{sparseMatrix} (\code{Matrix}, \code{dgCMatrix}) object.
 }
 \note{
-Updated 2019-07-30.
+Updated 2029-01-18.
 }
 \examples{
 if (requireNamespace("Matrix", quietly = TRUE)) {

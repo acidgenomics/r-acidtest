@@ -2,7 +2,7 @@
 #'
 #' Example `list` data used to test `correlation()` methods.
 #'
-#' @note Updated 2019-11-08.
+#' @note Updated 2020-01-18.
 #'
 #' @examples
 #' data(correlation)

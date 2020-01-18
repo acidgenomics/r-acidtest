@@ -1,8 +1,8 @@
 #' Sparse matrix
 #'
-#' Example `sparseMatrix` object.
+#' Example `sparseMatrix` (`Matrix`, `dgCMatrix`) object.
 #'
-#' @note Updated 2019-07-30.
+#' @note Updated 2029-01-18.
 #'
 #' @examples
 #' if (requireNamespace("Matrix", quietly = TRUE)) {

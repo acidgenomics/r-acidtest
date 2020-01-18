@@ -2,7 +2,7 @@
 #'
 #' Example `Seurat` (v3) object.
 #'
-#' @note Updated 2019-08-13.
+#' @note Updated 2020-01-18.
 #'
 #' @examples
 #' if (requireNamespace("Seurat", quietly = TRUE)) {

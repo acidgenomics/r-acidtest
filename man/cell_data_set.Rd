@@ -12,7 +12,7 @@ cell_data_set
 Example monocle3 \code{cell_data_set} object.
 }
 \note{
-Updated 2019-10-30.
+Updated 2020-01-18.
 }
 \examples{
 ## Not currently working on Bioconductor 3.10.

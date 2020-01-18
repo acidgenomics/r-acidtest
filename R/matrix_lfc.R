@@ -2,7 +2,7 @@
 #'
 #' Example `matrix` containing log base 2 fold change values.
 #'
-#' @note Updated 2019-07-30.
+#' @note Updated 2020-01-18.
 #'
 #' @examples
 #' data(matrix_lfc)

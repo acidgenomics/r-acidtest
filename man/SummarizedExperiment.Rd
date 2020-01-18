@@ -12,7 +12,7 @@ SummarizedExperiment
 Modified version of the \code{SummarizedExperiment()} documentation example.
 }
 \note{
-Updated 2019-07-30.
+Updated 2020-01-18.
 }
 \examples{
 if (requireNamespace("SummarizedExperiment", quietly = TRUE)) {

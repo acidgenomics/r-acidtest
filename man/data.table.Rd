@@ -12,7 +12,7 @@ data.table
 Example \code{data.table} object.
 }
 \note{
-Updated 2019-07-30.
+Updated 2020-01-18.
 }
 \examples{
 if (requireNamespace("data.table", quietly = TRUE)) {
