@@ -1,6 +1,7 @@
 ## acidtest 0.2.9 (2020-01-18)
 
 - Renamed `DataFrame` example to `DFrame`, based on Bioconductor 3.10 change.
+- Resaved all example objects.
 
 ## acidtest 0.2.8 (2019-11-11)
 
