@@ -1,3 +1,15 @@
+## acidtest 0.2.9 (2020-01-18)
+
+- Renamed `DataFrame` example to `DFrame`, based on Bioconductor 3.10 change.
+
+## acidtest 0.2.8 (2019-11-11)
+
+- Resaved `cell_data_set` object.
+
+## acidtest 0.2.7 (2019-10-30)
+
+- Resaved objects following Bioconductor 3.10 release.
+
 ## acidtest 0.2.6 (2019-10-21)
 
 - No longer checking against `NA` for syntactic functions.
