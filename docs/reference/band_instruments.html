@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • acidtest</title>
+<title>Band membership — band_instruments • acidtest</title>
 
 
 <!-- jquery -->
@@ -37,7 +37,11 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Band membership — band_instruments" />
+<meta property="og:description" content="These data sets describe band members of the Beatles and Rolling Stones. They
+are toy data sets that can be displayed in their entirety on a slide (e.g. to
+demonstrate a join)." />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -56,7 +60,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -106,144 +110,46 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Band membership</h1>
+    <small class="dont-index">Source: <a href='https://github.com/acidgenomics/acidtest/blob/master/R/joins.R'><code>R/joins.R</code></a></small>
+    <div class="hidden name"><code>band_instruments.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>These data sets describe band members of the Beatles and Rolling Stones. They
+are toy data sets that can be displayed in their entirety on a slide (e.g. to
+demonstrate a join).</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='no'>band_instruments</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="DFrame.html">DFrame</a></code> </p>
-        </td>
-        <td><p>Data frame</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="GRanges.html">GRanges</a></code> </p>
-        </td>
-        <td><p>Genomic ranges</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="IRanges.html">IRanges</a></code> </p>
-        </td>
-        <td><p>Integer ranges</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="RangedSummarizedExperiment.html">RangedSummarizedExperiment</a></code> </p>
-        </td>
-        <td><p>Ranged summarized experiment</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="Seurat.html">Seurat</a></code> </p>
-        </td>
-        <td><p>Seurat</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="SingleCellExperiment.html">SingleCellExperiment</a></code> </p>
-        </td>
-        <td><p>Single cell experiment</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="SingleCellExperiment_Seurat.html">SingleCellExperiment_Seurat</a></code> </p>
-        </td>
-        <td><p>Single cell experiment</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="SummarizedExperiment.html">SummarizedExperiment</a></code> </p>
-        </td>
-        <td><p>Summarized experiment</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="SummarizedExperiment_transcripts.html">SummarizedExperiment_transcripts</a></code> </p>
-        </td>
-        <td><p>Summarized experiment</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="cell_data_set.html">cell_data_set</a></code> </p>
-        </td>
-        <td><p>Cell data set</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="correlation.html">correlation</a></code> </p>
-        </td>
-        <td><p>Correlation</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="data.frame.html">data.frame</a></code> </p>
-        </td>
-        <td><p>Data frame</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="data.table.html">data.table</a></code> </p>
-        </td>
-        <td><p>Data table</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="matrix.html">matrix</a></code> </p>
-        </td>
-        <td><p>Matrix</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="matrix_lfc.html">matrix_lfc</a></code> </p>
-        </td>
-        <td><p>Log fold change</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="sparseMatrix.html">sparseMatrix</a></code> </p>
-        </td>
-        <td><p>Sparse matrix</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="syntactic.html">syntactic</a></code> </p>
-        </td>
-        <td><p>Syntactic names list</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="tbl_df.html">tbl_df</a></code> </p>
-        </td>
-        <td><p>Tibble</p></td>
-      </tr>
-    </tbody>
-    </table>
+
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>An object of class <code>DataFrame</code> with 3 rows and 2 columns.</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><code><a href='https://rdrr.io/r/utils/help.html'>help(topic = "band_instruments", package = "dplyr")</a></code></p></div>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>band_instruments</span>)
+<span class='no'>band_instruments</span></div><div class='output co'>#&gt; DataFrame with 3 rows and 2 columns
+#&gt;          name       plays
+#&gt;   &lt;character&gt; &lt;character&gt;
+#&gt; 1        John      guitar
+#&gt; 2        Paul        bass
+#&gt; 3       Keith      guitar</div></pre>
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#format">Format</a></li>
+      <li><a href="#see-also">See also</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
+
   </div>
 </div>
 
