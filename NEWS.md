@@ -1,3 +1,8 @@
+## acidtest 0.2.10 (2020-01-19)
+
+- Migrated `band_instruments` and `band_members` (dplyr join examples) from
+  now archived transformer package here to acidtest.
+
 ## acidtest 0.2.9 (2020-01-18)
 
 - Renamed `DataFrame` example to `DFrame`, based on Bioconductor 3.10 change.
