@@ -1,8 +1,8 @@
 Package: acidtest
 Title: Acid Genomics test data
 Description: Reference data for unit testing. 
-Version: 0.2.9
-Date: 2020-01-18
+Version: 0.2.10
+Date: 2020-01-19
 Authors@R: c(
     person(
         "Michael", "Steinbaugh",
@@ -31,6 +31,7 @@ Suggests:
     SingleCellExperiment (>= 1.8),
     SummarizedExperiment (>= 1.16),
     data.table (>= 1.12),
+    dplyr (>= 0.8),
     monocle3 (>= 0.2),
     tibble (>= 2.1)
 Remotes:

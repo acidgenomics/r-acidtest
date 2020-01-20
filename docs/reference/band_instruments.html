@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Version 0.1 • acidtest</title>
+<title>Band membership — band_instruments • acidtest</title>
 
 
 <!-- jquery -->
@@ -37,7 +37,11 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Version 0.1" />
+<meta property="og:title" content="Band membership — band_instruments" />
+<meta property="og:description" content="These data sets describe band members of the Beatles and Rolling Stones. They
+are toy data sets that can be displayed in their entirety on a slide (e.g. to
+demonstrate a join)." />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -56,7 +60,7 @@
   </head>
 
   <body>
-    <div class="container template-news">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -108,71 +112,45 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Changelog <small>0.1</small></h1>
-      
+    <h1>Band membership</h1>
+    <small class="dont-index">Source: <a href='https://github.com/acidgenomics/acidtest/blob/master/R/joins.R'><code>R/joins.R</code></a></small>
+    <div class="hidden name"><code>band_instruments.Rd</code></div>
     </div>
 
-    <div id="acidtest-010-2019-03-28" class="section level2">
-<h2 class="hasAnchor">
-<a href="#acidtest-010-2019-03-28" class="anchor"></a>acidtest 0.1.0 (2019-03-28)</h2>
-<ul>
-<li>Initial release.</li>
-</ul>
-</div>
-    <div id="acidtest-011-2019-04-01" class="section level2">
-<h2 class="hasAnchor">
-<a href="#acidtest-011-2019-04-01" class="anchor"></a>acidtest 0.1.1 (2019-04-01)</h2>
-<ul>
-<li>Added <code>gr</code>, <code>lfc</code>, <code>mn</code>, and <code>txse</code> test data.</li>
-</ul>
-</div>
-    <div id="acidtest-012-2019-05-05" class="section level2">
-<h2 class="hasAnchor">
-<a href="#acidtest-012-2019-05-05" class="anchor"></a>acidtest 0.1.2 (2019-05-05)</h2>
-<ul>
-<li>Now pinned to R &gt;= 3.5.</li>
-</ul>
-</div>
-    <div id="acidtest-013-2019-07-11" class="section level2">
-<h2 class="hasAnchor">
-<a href="#acidtest-013-2019-07-11" class="anchor"></a>acidtest 0.1.3 (2019-07-11)</h2>
-<ul>
-<li>Added <code>ir</code> example <code>IRanges</code> object.</li>
-</ul>
-</div>
-    <div id="acidtest-014-2019-07-12" class="section level2">
-<h2 class="hasAnchor">
-<a href="#acidtest-014-2019-07-12" class="anchor"></a>acidtest 0.1.4 (2019-07-12)</h2>
-<ul>
-<li>Added <code>dt</code> example <code>data.table</code> object.</li>
-<li>Improved documentation consistency.</li>
-</ul>
-</div>
-    <div id="acidtest-015-2019-07-16" class="section level2">
-<h2 class="hasAnchor">
-<a href="#acidtest-015-2019-07-16" class="anchor"></a>acidtest 0.1.5 (2019-07-16)</h2>
-<ul>
-<li>Added <code>seurat</code> example, migrated from pointillism package.</li>
-<li>Resaved <code>sce</code> based on new <code>seurat</code> object.</li>
-<li>Archived source code for previous <code>sce</code> as <code>sce_splatter.R</code>.</li>
-</ul>
-</div>
-  </div>
+    <div class="ref-description">
+    <p>These data sets describe band members of the Beatles and Rolling Stones. They
+are toy data sets that can be displayed in their entirety on a slide (e.g. to
+demonstrate a join).</p>
+    </div>
 
+    <pre class="usage"><span class='no'>band_instruments</span></pre>
+
+
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>An object of class <code>DataFrame</code> with 3 rows and 2 columns.</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><code><a href='https://rdrr.io/r/utils/help.html'>help(topic = "band_instruments", package = "dplyr")</a></code></p></div>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>band_instruments</span>)
+<span class='no'>band_instruments</span></div><div class='output co'>#&gt; DataFrame with 3 rows and 2 columns
+#&gt;          name       plays
+#&gt;   &lt;character&gt; &lt;character&gt;
+#&gt; 1        John      guitar
+#&gt; 2        Paul        bass
+#&gt; 3       Keith      guitar</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <div id="tocnav">
-      <h2>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-        <li><a href="#acidtest-010-2019-03-28">0.1.0</a></li>
-        <li><a href="#acidtest-011-2019-04-01">0.1.1</a></li>
-        <li><a href="#acidtest-012-2019-05-05">0.1.2</a></li>
-        <li><a href="#acidtest-013-2019-07-11">0.1.3</a></li>
-        <li><a href="#acidtest-014-2019-07-12">0.1.4</a></li>
-        <li><a href="#acidtest-015-2019-07-16">0.1.5</a></li>
-      </ul>
-    </div>
-  </div>
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#format">Format</a></li>
+      <li><a href="#see-also">See also</a></li>
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
+  </div>
 </div>
 
 
