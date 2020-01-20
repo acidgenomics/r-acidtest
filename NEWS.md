@@ -1,3 +1,9 @@
+## acidtest 0.2.11 (2020-01-20)
+
+- Reverted saved version of `SingleCellExperiment` back to v0.2.8 version, as
+  too many unit tests will fail in basejump otherwise, due to splatter creating
+  a new random count matrix.
+
 ## acidtest 0.2.10 (2020-01-19)
 
 - Migrated `band_instruments` and `band_members` (dplyr join examples) from
