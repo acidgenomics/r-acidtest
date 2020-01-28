@@ -3,11 +3,8 @@
 #' Example `list` data used to test `correlation()` methods.
 #'
 #' @note Updated 2020-01-28.
-#'
-#' @usage data(correlation)
-#'
 #' @return `list`.
-#'
+#' @usage data(correlation)
 #' @examples
 #' data(correlation)
 #' class(correlation)

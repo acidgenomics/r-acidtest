@@ -4,20 +4,29 @@
 \name{band_instruments}
 \alias{band_instruments}
 \title{Band membership}
-\format{An object of class \code{DataFrame} with 3 rows and 2 columns.}
+\format{An object of class \code{DFrame} with 3 rows and 2 columns.}
 \usage{
-band_instruments
+data(band_instruments)
+}
+\value{
+\code{DFrame}.
 }
 \description{
 These data sets describe band members of the Beatles and Rolling Stones. They
 are toy data sets that can be displayed in their entirety on a slide (e.g. to
 demonstrate a join).
 }
+\note{
+Updated 2020-01-28.
+}
 \examples{
-data(band_instruments)
-band_instruments
+if (requireNamespace("S4Vectors", quietly = TRUE)) {
+    data(band_instruments)
+    class(band_instruments)
+    band_instruments
+}
 }
 \seealso{
 \code{help(topic = "band_instruments", package = "dplyr")}
 }
-\keyword{internal}
+\keyword{datasets}

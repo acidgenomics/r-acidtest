@@ -2,8 +2,9 @@
 #'
 #' Examples `IRanges` object.
 #'
-#' @note Updated 2020-01-18.
-#'
+#' @note Updated 2020-01-28.
+#' @return `IRanges`.
+#' @usage data(IRanges)
 #' @examples
 #' if (requireNamespace("IRanges", quietly = TRUE)) {
 #'     data(IRanges)

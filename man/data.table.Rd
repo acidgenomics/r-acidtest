@@ -6,13 +6,16 @@
 \title{Data table}
 \format{An object of class \code{data.table} (inherits from \code{data.frame}) with 4 rows and 5 columns.}
 \usage{
-data.table
+data(data.table)
+}
+\value{
+\code{data.table}.
 }
 \description{
 Example \code{data.table} object.
 }
 \note{
-Updated 2020-01-18.
+Updated 2020-01-28.
 }
 \examples{
 if (requireNamespace("data.table", quietly = TRUE)) {

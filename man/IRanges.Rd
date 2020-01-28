@@ -6,13 +6,16 @@
 \title{Integer ranges}
 \format{An object of class \code{IRanges} of length 3.}
 \usage{
-IRanges
+data(IRanges)
+}
+\value{
+\code{IRanges}.
 }
 \description{
 Examples \code{IRanges} object.
 }
 \note{
-Updated 2020-01-18.
+Updated 2020-01-28.
 }
 \examples{
 if (requireNamespace("IRanges", quietly = TRUE)) {

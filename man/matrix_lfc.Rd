@@ -6,13 +6,16 @@
 \title{Log fold change}
 \format{An object of class \code{matrix} with 8 rows and 4 columns.}
 \usage{
-matrix_lfc
+data(matrix_lfc)
+}
+\value{
+\code{matrix}.
 }
 \description{
 Example \code{matrix} containing log base 2 fold change values.
 }
 \note{
-Updated 2020-01-18.
+Updated 2020-01-28.
 }
 \examples{
 data(matrix_lfc)

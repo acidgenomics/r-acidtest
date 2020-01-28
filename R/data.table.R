@@ -2,8 +2,9 @@
 #'
 #' Example `data.table` object.
 #'
-#' @note Updated 2020-01-18.
-#'
+#' @note Updated 2020-01-28.
+#' @return `data.table`.
+#' @usage data(data.table)
 #' @examples
 #' if (requireNamespace("data.table", quietly = TRUE)) {
 #'     data(data.table)
