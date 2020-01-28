@@ -5,9 +5,9 @@
 \alias{acidtest}
 \alias{acidtest-package}
 \title{acidtest
-Reference data for unit testing from Acid Genomics.}
+Reference data for Acid Genomics unit tests.}
 \description{
-Reference data for unit testing.
+Reference data for Acid Genomics unit tests.
 }
 \seealso{
 Useful links:
