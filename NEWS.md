@@ -1,3 +1,8 @@
+## acidtest 0.2.12 (2020-01-27)
+
+- Removed monocle3 `cell_data_set` example object. Will add back when monocle3
+  is available on Bioconductor.
+
 ## acidtest 0.2.11 (2020-01-20)
 
 - Reverted saved version of `SingleCellExperiment` back to v0.2.8 version, as
