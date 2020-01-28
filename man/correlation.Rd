@@ -6,13 +6,16 @@
 \title{Correlation}
 \format{An object of class \code{list} of length 6.}
 \usage{
-correlation
+data(correlation)
+}
+\value{
+\code{list}.
 }
 \description{
 Example \code{list} data used to test \code{correlation()} methods.
 }
 \note{
-Updated 2020-01-18.
+Updated 2020-01-28.
 }
 \examples{
 data(correlation)

@@ -6,13 +6,16 @@
 \title{Sparse matrix}
 \format{An object of class \code{dgCMatrix} with 8 rows and 10 columns.}
 \usage{
-sparseMatrix
+data(sparseMatrix)
+}
+\value{
+\code{sparseMatrix}.
 }
 \description{
 Example \code{sparseMatrix} (\code{Matrix}, \code{dgCMatrix}) object.
 }
 \note{
-Updated 2029-01-18.
+Updated 2029-01-28.
 }
 \examples{
 if (requireNamespace("Matrix", quietly = TRUE)) {

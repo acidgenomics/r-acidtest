@@ -6,13 +6,16 @@
 \title{Data frame}
 \format{An object of class \code{DFrame} with 4 rows and 4 columns.}
 \usage{
-DFrame
+data(DFrame)
+}
+\value{
+\code{DFrame}.
 }
 \description{
 Example Bioconductor S4 \code{DFrame} object.
 }
 \note{
-Updated 2020-01-18.
+Updated 2020-01-28.
 }
 \examples{
 if (requireNamespace("S4Vectors", quietly = TRUE)) {

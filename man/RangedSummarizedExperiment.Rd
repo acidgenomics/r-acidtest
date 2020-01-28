@@ -6,7 +6,10 @@
 \title{Ranged summarized experiment}
 \format{An object of class \code{RangedSummarizedExperiment} with 500 rows and 12 columns.}
 \usage{
-RangedSummarizedExperiment
+data(RangedSummarizedExperiment)
+}
+\value{
+\code{RangedSummarizedExperiment}.
 }
 \description{
 Example \code{RangedSummarizedExperiment} containing gene-level RNA-seq data.
@@ -16,7 +19,7 @@ Generated with \code{DESeq2::makeExampleDESeqDataSet()}. Contains actual gene
 identifiers and Ensembl annotations.
 }
 \note{
-Updated 2020-01-18.
+Updated 2020-01-28.
 }
 \examples{
 if (requireNamespace("SummarizedExperiment", quietly = TRUE)) {

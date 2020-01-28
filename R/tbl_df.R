@@ -2,8 +2,9 @@
 #'
 #' Example `tbl_df` object.
 #'
-#' @note Updated 2020-01-18.
-#'
+#' @note Updated 2020-01-28.
+#' @return `tbl_df`.
+#' @usage data(tbl_df)
 #' @examples
 #' if (requireNamespace("tibble", quietly = TRUE)) {
 #'     data(tbl_df)

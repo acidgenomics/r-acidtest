@@ -6,13 +6,16 @@
 \title{Genomic ranges}
 \format{An object of class \code{GRanges} of length 5.}
 \usage{
-GRanges
+data(GRanges)
+}
+\value{
+\code{GRanges}.
 }
 \description{
 Example \code{GRanges} object.
 }
 \note{
-Updated 2020-01-18.
+Updated 2020-01-28.
 }
 \examples{
 if (requireNamespace("GenomicRanges", quietly = TRUE)) {

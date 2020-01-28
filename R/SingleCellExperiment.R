@@ -2,12 +2,12 @@
 #'
 #' Example `SingleCellExperiment` containing gene-level RNA-seq data.
 #'
-#' @note Updated 2020-01-18.
-#'
+#' @note Updated 2020-01-28.
+#' @return `SingleCellExperiment`.
 #' @seealso
 #' - `splatter::splatSimulate()`.
 #' - `data(sc_example_counts, package = "scater")`.
-#'
+#' @usage data(SingleCellExperiment)
 #' @examples
 #' if (requireNamespace("SingleCellExperiment", quietly = TRUE)) {
 #'     data(SingleCellExperiment)

@@ -6,13 +6,16 @@
 \title{Data frame}
 \format{An object of class \code{data.frame} with 4 rows and 4 columns.}
 \usage{
-data.frame
+data(data.frame)
+}
+\value{
+\code{data.frame}.
 }
 \description{
 Example \code{data.frame} object.
 }
 \note{
-Updated 2020-01-18.
+Updated 2020-01-28.
 }
 \examples{
 data(data.frame)
