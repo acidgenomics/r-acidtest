@@ -1,3 +1,7 @@
+## acidtest 0.2.13 (2020-01-28)
+
+- Documentation fixes to pass CRAN release checks.
+
 ## acidtest 0.2.12 (2020-01-27)
 
 - Removed monocle3 `cell_data_set` example object. Will add back when monocle3

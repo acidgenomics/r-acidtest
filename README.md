@@ -4,7 +4,7 @@
 [![Travis CI build status](https://travis-ci.com/acidgenomics/acidtest.svg?branch=master)](https://travis-ci.com/acidgenomics/acidtest)
 [![AppVeyor CI build status](https://ci.appveyor.com/api/projects/status/or2o22215alx5xy8/branch/master?svg=true)](https://ci.appveyor.com/project/mjsteinbaugh/acidtest/branch/master)
 
-Reference data for unit testing.
+Reference data for Acid Genomics unit tests.
 
 ## Installation
 

@@ -1,4 +1,4 @@
 #' acidtest
-#' Reference data for unit testing from Acid Genomics.
+#' Reference data for Acid Genomics unit tests.
 #' @keywords internal
 "_PACKAGE"
