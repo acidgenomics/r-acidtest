@@ -2,7 +2,10 @@
 #'
 #' Example `data.frame` object.
 #'
-#' @note Updated 2020-01-18.
+#' @note Updated 2020-01-28.
+#' @usage data(data.frame)
+#'
+#' @return `data.frame`.
 #'
 #' @examples
 #' data(data.frame)
