@@ -1,3 +1,8 @@
+## acidtest 0.2.14 (2020-01-28)
+
+- Additional documentation fixes to avoid CRAN warnings related to roxygen2
+  not outputting correct usage example for data when `lazyData: FALSE`.
+
 ## acidtest 0.2.13 (2020-01-28)
 
 - Documentation fixes to pass CRAN release checks.
