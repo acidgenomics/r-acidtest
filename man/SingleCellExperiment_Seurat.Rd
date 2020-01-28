@@ -6,13 +6,16 @@
 \title{Single cell experiment}
 \format{An object of class \code{SingleCellExperiment} with 230 rows and 80 columns.}
 \usage{
-SingleCellExperiment_Seurat
+data(SingleCellExperiment_Seurat)
+}
+\value{
+\code{SingleCellExperiment}.
 }
 \description{
 Example \code{SingleCellExperiment} containing gene-level RNA-seq data.
 }
 \note{
-Updated 2020-01-18.
+Updated 2020-01-28.
 }
 \examples{
 if (requireNamespace("SingleCellExperiment", quietly = TRUE)) {

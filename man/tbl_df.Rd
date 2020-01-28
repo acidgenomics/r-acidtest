@@ -6,13 +6,16 @@
 \title{Tibble}
 \format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 4 rows and 5 columns.}
 \usage{
-tbl_df
+data(tbl_df)
+}
+\value{
+\code{tbl_df}.
 }
 \description{
 Example \code{tbl_df} object.
 }
 \note{
-Updated 2020-01-18.
+Updated 2020-01-28.
 }
 \examples{
 if (requireNamespace("tibble", quietly = TRUE)) {

@@ -2,7 +2,11 @@
 #'
 #' Example `SingleCellExperiment` containing gene-level RNA-seq data.
 #'
-#' @note Updated 2020-01-18.
+#' @note Updated 2020-01-28.
+#'
+#' @usage data(SingleCellExperiment)
+#'
+#' @return `SingleCellExperiment`.
 #'
 #' @seealso
 #' - `splatter::splatSimulate()`.

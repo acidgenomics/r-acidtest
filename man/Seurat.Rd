@@ -6,13 +6,16 @@
 \title{Seurat}
 \format{An object of class \code{Seurat} with 230 rows and 80 columns.}
 \usage{
-Seurat
+data(Seurat)
+}
+\value{
+\code{Seurat}.
 }
 \description{
 Example \code{Seurat} (v3) object.
 }
 \note{
-Updated 2020-01-18.
+Updated 2020-01-28.
 }
 \examples{
 if (requireNamespace("Seurat", quietly = TRUE)) {

@@ -6,13 +6,16 @@
 \title{Syntactic names list}
 \format{An object of class \code{list} of length 6.}
 \usage{
-syntactic
+data(syntactic)
+}
+\value{
+\code{list}.
 }
 \description{
 Example \code{list} data used to test syntactic naming functions.
 }
 \note{
-Updated 2020-01-18.
+Updated 2020-01-28.
 }
 \examples{
 data(syntactic)

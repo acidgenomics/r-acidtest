@@ -6,13 +6,16 @@
 \title{Summarized experiment}
 \format{An object of class \code{SummarizedExperiment} with 50 rows and 4 columns.}
 \usage{
-SummarizedExperiment
+data(SummarizedExperiment)
+}
+\value{
+\code{SummarizedExperiment}.
 }
 \description{
 Modified version of the \code{SummarizedExperiment()} documentation example.
 }
 \note{
-Updated 2020-01-18.
+Updated 2020-01-28.
 }
 \examples{
 if (requireNamespace("SummarizedExperiment", quietly = TRUE)) {

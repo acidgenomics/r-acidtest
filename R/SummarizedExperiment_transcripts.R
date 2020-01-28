@@ -2,7 +2,11 @@
 #'
 #' Example `SummarizedExperiment` containing transcript-level RNA-seq data.
 #'
-#' @note Updated 2020-01-18.
+#' @note Updated 2020-01-28.
+#'
+#' @usage data(SummarizedExperiment_transcripts)
+#'
+#' @return `SummarizedExperiment`.
 #'
 #' @examples
 #' if (requireNamespace("SummarizedExperiment", quietly = TRUE)) {

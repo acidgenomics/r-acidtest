@@ -6,13 +6,16 @@
 \title{Summarized experiment}
 \format{An object of class \code{SummarizedExperiment} with 6 rows and 4 columns.}
 \usage{
-SummarizedExperiment_transcripts
+data(SummarizedExperiment_transcripts)
+}
+\value{
+\code{SummarizedExperiment}.
 }
 \description{
 Example \code{SummarizedExperiment} containing transcript-level RNA-seq data.
 }
 \note{
-Updated 2020-01-18.
+Updated 2020-01-28.
 }
 \examples{
 if (requireNamespace("SummarizedExperiment", quietly = TRUE)) {
