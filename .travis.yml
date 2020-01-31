@@ -1,4 +1,5 @@
 env:
+  - CRAN=1
   - RCHECK_SKIP_UPDATE=1
 
 os: linux
