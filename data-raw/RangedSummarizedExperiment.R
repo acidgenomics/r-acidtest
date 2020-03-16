@@ -1,7 +1,7 @@
-library(usethis)               # 1.5.1
+library(usethis)
 library(pryr)                  # 0.1.4
 library(SummarizedExperiment)  # 1.16.1
-library(basejump)              # 0.11.24
+library(basejump)              # 0.12.4
 library(DESeq2)                # 1.26.0
 
 ## Restrict to 1.5 MB.
@@ -9,7 +9,7 @@ library(DESeq2)                # 1.26.0
 limit <- structure(1.5e6, class = "object_size")
 
 organism <- "Homo sapiens"
-release <- 92L
+release <- 99L
 
 ## Generate example DESeqDataSet using DESeq2.
 ## Note that we're using simulated counts here.

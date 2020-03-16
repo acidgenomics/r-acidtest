@@ -1,6 +1,6 @@
-library(usethis)        # 1.5.1
+library(usethis)
 library(GenomicRanges)  # 1.38.0
-library(basejump)       # 0.11.24
+library(basejump)       # 0.12.4
 GRanges <- makeGRangesFromEnsembl("Homo sapiens", release = 87L)
 GRanges <- head(GRanges, n = 5L)
 mcols <- mcols(GRanges)

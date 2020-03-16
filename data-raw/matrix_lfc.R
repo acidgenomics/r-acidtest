@@ -1,4 +1,4 @@
-library(usethis)  # 1.5.1
+library(usethis)
 ## Order was randomized using `sample()`.
 nrow <- 8L
 ncol <- 4L

@@ -1,3 +1,11 @@
+## acidtest 0.3.0 (2020-03-16)
+
+- Resaved all example datasets.
+- Now using Ensembl 99 as reference instead of 92, where applicable. This helps
+  avoid errors in other packages, namely pfgsea due to current Ensembl server
+  migration (until March 24th) that renders all archives inaccessible, causing
+  biomaRt code to error out.
+
 ## acidtest 0.2.14 (2020-01-28)
 
 - Additional documentation fixes to avoid CRAN warnings related to roxygen2

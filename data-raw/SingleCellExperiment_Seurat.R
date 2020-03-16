@@ -1,12 +1,12 @@
-library(usethis)      # 1.5.1
+library(usethis)
 library(pryr)         # 0.1.4
-library(pointillism)  # 0.4.5
+library(pointillism)  # 0.4.9
 
 ## Restrict to 1 MB.
 ## Use `pryr::object_size()` instead of `utils::object.size()`.
 limit <- structure(1e6, class = "object_size")
 
-data(Seurat, package = "acidtest")
+data(Seurat)
 sce <- as(Seurat, "SingleCellExperiment")
 sce <- convertSymbolsToGenes(sce)
 
@@ -17,11 +17,11 @@ stopifnot(identical(assayNames(sce), c("counts", "logcounts")))
 ## Dimensionality reduction.
 stopifnot(identical(reducedDimNames(sce), c("PCA", "TSNE", "UMAP")))
 reducedDims(sce) <- reducedDims(sce)["UMAP"]
-reducedDimNames(sce) <- camel(reducedDimNames(sce))
+reducedDimNames(sce) <- camelCase(reducedDimNames(sce))
 
 ## Column data.
 cd <- colData(sce) %>% .[, "groups", drop = FALSE]
-cd$sampleID <- factor(gsub("g", "sample", camel(cd$groups)))
+cd$sampleID <- factor(gsub("g", "sample", camelCase(cd$groups)))
 cd <- cd[, "sampleID", drop = FALSE]
 colData(sce) <- cd
 

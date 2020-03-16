@@ -1,22 +1,22 @@
 ## Gene-level SingleCellExperiment example.
-## Updated 2020-01-18.
+## Updated 2020-03-16.
 ##
 ## Splatter params are derived from:
 ## https://github.com/mikelove/zinbwave-deseq2/blob/master/
 ##     zinbwave-deseq2.knit.md
 
-library(usethis)               # 1.5.1
+library(usethis)
 library(pryr)                  # 0.1.4
 library(SingleCellExperiment)  # 1.8.0
-library(basejump)              # 0.11.24
-library(splatter)              # 1.10.0
+library(basejump)              # 0.12.4
+library(splatter)              # 1.10.1
 
 ## Restrict to 2 MB.
 ## Use `pryr::object_size()` instead of `utils::object.size()`.
 limit <- structure(2e6, class = "object_size")
 
 organism <- "Homo sapiens"
-release <- 92L
+release <- 99L
 
 ## Use splatter to generate an example dataset with simulated counts.
 ## Note: These DE params are natural log scale.
@@ -40,7 +40,7 @@ colData(sce) <- camelCase(colData(sce))
 
 ## Prepare column data.
 colData(sce) <- DataFrame(
-    sampleID = factor(gsub("group", "sample", camel(sce$group))),
+    sampleID = factor(gsub("group", "sample", camelCase(sce$group))),
     row.names = colnames(sce)
 )
 
