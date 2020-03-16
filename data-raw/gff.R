@@ -1,4 +1,5 @@
 ## Create minimal example GFF/GTF files.
+## Updated on 2020-03-16.
 ##
 ## Note that these commands are memory hungry and don't always work well on a
 ## low power virtual machine.
@@ -7,7 +8,8 @@
 ##
 ## Set the working directory to script path.
 
-library(R.utils)
+library(R.utils)   # 2.9.2
+library(basejump)  # 0.12.4
 
 
 
@@ -16,10 +18,10 @@ download.file(
     url = pasteURL(
         "ftp.ensembl.org",
         "pub",
-        "release-95",
+        "release-99",
         "gtf",
         "homo_sapiens",
-        "Homo_sapiens.GRCh38.95.gtf.gz",
+        "Homo_sapiens.GRCh38.99.gtf.gz",
         protocol = "ftp"
     ),
     destfile = "ensembl.gtf.gz"
@@ -37,10 +39,10 @@ download.file(
     url = pasteURL(
         "ftp.ensembl.org",
         "pub",
-        "release-95",
+        "release-99",
         "gff3",
         "homo_sapiens",
-        "Homo_sapiens.GRCh38.95.gff3.gz",
+        "Homo_sapiens.GRCh38.99.gff3.gz",
         protocol = "ftp"
     ),
     destfile = "ensembl.gff3.gz"
@@ -60,8 +62,8 @@ download.file(
         "databases",
         "gencode",
         "Gencode_human",
-        "release_29",
-        "gencode.v29.annotation.gtf.gz",
+        "release_33",
+        "gencode.v33.annotation.gtf.gz",
         protocol = "ftp"
     ),
     destfile = "gencode.gtf.gz"
@@ -81,8 +83,8 @@ download.file(
         "databases",
         "gencode",
         "Gencode_human",
-        "release_29",
-        "gencode.v29.annotation.gff3.gz",
+        "release_33",
+        "gencode.v33.annotation.gff3.gz",
         protocol = "ftp"
     ),
     destfile = "gencode.gff3.gz"
@@ -94,7 +96,7 @@ gzip("gencode.gff3", overwrite = TRUE)
 
 
 
-## RefSeq GRCh38.p12 GTF ====
+## RefSeq GRCh38.p13 GTF ====
 download.file(
     url = pasteURL(
         "ftp.ncbi.nlm.nih.gov",
@@ -103,8 +105,8 @@ download.file(
         "vertebrate_mammalian",
         "Homo_sapiens",
         "reference",
-        "GCF_000001405.38_GRCh38.p12",
-        "GCF_000001405.38_GRCh38.p12_genomic.gtf.gz",
+        "GCF_000001405.39_GRCh38.p13",
+        "GCF_000001405.39_GRCh38.p13_genomic.gtf.gz",
         protocol = "ftp"
     ),
     destfile = "refseq.gtf.gz"
@@ -116,7 +118,7 @@ gzip("refseq.gtf", overwrite = TRUE)
 
 
 
-## RefSeq GRCh38.p12 GFF3 ====
+## RefSeq GRCh38.p13 GFF3 ====
 download.file(
     url = pasteURL(
         "ftp.ncbi.nlm.nih.gov",
@@ -125,8 +127,8 @@ download.file(
         "vertebrate_mammalian",
         "Homo_sapiens",
         "reference",
-        "GCF_000001405.38_GRCh38.p12",
-        "GCF_000001405.38_GRCh38.p12_genomic.gff.gz",
+        "GCF_000001405.39_GRCh38.p13",
+        "GCF_000001405.39_GRCh38.p13_genomic.gff.gz",
         protocol = "ftp"
     ),
     destfile = "refseq.gff.gz"
@@ -143,10 +145,10 @@ download.file(
     url = pasteURL(
         "ftp.flybase.net",
         "releases",
-        "FB2018_05",
-        "dmel_r6.24",
+        "FB2020_01",
+        "dmel_r6.32",
         "gtf",
-        "dmel-all-r6.24.gtf.gz",
+        "dmel-all-r6.32.gtf.gz",
         protocol = "ftp"
     ),
     destfile = "flybase.gtf.gz"
@@ -165,11 +167,11 @@ download.file(
         "pub",
         "wormbase",
         "releases",
-        "WS268",
+        "WS275",
         "species",
         "c_elegans",
         "PRJNA13758",
-        "c_elegans.PRJNA13758.WS268.canonical_geneset.gtf.gz",
+        "c_elegans.PRJNA13758.WS275.canonical_geneset.gtf.gz",
         protocol = "ftp"
     ),
     destfile = "wormbase.gtf.gz"
