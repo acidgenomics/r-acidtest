@@ -1,4 +1,4 @@
-library(usethis)  # 1.5.1
+library(usethis)
 library(Matrix)   # 1.2-18
 i <- c(1L, 3L:8L)
 j <- c(2L, 9L, 6L:10L)

@@ -1,12 +1,12 @@
 ## Seurat example object.
-## Updated 2020-01-18.
+## Updated 2020-03-16.
 
-library(usethis)      # 1.5.1
+library(usethis)
 library(pryr)         # 0.1.4
-library(basejump)     # 0.11.24
+library(basejump)     # 0.12.4
 library(reticulate)   # 1.14
-library(Seurat)       # 3.1.2
-library(pointillism)  # 0.4.5
+library(Seurat)       # 3.1.4
+library(pointillism)  # 0.4.9
 
 ## umap-learn via reticulate doesn't work well with conda.
 ## Set up a Python 3 virtual environment instead.
