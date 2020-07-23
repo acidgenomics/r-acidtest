@@ -1,3 +1,9 @@
+## acidtest 0.3.1 (2020-07-23)
+
+### Minor changes
+
+- Maintenance release, increasing R dependency to 4.0.
+
 ## acidtest 0.3.0 (2020-03-16)
 
 - Resaved all example datasets.

@@ -4,7 +4,9 @@
 \name{syntactic}
 \alias{syntactic}
 \title{Syntactic names list}
-\format{An object of class \code{list} of length 6.}
+\format{
+An object of class \code{list} of length 6.
+}
 \usage{
 data(syntactic)
 }

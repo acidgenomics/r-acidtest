@@ -4,7 +4,9 @@
 \name{data.table}
 \alias{data.table}
 \title{Data table}
-\format{An object of class \code{data.table} (inherits from \code{data.frame}) with 4 rows and 5 columns.}
+\format{
+An object of class \code{data.table} (inherits from \code{data.frame}) with 4 rows and 5 columns.
+}
 \usage{
 data(data.table)
 }

@@ -4,7 +4,9 @@
 \name{sparseMatrix}
 \alias{sparseMatrix}
 \title{Sparse matrix}
-\format{An object of class \code{dgCMatrix} with 8 rows and 10 columns.}
+\format{
+An object of class \code{dgCMatrix} with 8 rows and 10 columns.
+}
 \usage{
 data(sparseMatrix)
 }

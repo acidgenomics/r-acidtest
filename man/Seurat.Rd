@@ -4,7 +4,9 @@
 \name{Seurat}
 \alias{Seurat}
 \title{Seurat}
-\format{An object of class \code{Seurat} with 230 rows and 80 columns.}
+\format{
+An object of class \code{Seurat} with 230 rows and 80 columns.
+}
 \usage{
 data(Seurat)
 }

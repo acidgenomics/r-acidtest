@@ -4,7 +4,9 @@
 \name{SingleCellExperiment_Seurat}
 \alias{SingleCellExperiment_Seurat}
 \title{Single cell experiment}
-\format{An object of class \code{SingleCellExperiment} with 230 rows and 80 columns.}
+\format{
+An object of class \code{SingleCellExperiment} with 230 rows and 80 columns.
+}
 \usage{
 data(SingleCellExperiment_Seurat)
 }

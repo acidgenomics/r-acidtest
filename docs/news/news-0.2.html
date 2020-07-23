@@ -10,23 +10,27 @@
 
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -55,7 +59,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-news">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -69,7 +73,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">acidtest</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.1</span>
       </span>
     </div>
 
@@ -90,7 +94,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/acidgenomics/acidtest">
+  <a href="https://github.com/acidgenomics/acidtest/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -108,13 +112,13 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Changelog <small>0.2</small></h1>
+      <h1 data-toc-skip>Changelog <small>0.2</small></h1>
       
     </div>
 
-    <div id="acidtest-0-2-0-2019-07-21" class="section level2">
+    <div id="acidtest-020-2019-07-21" class="section level2">
 <h2 class="hasAnchor">
-<a href="#acidtest-0-2-0-2019-07-21" class="anchor"></a>acidtest 0.2.0 (2019-07-21)</h2>
+<a href="#acidtest-020-2019-07-21" class="anchor"></a>acidtest 0.2.0 (2019-07-21)</h2>
 <ul>
 <li>Disabled lazy data loading.</li>
 <li>Spelled out object class names to make example data more straightforward.</li>
@@ -122,133 +126,116 @@
 <li>There’s no currently no supported way to redirect old data names, so these changes are breaking.</li>
 </ul>
 </div>
-    <div id="acidtest-0-2-1-2019-07-30" class="section level2">
+    <div id="acidtest-021-2019-07-30" class="section level2">
 <h2 class="hasAnchor">
-<a href="#acidtest-0-2-1-2019-07-30" class="anchor"></a>acidtest 0.2.1 (2019-07-30)</h2>
+<a href="#acidtest-021-2019-07-30" class="anchor"></a>acidtest 0.2.1 (2019-07-30)</h2>
 <ul>
 <li>
 <code>RangedSummarizedExperiment</code>: Resaved with additional metadata columns in <code>rowData</code> that are useful for unit testing in DESeqAnalysis package.</li>
 </ul>
 </div>
-    <div id="acidtest-0-2-2-2019-08-02" class="section level2">
+    <div id="acidtest-022-2019-08-02" class="section level2">
 <h2 class="hasAnchor">
-<a href="#acidtest-0-2-2-2019-08-02" class="anchor"></a>acidtest 0.2.2 (2019-08-02)</h2>
+<a href="#acidtest-022-2019-08-02" class="anchor"></a>acidtest 0.2.2 (2019-08-02)</h2>
 <ul>
 <li>
 <code>cell_data_set</code>: New example monocle3 <code>cell_data_set</code> S4 object.</li>
 </ul>
 </div>
-    <div id="acidtest-0-2-3-2019-08-10" class="section level2">
+    <div id="acidtest-023-2019-08-10" class="section level2">
 <h2 class="hasAnchor">
-<a href="#acidtest-0-2-3-2019-08-10" class="anchor"></a>acidtest 0.2.3 (2019-08-10)</h2>
+<a href="#acidtest-023-2019-08-10" class="anchor"></a>acidtest 0.2.3 (2019-08-10)</h2>
 <ul>
 <li>
 <code>SingleCellExperiment</code>: Updated example to zero pad both row and column names. Previously, only the column names were padded.</li>
 <li>Improved reticulate documentation on how to process Seurat.</li>
 </ul>
 </div>
-    <div id="acidtest-0-2-4-2019-08-13" class="section level2">
+    <div id="acidtest-024-2019-08-13" class="section level2">
 <h2 class="hasAnchor">
-<a href="#acidtest-0-2-4-2019-08-13" class="anchor"></a>acidtest 0.2.4 (2019-08-13)</h2>
+<a href="#acidtest-024-2019-08-13" class="anchor"></a>acidtest 0.2.4 (2019-08-13)</h2>
 <ul>
 <li>Resaved <code>Seurat</code> and <code>SingleCellExperiment_Seurat</code> objects.</li>
 <li>Added additional comments regarding how to configure reticulate and UMAP to generate an example <code>Seurat</code> object with dimension reduction applied.</li>
 </ul>
 </div>
-    <div id="acidtest-0-2-5-2019-08-27" class="section level2">
+    <div id="acidtest-025-2019-08-27" class="section level2">
 <h2 class="hasAnchor">
-<a href="#acidtest-0-2-5-2019-08-27" class="anchor"></a>acidtest 0.2.5 (2019-08-27)</h2>
+<a href="#acidtest-025-2019-08-27" class="anchor"></a>acidtest 0.2.5 (2019-08-27)</h2>
 <ul>
 <li>Updated R dependency to 3.6.</li>
 </ul>
 </div>
-    <div id="acidtest-0-2-6-2019-10-21" class="section level2">
+    <div id="acidtest-026-2019-10-21" class="section level2">
 <h2 class="hasAnchor">
-<a href="#acidtest-0-2-6-2019-10-21" class="anchor"></a>acidtest 0.2.6 (2019-10-21)</h2>
+<a href="#acidtest-026-2019-10-21" class="anchor"></a>acidtest 0.2.6 (2019-10-21)</h2>
 <ul>
 <li>No longer checking against <code>NA</code> for syntactic functions.</li>
 </ul>
 </div>
-    <div id="acidtest-0-2-7-2019-10-30" class="section level2">
+    <div id="acidtest-027-2019-10-30" class="section level2">
 <h2 class="hasAnchor">
-<a href="#acidtest-0-2-7-2019-10-30" class="anchor"></a>acidtest 0.2.7 (2019-10-30)</h2>
+<a href="#acidtest-027-2019-10-30" class="anchor"></a>acidtest 0.2.7 (2019-10-30)</h2>
 <ul>
 <li>Resaved objects following Bioconductor 3.10 release.</li>
 </ul>
 </div>
-    <div id="acidtest-0-2-8-2019-11-11" class="section level2">
+    <div id="acidtest-028-2019-11-11" class="section level2">
 <h2 class="hasAnchor">
-<a href="#acidtest-0-2-8-2019-11-11" class="anchor"></a>acidtest 0.2.8 (2019-11-11)</h2>
+<a href="#acidtest-028-2019-11-11" class="anchor"></a>acidtest 0.2.8 (2019-11-11)</h2>
 <ul>
 <li>Resaved <code>cell_data_set</code> object.</li>
 </ul>
 </div>
-    <div id="acidtest-0-2-9-2020-01-18" class="section level2">
+    <div id="acidtest-029-2020-01-18" class="section level2">
 <h2 class="hasAnchor">
-<a href="#acidtest-0-2-9-2020-01-18" class="anchor"></a>acidtest 0.2.9 (2020-01-18)</h2>
+<a href="#acidtest-029-2020-01-18" class="anchor"></a>acidtest 0.2.9 (2020-01-18)</h2>
 <ul>
 <li>Renamed <code>DataFrame</code> example to <code>DFrame</code>, based on Bioconductor 3.10 change.</li>
 <li>Resaved all example objects.</li>
 </ul>
 </div>
-    <div id="acidtest-0-2-10-2020-01-19" class="section level2">
+    <div id="acidtest-0210-2020-01-19" class="section level2">
 <h2 class="hasAnchor">
-<a href="#acidtest-0-2-10-2020-01-19" class="anchor"></a>acidtest 0.2.10 (2020-01-19)</h2>
+<a href="#acidtest-0210-2020-01-19" class="anchor"></a>acidtest 0.2.10 (2020-01-19)</h2>
 <ul>
 <li>Migrated <code>band_instruments</code> and <code>band_members</code> (dplyr join examples) from now archived transformer package here to acidtest.</li>
 </ul>
 </div>
-    <div id="acidtest-0-2-11-2020-01-20" class="section level2">
+    <div id="acidtest-0211-2020-01-20" class="section level2">
 <h2 class="hasAnchor">
-<a href="#acidtest-0-2-11-2020-01-20" class="anchor"></a>acidtest 0.2.11 (2020-01-20)</h2>
+<a href="#acidtest-0211-2020-01-20" class="anchor"></a>acidtest 0.2.11 (2020-01-20)</h2>
 <ul>
 <li>Reverted saved version of <code>SingleCellExperiment</code> back to v0.2.8 version, as too many unit tests will fail in basejump otherwise, due to splatter creating a new random count matrix.</li>
 </ul>
 </div>
-    <div id="acidtest-0-2-12-2020-01-27" class="section level2">
+    <div id="acidtest-0212-2020-01-27" class="section level2">
 <h2 class="hasAnchor">
-<a href="#acidtest-0-2-12-2020-01-27" class="anchor"></a>acidtest 0.2.12 (2020-01-27)</h2>
+<a href="#acidtest-0212-2020-01-27" class="anchor"></a>acidtest 0.2.12 (2020-01-27)</h2>
 <ul>
 <li>Removed monocle3 <code>cell_data_set</code> example object. Will add back when monocle3 is available on Bioconductor.</li>
 </ul>
 </div>
-    <div id="acidtest-0-2-13-2020-01-28" class="section level2">
+    <div id="acidtest-0213-2020-01-28" class="section level2">
 <h2 class="hasAnchor">
-<a href="#acidtest-0-2-13-2020-01-28" class="anchor"></a>acidtest 0.2.13 (2020-01-28)</h2>
+<a href="#acidtest-0213-2020-01-28" class="anchor"></a>acidtest 0.2.13 (2020-01-28)</h2>
 <ul>
 <li>Documentation fixes to pass CRAN release checks.</li>
 </ul>
 </div>
-    <div id="acidtest-0-2-14-2020-01-28" class="section level2">
+    <div id="acidtest-0214-2020-01-28" class="section level2">
 <h2 class="hasAnchor">
-<a href="#acidtest-0-2-14-2020-01-28" class="anchor"></a>acidtest 0.2.14 (2020-01-28)</h2>
+<a href="#acidtest-0214-2020-01-28" class="anchor"></a>acidtest 0.2.14 (2020-01-28)</h2>
 <ul>
 <li>Additional documentation fixes to avoid CRAN warnings related to roxygen2 not outputting correct usage example for data when <code>lazyData: FALSE</code>.</li>
 </ul>
 </div>
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <div id="tocnav">
-      <h2>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-        <li><a href="#acidtest-0-2-0-2019-07-21">0.2.0</a></li>
-        <li><a href="#acidtest-0-2-1-2019-07-30">0.2.1</a></li>
-        <li><a href="#acidtest-0-2-2-2019-08-02">0.2.2</a></li>
-        <li><a href="#acidtest-0-2-3-2019-08-10">0.2.3</a></li>
-        <li><a href="#acidtest-0-2-4-2019-08-13">0.2.4</a></li>
-        <li><a href="#acidtest-0-2-5-2019-08-27">0.2.5</a></li>
-        <li><a href="#acidtest-0-2-6-2019-10-21">0.2.6</a></li>
-        <li><a href="#acidtest-0-2-7-2019-10-30">0.2.7</a></li>
-        <li><a href="#acidtest-0-2-8-2019-11-11">0.2.8</a></li>
-        <li><a href="#acidtest-0-2-9-2020-01-18">0.2.9</a></li>
-        <li><a href="#acidtest-0-2-10-2020-01-19">0.2.10</a></li>
-        <li><a href="#acidtest-0-2-11-2020-01-20">0.2.11</a></li>
-        <li><a href="#acidtest-0-2-12-2020-01-27">0.2.12</a></li>
-        <li><a href="#acidtest-0-2-13-2020-01-28">0.2.13</a></li>
-        <li><a href="#acidtest-0-2-14-2020-01-28">0.2.14</a></li>
-      </ul>
-    </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 
 </div>
@@ -260,7 +247,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

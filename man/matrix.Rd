@@ -4,7 +4,9 @@
 \name{matrix}
 \alias{matrix}
 \title{Matrix}
-\format{An object of class \code{matrix} with 4 rows and 4 columns.}
+\format{
+An object of class \code{matrix} (inherits from \code{array}) with 4 rows and 4 columns.
+}
 \usage{
 data(matrix)
 }

@@ -4,7 +4,9 @@
 \name{band_instruments}
 \alias{band_instruments}
 \title{Band membership}
-\format{An object of class \code{DFrame} with 3 rows and 2 columns.}
+\format{
+An object of class \code{DFrame} with 3 rows and 2 columns.
+}
 \usage{
 data(band_instruments)
 }
