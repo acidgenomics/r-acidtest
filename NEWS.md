@@ -1,3 +1,7 @@
+## acidtest 0.3.2 (2020-07-24)
+
+- Resaved Seurat object.
+
 ## acidtest 0.3.1 (2020-07-23)
 
 ### Minor changes
