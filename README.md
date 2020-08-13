@@ -11,12 +11,7 @@ Reference data for Acid Genomics unit tests.
 This is an [R][] package.
 
 ```r
-if (!requireNamespace("remotes", quietly = TRUE)) {
-    install.packages("remotes")
-}
-Sys.setenv(R_REMOTES_UPGRADE = "always")
-## Set `GITHUB_PAT` in `~/.Renviron` if you get a rate limit error.
-remotes::install_github("acidgenomics/acidtest")
+install.packages("acidtest", repos = "r.acidgenomics.com")
 ```
 
 [acid genomics]: https://acidgenomics.com/
