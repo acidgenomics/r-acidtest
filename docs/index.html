@@ -79,7 +79,10 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>This is an <a href="https://www.r-project.org/">R</a> package.</p>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"acidtest"</span>, <span class="kw">repos</span> <span class="kw">=</span> <span class="st">"r.acidgenomics.com"</span>)</pre></div>
+<div class="sourceCode" id="cb1"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(
+    <span class="kw">pkgs</span> <span class="kw">=</span> <span class="st">"acidtest"</span>,
+    <span class="kw">repos</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"r.acidgenomics.com"</span>, <span class="fu"><a href="https://rdrr.io/r/base/options.html">getOption</a></span>(<span class="st">"repos"</span>))
+)</pre></div>
 </div>
 </div>
   </div>

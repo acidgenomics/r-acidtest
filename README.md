@@ -11,7 +11,10 @@ Reference data for Acid Genomics unit tests.
 This is an [R][] package.
 
 ```r
-install.packages("acidtest", repos = "r.acidgenomics.com")
+install.packages(
+    pkgs = "acidtest",
+    repos = c("r.acidgenomics.com", getOption("repos"))
+)
 ```
 
 [acid genomics]: https://acidgenomics.com/
