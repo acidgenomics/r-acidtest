@@ -1,3 +1,9 @@
+## AcidTest 0.4.0 (2020-10-06)
+
+### Major changes
+
+- Renamed package from acidtest to AcidTest.
+
 ## acidtest 0.3.2 (2020-07-24)
 
 - Resaved Seurat object.

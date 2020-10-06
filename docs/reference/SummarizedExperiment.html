@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Summarized experiment — SummarizedExperiment • acidtest</title>
+<title>Summarized experiment — SummarizedExperiment • AcidTest</title>
 
 
 <!-- jquery -->
@@ -73,8 +73,8 @@
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">acidtest</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.1</span>
+        <a class="navbar-link" href="../index.html">AcidTest</a>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.4.0</span>
       </span>
     </div>
 
@@ -95,7 +95,13 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/acidgenomics/acidtest/">
+  <a href="https://acidgenomics.com/">
+    <span class="fas fa fas fa-vial fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://github.com/acidgenomics/AcidTest/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -114,7 +120,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Summarized experiment</h1>
-    <small class="dont-index">Source: <a href='https://github.com/acidgenomics/acidtest/blob/master/R/SummarizedExperiment.R'><code>R/SummarizedExperiment.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/acidgenomics/AcidTest/blob/master/R/SummarizedExperiment.R'><code>R/SummarizedExperiment.R</code></a></small>
     <div class="hidden name"><code>SummarizedExperiment.Rd</code></div>
     </div>
 
@@ -122,7 +128,7 @@
     <p>Modified version of the <code>SummarizedExperiment()</code> documentation example.</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>SummarizedExperiment</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>SummarizedExperiment</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
@@ -136,11 +142,12 @@
     <p>Updated 2020-01-28.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"SummarizedExperiment"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
-    <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>SummarizedExperiment</span>)
-    <span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>SummarizedExperiment</span>)
-    <span class='no'>SummarizedExperiment</span>
-}</div><div class='output co'>#&gt; class: SummarizedExperiment 
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span><span class='op'>(</span><span class='st'>"SummarizedExperiment"</span>, quietly <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span>
+    <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>SummarizedExperiment</span><span class='op'>)</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='op'>(</span><span class='va'>SummarizedExperiment</span><span class='op'>)</span>
+    <span class='va'>SummarizedExperiment</span>
+<span class='op'>}</span>
+</div><div class='output co'>#&gt; class: SummarizedExperiment 
 #&gt; dim: 50 4 
 #&gt; metadata(0):
 #&gt; assays(1): ''
@@ -163,7 +170,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
