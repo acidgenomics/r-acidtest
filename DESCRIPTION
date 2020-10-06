@@ -27,11 +27,11 @@ Suggests:
     IRanges,
     Matrix,
     S4Vectors,
-    Seurat (>= 3.1),
+    Seurat,
     SingleCellExperiment,
     SummarizedExperiment,
-    data.table (>= 1.12),
-    dplyr (>= 0.8),
-    tibble (>= 2.1)
+    data.table,
+    dplyr,
+    tibble
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1

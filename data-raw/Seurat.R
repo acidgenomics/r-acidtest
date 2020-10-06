@@ -1,12 +1,12 @@
 ## Seurat example object.
-## Updated 2020-03-16.
+## Updated 2020-07-24.
 
 library(usethis)
 library(pryr)         # 0.1.4
-library(basejump)     # 0.12.4
-library(reticulate)   # 1.14
-library(Seurat)       # 3.1.4
-library(pointillism)  # 0.4.9
+library(basejump)     # 0.12.9
+library(reticulate)   # 1.16
+library(Seurat)       # 3.2.0
+library(pointillism)  # 0.4.12
 
 ## umap-learn via reticulate doesn't work well with conda.
 ## Set up a Python 3 virtual environment instead.
@@ -40,23 +40,15 @@ virtualenv_list()
 use_virtualenv(virtualenv = "r-reticulate", required = TRUE)
 py_config()
 
-## Azure RHEL 7 (2019-10-25):
-##
-## python:         /home/mike/.virtualenvs/r-reticulate/bin/python
-## libpython:      /usr/local/koopa/cellar/python/3.8.0/lib/libpython3.8.so
-## pythonhome:     /usr/local/koopa/cellar/python/3.8.0:/usr/local/koopa/cellar/python/3.8.0
-## version:        3.8.0 (default, Oct 16 2019, 11:45:19)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
-## numpy:          /home/mike/.virtualenvs/r-reticulate/lib/python3.8/site-packages/numpy
-## numpy_version:  1.17.3
-
 ## macOS 10.14.6 (2020-01-18):
 ##
-## python:         /usr/local/python/virtualenvs/r-reticulate/bin/python
-## libpython:      /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/config-3.8-darwin/libpython3.8.dylib
-## pythonhome:     /Library/Frameworks/Python.framework/Versions/3.8:/Library/Frameworks/Python.framework/Versions/3.8
-## version:        3.8.1 (v3.8.1:1b293b6006, Dec 18 2019, 14:08:53)  [Clang 6.0 (clang-600.0.57)]
-## numpy:          /usr/local/python/virtualenvs/r-reticulate/lib/python3.8/site-packages/numpy
-## numpy_version:  1.18.1
+## python:         /usr/local/koopa/opt/python/virtualenvs/r-reticulate/bin/python
+## libpython:      /usr/local/opt/python@3.8/Frameworks/Python.framework/Versions/3.8/lib/python3.8/config-3.8-darwin/libpython3.8.dylib
+## pythonhome:     /usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8:/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8
+## version:        3.8.5 (default, Jul 21 2020, 10:48:26)  [Clang 11.0.3 (clang-1103.0.32.62)]
+## numpy:          /usr/local/koopa/opt/python/virtualenvs/r-reticulate/lib/python3.8/site-packages/numpy
+## numpy_version:  1.19.1
+## leidenalg:      [NOT FOUND]
 
 ## Now we're ready to check and see if UMAP is available.
 stopifnot(py_module_available(module = "umap"))
