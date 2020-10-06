@@ -1,8 +1,8 @@
-Package: acidtest
+Package: AcidTest
 Title: Acid Genomics Test Data
 Description: Reference data for Acid Genomics unit tests.
-Version: 0.3.0
-Date: 2020-03-16
+Version: 0.4.0
+Date: 2020-10-06
 Authors@R: c(
     person(
         "Michael", "Steinbaugh",
@@ -16,22 +16,22 @@ Authors@R: c(
     ))
 URL:
     https://acidtest.acidgenomics.com/,
-    https://github.com/acidgenomics/acidtest/
-BugReports: https://github.com/acidgenomics/acidtest/issues/
+    https://github.com/acidgenomics/AcidTest/
+BugReports: https://github.com/acidgenomics/AcidTest/issues/
 License: GPL-3
 Encoding: UTF-8
 LazyData: false
-Depends: R (>= 3.6)
+Depends: R (>= 4.0)
 Suggests:
-    GenomicRanges (>= 1.38),
-    IRanges (>= 2.20),
-    Matrix (>= 1.2),
-    S4Vectors (>= 0.24),
+    GenomicRanges,
+    IRanges,
+    Matrix,
+    S4Vectors,
     Seurat (>= 3.1),
-    SingleCellExperiment (>= 1.8),
-    SummarizedExperiment (>= 1.16),
+    SingleCellExperiment,
+    SummarizedExperiment,
     data.table (>= 1.12),
     dplyr (>= 0.8),
     tibble (>= 2.1)
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.1

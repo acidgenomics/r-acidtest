@@ -4,7 +4,9 @@
 \name{matrix_lfc}
 \alias{matrix_lfc}
 \title{Log fold change}
-\format{An object of class \code{matrix} with 8 rows and 4 columns.}
+\format{
+An object of class \code{matrix} (inherits from \code{array}) with 8 rows and 4 columns.
+}
 \usage{
 data(matrix_lfc)
 }

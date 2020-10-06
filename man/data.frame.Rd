@@ -4,7 +4,9 @@
 \name{data.frame}
 \alias{data.frame}
 \title{Data frame}
-\format{An object of class \code{data.frame} with 4 rows and 4 columns.}
+\format{
+An object of class \code{data.frame} with 4 rows and 4 columns.
+}
 \usage{
 data(data.frame)
 }

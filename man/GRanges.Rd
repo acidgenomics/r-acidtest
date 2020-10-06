@@ -4,7 +4,9 @@
 \name{GRanges}
 \alias{GRanges}
 \title{Genomic ranges}
-\format{An object of class \code{GRanges} of length 5.}
+\format{
+An object of class \code{GRanges} of length 5.
+}
 \usage{
 data(GRanges)
 }

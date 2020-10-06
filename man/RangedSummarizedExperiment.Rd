@@ -4,7 +4,9 @@
 \name{RangedSummarizedExperiment}
 \alias{RangedSummarizedExperiment}
 \title{Ranged summarized experiment}
-\format{An object of class \code{RangedSummarizedExperiment} with 500 rows and 12 columns.}
+\format{
+An object of class \code{RangedSummarizedExperiment} with 500 rows and 12 columns.
+}
 \usage{
 data(RangedSummarizedExperiment)
 }

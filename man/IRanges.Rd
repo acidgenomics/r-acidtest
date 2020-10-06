@@ -4,7 +4,9 @@
 \name{IRanges}
 \alias{IRanges}
 \title{Integer ranges}
-\format{An object of class \code{IRanges} of length 3.}
+\format{
+An object of class \code{IRanges} of length 3.
+}
 \usage{
 data(IRanges)
 }
