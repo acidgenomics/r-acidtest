@@ -12,7 +12,10 @@ This is an [R][] package.
 ```r
 install.packages(
     pkgs = "AcidTest",
-    repos = c("r.acidgenomics.com", getOption("repos"))
+    repos = c(
+        "https://r.acidgenomics.com",
+        getOption("repos")
+    )
 )
 ```
 
