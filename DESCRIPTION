@@ -15,9 +15,9 @@ Authors@R: c(
         role = c("cph", "fnd")
     ))
 URL:
-    https://acidtest.acidgenomics.com/,
-    https://github.com/acidgenomics/AcidTest/
-BugReports: https://github.com/acidgenomics/AcidTest/issues/
+    https://r.acidgenomics.com/packages/acidtest/,
+    https://github.com/acidgenomics/r-acidtest/
+BugReports: https://github.com/acidgenomics/r-acidtest/issues/
 License: GPL-3
 Encoding: UTF-8
 LazyData: false
