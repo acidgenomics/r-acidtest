@@ -11,9 +11,9 @@ Reference data for Acid Genomics unit tests.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://acidtest.acidgenomics.com/}
-  \item \url{https://github.com/acidgenomics/acidtest/}
-  \item Report bugs at \url{https://github.com/acidgenomics/acidtest/issues/}
+  \item \url{https://r.acidgenomics.com/packages/acidtest/}
+  \item \url{https://github.com/acidgenomics/r-acidtest/}
+  \item Report bugs at \url{https://github.com/acidgenomics/r-acidtest/issues/}
 }
 
 }
