@@ -1,5 +1,5 @@
 library(usethis)
-library(SummarizedExperiment)  # 1.16.1
+library(SummarizedExperiment)
 nrow <- 50L
 ncol <- 4L
 assay <- matrix(
