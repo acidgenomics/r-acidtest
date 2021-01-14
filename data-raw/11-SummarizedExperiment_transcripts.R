@@ -1,22 +1,18 @@
 library(magrittr)
 library(usethis)
-library(pryr)                  # 0.1.4
-library(SummarizedExperiment)  # 1.16.1
-library(basejump)              # 0.13.5
-
+library(pryr)
+library(SummarizedExperiment)
+library(basejump)
 ## Restrict to 1 MB.
 ## Use `pryr::object_size()` instead of `utils::object.size()`.
 limit <- structure(1e6, class = "object_size")
-
 organism <- "Homo sapiens"
 release <- 99L
-
 tx2gene <-
     makeTx2GeneFromEnsembl(organism, release = release) %>%
     as("DataFrame") %>%
     set_colnames(c("txId", "geneID"))
-
-## Pick transcripts that have gene overlaps, to test our aggregate code.
+## Pick transcripts that have gene overlaps, to test our `aggregate()` code.
 transcripts <- c(
     "ENST00000494424",
     "ENST00000496771",
@@ -46,12 +42,10 @@ se <- SummarizedExperiment(
     rowData = rowData,
     metadata = list(date = Sys.Date())
 )
-
 ## Size checks.
 lapply(coerceS4ToList(se), object_size)
 object_size(se)
 stopifnot(object_size(se) < limit)
 validObject(se)
-
 SummarizedExperiment_transcripts <- se
 use_data(SummarizedExperiment_transcripts, compress = "xz", overwrite = TRUE)
