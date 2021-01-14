@@ -40,7 +40,7 @@ colData(sce) <- camelCase(colData(sce))
 
 ## Prepare column data.
 colData(sce) <- DataFrame(
-    sampleID = factor(gsub("group", "sample", camelCase(sce$group))),
+    "sampleId" = factor(gsub("group", "sample", camelCase(sce$group))),
     row.names = colnames(sce)
 )
 
@@ -58,7 +58,7 @@ rowRanges <- rowRanges[seq_len(nrow(sce)), ]
 ## Relevel the factor columns, to save disk space.
 rowRanges <- droplevels(rowRanges)
 ## Note that we're keeping the original rownames from dds_small, and they won't
-## match the `geneID` column in rowRanges. This is intentional, for unit tests.
+## match the `geneId` column in rowRanges. This is intentional, for unit tests.
 names(rowRanges) <- rownames(sce)
 rowRanges(sce) <- rowRanges
 

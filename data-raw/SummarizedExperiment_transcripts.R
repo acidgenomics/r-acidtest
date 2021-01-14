@@ -21,7 +21,7 @@ transcripts <- c(
     "ENST00000371588",
     "ENST00000413082"
 )
-stopifnot(all(transcripts %in% tx2gene[["transcriptID"]]))
+stopifnot(all(transcripts %in% tx2gene[["transcriptId"]]))
 samples <- paste0("sample", seq_len(4L))
 counts <- matrix(
     data = seq_len(length(transcripts) * length(samples)),
@@ -33,7 +33,7 @@ counts <- matrix(
 rowData <- tx2gene %>%
     as("DataFrame") %>%
     .[
-        match(x = rownames(counts), table = .[["transcriptID"]]),
+        match(x = rownames(counts), table = .[["transcriptId"]]),
         ,
         drop = FALSE
     ]

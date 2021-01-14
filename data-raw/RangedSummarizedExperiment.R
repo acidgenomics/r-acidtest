@@ -27,14 +27,14 @@ stopifnot(object_size(rse) < limit)
 ## Pad the dimnames so they sort correctly.
 rse <- autopadZeros(rse, rownames = TRUE)
 
-## Row data. Include real `geneID`, `geneName` columns to test mapping.
+## Row data. Include real `geneId`, `geneName` columns to test mapping.
 rowRanges <- makeGRangesFromEnsembl(organism = organism, release = release)
 ## Subset to match the number of rows in the example.
 rowRanges <- rowRanges[seq_len(nrow(rse)), ]
 ## Relevel the factor columns, to save disk space.
 rowRanges <- droplevels(rowRanges)
 ## Note that we're keeping the original rownames from dds_small, and they won't
-## match the `geneID` column in rowRanges. This is intentional, for unit tests.
+## match the `geneId` column in rowRanges. This is intentional, for unit tests.
 names(rowRanges) <- rownames(rse)
 rowRanges(rse) <- rowRanges
 

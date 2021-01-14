@@ -1,3 +1,9 @@
+## AcidTest 0.4.1 (2021-01-14)
+
+### Minor changes
+
+- Resaved metadata in strict lower camel case, where applicable.
+
 ## AcidTest 0.4.0 (2020-10-06)
 
 ### Major changes

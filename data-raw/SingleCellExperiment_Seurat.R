@@ -21,8 +21,8 @@ reducedDimNames(sce) <- camelCase(reducedDimNames(sce))
 
 ## Column data.
 cd <- colData(sce) %>% .[, "groups", drop = FALSE]
-cd$sampleID <- factor(gsub("g", "sample", camelCase(cd$groups)))
-cd <- cd[, "sampleID", drop = FALSE]
+cd$sampleId <- factor(gsub("g", "sample", camelCase(cd$groups)))
+cd <- cd[, "sampleId", drop = FALSE]
 colData(sce) <- cd
 
 ## Metadata.
