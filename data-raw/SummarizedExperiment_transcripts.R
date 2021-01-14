@@ -1,7 +1,8 @@
+library(magrittr)
 library(usethis)
 library(pryr)                  # 0.1.4
 library(SummarizedExperiment)  # 1.16.1
-library(basejump)              # 0.12.4
+library(basejump)              # 0.13.5
 
 ## Restrict to 1 MB.
 ## Use `pryr::object_size()` instead of `utils::object.size()`.
@@ -10,7 +11,10 @@ limit <- structure(1e6, class = "object_size")
 organism <- "Homo sapiens"
 release <- 99L
 
-tx2gene <- makeTx2GeneFromEnsembl(organism, release = release)
+tx2gene <-
+    makeTx2GeneFromEnsembl(organism, release = release) %>%
+    as("DataFrame") %>%
+    set_colnames(c("txId", "geneID"))
 
 ## Pick transcripts that have gene overlaps, to test our aggregate code.
 transcripts <- c(
@@ -21,7 +25,7 @@ transcripts <- c(
     "ENST00000371588",
     "ENST00000413082"
 )
-stopifnot(all(transcripts %in% tx2gene[["transcriptId"]]))
+stopifnot(all(transcripts %in% tx2gene[["txId"]]))
 samples <- paste0("sample", seq_len(4L))
 counts <- matrix(
     data = seq_len(length(transcripts) * length(samples)),
@@ -33,7 +37,7 @@ counts <- matrix(
 rowData <- tx2gene %>%
     as("DataFrame") %>%
     .[
-        match(x = rownames(counts), table = .[["transcriptId"]]),
+        match(x = rownames(counts), table = .[["txId"]]),
         ,
         drop = FALSE
     ]
