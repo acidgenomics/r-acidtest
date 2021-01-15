@@ -1,5 +1,7 @@
 ## Order was randomized using `sample()`.
-library(usethis)
+suppressPackageStartupMessages({
+    library(usethis)
+})
 nrow <- 8L
 ncol <- 4L
 matrix_lfc <- matrix(

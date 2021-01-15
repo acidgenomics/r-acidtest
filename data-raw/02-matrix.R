@@ -1,4 +1,6 @@
-library(usethis)
+suppressPackageStartupMessages({
+    library(usethis)
+})
 nrow <- 4L
 ncol <- 4L
 matrix <- matrix(

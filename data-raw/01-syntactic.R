@@ -1,4 +1,6 @@
-library(usethis)
+suppressPackageStartupMessages({
+    library(usethis)
+})
 data.frame <- head(datasets::USArrests)  # nolint
 matrix <- as.matrix(data.frame)
 syntactic <- list(

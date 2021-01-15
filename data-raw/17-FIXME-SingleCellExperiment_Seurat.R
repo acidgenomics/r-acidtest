@@ -1,6 +1,8 @@
-library(usethis)
-library(pryr)
-library(pointillism)
+suppressPackageStartupMessages({
+    library(usethis)
+    library(pryr)
+    library(pointillism)
+})
 
 ## Restrict to 1 MB.
 ## Use `pryr::object_size()` instead of `utils::object.size()`.

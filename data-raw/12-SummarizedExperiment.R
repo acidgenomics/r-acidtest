@@ -1,5 +1,7 @@
-library(usethis)
-library(SummarizedExperiment)
+suppressPackageStartupMessages({
+    library(usethis)
+    library(SummarizedExperiment)
+})
 nrow <- 50L
 ncol <- 4L
 assay <- matrix(

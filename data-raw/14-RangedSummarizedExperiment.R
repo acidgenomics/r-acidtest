@@ -1,8 +1,10 @@
-library(usethis)
-library(pryr)
-library(SummarizedExperiment)
-library(basejump)
-library(DESeq2)
+suppressPackageStartupMessages({
+    library(usethis)
+    library(pryr)
+    library(SummarizedExperiment)
+    library(basejump)
+    library(DESeq2)
+})
 ## Restrict to 1.5 MB.
 ## Use `pryr::object_size()` instead of `utils::object.size()`.
 limit <- structure(1.5e6, class = "object_size")

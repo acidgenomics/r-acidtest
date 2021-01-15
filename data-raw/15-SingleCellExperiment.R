@@ -9,11 +9,13 @@
 ##     zinbwave-deseq2.knit.md
 NULL
 
-library(usethis)
-library(pryr)
-library(SingleCellExperiment)
-library(basejump)
-library(splatter)
+suppressPackageStartupMessages({
+    library(usethis)
+    library(pryr)
+    library(SingleCellExperiment)
+    library(basejump)
+    library(splatter)
+})
 
 ## Restrict to 2 MB.
 ## Use `pryr::object_size()` instead of `utils::object.size()`.

@@ -1,6 +1,8 @@
-library(usethis)
-library(GenomicRanges)
-library(basejump)
+suppressPackageStartupMessages({
+    library(usethis)
+    library(GenomicRanges)
+    library(basejump)
+})
 GRanges <- makeGRangesFromEnsembl("Homo sapiens", release = 87L)
 GRanges <- head(GRanges, n = 5L)
 mcols <- mcols(GRanges)

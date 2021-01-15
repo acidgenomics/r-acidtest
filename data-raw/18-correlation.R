@@ -1,5 +1,7 @@
-library(usethis)
-library(SummarizedExperiment)
+suppressPackageStartupMessages({
+    library(usethis)
+    library(SummarizedExperiment)
+})
 nrow <- 10L
 ncol <- 10L
 n <- nrow * ncol

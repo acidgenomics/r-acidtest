@@ -1,15 +1,18 @@
-library(usethis)
-library(pryr)
-library(basejump)
-library(reticulate)
-library(Seurat)
-library(pointillism)
+suppressPackageStartupMessages({
+    library(usethis)
+    library(pryr)
+    library(basejump)
+    library(reticulate)
+    library(Seurat)
+    library(pointillism)
+})
 
 ## umap-learn@0.5.0 conda environment warning:
 ## Now we're ready to check and see if UMAP is available.
 ## New warning: Tensorflow not installed; ParametricUMAP will be unavailable.
 ## Consider adding tensorflow to the bioconda recipe?
 ## > use_condaenv(condaenv = "umap-learn@0.5.0", required = TRUE)
+## https://github.com/conda-forge/umap-learn-feedstock/issues/29
 
 ## NOTE Need to add tensorflow 2.3.2 (Python 3.8) to Bioconda first, then
 ## add this to the umap-learn recipe to better support 0.5.0 update.
