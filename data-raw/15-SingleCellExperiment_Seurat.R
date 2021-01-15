@@ -1,6 +1,6 @@
 library(usethis)
-library(pryr)         # 0.1.4
-library(pointillism)  # 0.4.9
+library(pryr)
+library(pointillism)
 
 ## Restrict to 1 MB.
 ## Use `pryr::object_size()` instead of `utils::object.size()`.
@@ -8,6 +8,7 @@ limit <- structure(1e6, class = "object_size")
 
 data(Seurat)
 sce <- as(Seurat, "SingleCellExperiment")
+## FIXME This needs to be updated to match `geneId` instead of `geneID`..
 sce <- convertSymbolsToGenes(sce)
 
 ## Assays.

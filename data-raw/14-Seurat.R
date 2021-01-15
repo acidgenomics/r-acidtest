@@ -11,6 +11,9 @@ library(pointillism)
 ## Consider adding tensorflow to the bioconda recipe?
 ## > use_condaenv(condaenv = "umap-learn@0.5.0", required = TRUE)
 
+## NOTE Need to add tensorflow 2.3.2 (Python 3.8) to Bioconda first, then
+## add this to the umap-learn recipe to better support 0.5.0 update.
+
 use_condaenv(condaenv = "umap-learn@0.4.6", required = TRUE)
 py_config()
 ## macOS 10.15.7 (2021-01-14):
