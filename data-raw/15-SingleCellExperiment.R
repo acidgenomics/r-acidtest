@@ -1,13 +1,11 @@
 #' Gene-level SingleCellExperiment example
 #'
 #' @note Updated 2020-03-16.
-#' @noRd
-#
+#'
 #' @details
-## Splatter params are derived from:
-## https://github.com/mikelove/zinbwave-deseq2/blob/master/
-##     zinbwave-deseq2.knit.md
-NULL
+#' Splatter params are derived from:
+#' https://github.com/mikelove/zinbwave-deseq2/blob/master/
+#'     zinbwave-deseq2.knit.md
 
 suppressPackageStartupMessages({
     library(usethis)
