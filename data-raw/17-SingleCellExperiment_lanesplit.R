@@ -28,12 +28,14 @@ colnames(sce) <- paste(
     sep = "_"
 )
 colData(sce) <- DataFrame(
-    "sampleId" = paste(
+    "sampleId" = as.factor(paste(
         rep(x = samples, each = length(barcodes) * length(lanes)),
         rep(x = lanes, times = length(barcodes) * length(samples)),
         sep = "_"
+    )),
+    "aggregate" = as.factor(
+        rep(x = samples, each = length(barcodes) * length(lanes))
     ),
-    "aggregate" = rep(x = samples, each = length(barcodes) * length(lanes)),
     row.names = colnames(sce)
 )
 SingleCellExperiment_lanesplit <- sce
