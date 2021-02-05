@@ -1,11 +1,14 @@
 suppressPackageStartupMessages({
     library(usethis)
-    library(pryr)  # switch to lobstr?
-    library(basejump)
+    library(pryr)
     library(reticulate)
     library(Seurat)
+    library(basejump)
     library(pointillism)
 })
+
+## Restrict object size to 1 MB.
+limit <- structure(1e6, class = "object_size")
 
 ## umap-learn@0.5.0 conda environment warning:
 ## Now we're ready to check and see if UMAP is available.
@@ -29,13 +32,10 @@ py_config()
 ## numpy:          /opt/koopa/app/conda/4.9.2/envs/umap-learn@0.4.6/lib/python3.8/site-packages/numpy
 ## numpy_version:  1.19.5
 ## nolint end
-
 stopifnot(py_module_available(module = "umap"))
 
-## Restrict object size to 1 MB.
-limit <- structure(1e6, class = "object_size")
-
-data(pbmc_small, package = "Seurat")
+## Location of example data moved from Seurat to SeuratObject in v4.0.
+data(pbmc_small, package = "SeuratObject")
 
 ## The Seurat wiki describes the changes in v3.0+.
 ## https://github.com/satijalab/seurat/wiki
@@ -55,13 +55,10 @@ Seurat <- RunUMAP(
 ## Slot row ranges into the Seurat object.
 rowRanges <- makeGRangesFromEnsembl(
     organism = "Homo sapiens",
-    genomeBuild = "GRCh37"
+    level = "genes",
+    genomeBuild = "GRCh37",
+    ignoreVersion = TRUE
 )
-colnames(mcols(rowRanges)) <-
-    camelCase(
-        object = colnames(mcols(rowRanges)),
-        strict = TRUE
-    )
 x <- rownames(Seurat)
 table <- make.unique(as.character(rowRanges$geneName))
 names(rowRanges) <- table
@@ -70,6 +67,7 @@ which <- match(x = x, table = table)
 rowRanges <- rowRanges[which]
 rowRanges <- droplevels(rowRanges)
 stopifnot(object_size(rowRanges) < limit)
+## FIXME THIS IS DEFINED IN POINTILLISM...
 rowRanges(Seurat) <- rowRanges
 
 object_size(Seurat)
