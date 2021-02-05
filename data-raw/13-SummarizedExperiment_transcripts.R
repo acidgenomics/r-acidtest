@@ -8,24 +8,28 @@ suppressPackageStartupMessages({
 ## Restrict to 1 MB.
 ## Use `pryr::object_size()` instead of `utils::object.size()`.
 limit <- structure(1e6, class = "object_size")
-organism <- "Homo sapiens"
-release <- 102L
 tx2gene <- makeTx2GeneFromEnsembl(
-    organism = organism,
-    release = release,
+    organism = "Homo sapiens",
+    release = 100L,
     ignoreVersion = FALSE
 )
 ## Pick transcripts that have gene overlaps, to test our `aggregate()` code.
-## FIXME NEED TO INCLUDE VERSION HERE...
 transcripts <- c(
-    "ENST00000494424",
-    "ENST00000496771",
-    "ENST00000612152",
-    "ENST00000371584",
-    "ENST00000371588",
-    "ENST00000413082"
+    "ENST00000494424.1",
+    "ENST00000496771.5",
+    "ENST00000612152.4",
+    "ENST00000371584.8",
+    "ENST00000371588.9",
+    "ENST00000413082.1"
 )
-stopifnot(all(transcripts %in% tx2gene[["txId"]]))
+genes <- c(
+    "ENSG00000000003.15",
+    "ENSG00000000419.12"
+)
+stopifnot(
+    all(transcripts %in% tx2gene[["txId"]]),
+    all(genes %in% tx2gene[["geneId"]])
+)
 samples <- paste0("sample", seq_len(4L))
 counts <- matrix(
     data = seq_len(length(transcripts) * length(samples)),
@@ -47,7 +51,7 @@ se <- SummarizedExperiment(
     metadata = list(date = Sys.Date())
 )
 ## Size checks.
-lapply(coerceS4ToList(se), object_size)
+lapply(coerceToList(se), object_size)
 object_size(se)
 stopifnot(object_size(se) < limit)
 validObject(se)
