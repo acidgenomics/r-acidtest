@@ -1,6 +1,6 @@
 suppressPackageStartupMessages({
     library(usethis)
-    library(pryr)
+    library(pryr)  # switch to lobstr?
     library(basejump)
     library(reticulate)
     library(Seurat)
@@ -19,6 +19,7 @@ suppressPackageStartupMessages({
 
 use_condaenv(condaenv = "umap-learn@0.4.6", required = TRUE)
 py_config()
+## nolint start
 ## macOS 10.15.7 (2021-01-14):
 ##
 ## python:         /opt/koopa/app/conda/4.9.2/envs/umap-learn@0.4.6/bin/python
@@ -27,6 +28,7 @@ py_config()
 ## version:        3.8.6 | packaged by conda-forge | (default, Dec 26 2020, 04:50:20)  [Clang 11.0.0 ]
 ## numpy:          /opt/koopa/app/conda/4.9.2/envs/umap-learn@0.4.6/lib/python3.8/site-packages/numpy
 ## numpy_version:  1.19.5
+## nolint end
 
 stopifnot(py_module_available(module = "umap"))
 
@@ -35,7 +37,7 @@ limit <- structure(1e6, class = "object_size")
 
 data(pbmc_small, package = "Seurat")
 
-## The Seurat wiki describes the changes in v3.0.
+## The Seurat wiki describes the changes in v3.0+.
 ## https://github.com/satijalab/seurat/wiki
 Seurat <- UpdateSeuratObject(pbmc_small)
 object_size(Seurat)
