@@ -17,7 +17,7 @@ data(SummarizedExperiment_transcripts)
 Example \code{SummarizedExperiment} containing transcript-level RNA-seq data.
 }
 \note{
-Updated 2020-01-28.
+Updated 2020-02-05.
 }
 \examples{
 if (requireNamespace("SummarizedExperiment", quietly = TRUE)) {

@@ -21,7 +21,7 @@ Generated with \code{DESeq2::makeExampleDESeqDataSet()}. Contains actual gene
 identifiers and Ensembl annotations.
 }
 \note{
-Updated 2020-01-28.
+Updated 2021-02-05.
 }
 \examples{
 if (requireNamespace("SummarizedExperiment", quietly = TRUE)) {
