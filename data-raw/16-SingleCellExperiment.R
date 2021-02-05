@@ -66,7 +66,7 @@ rowRanges(sce) <- rowRanges
 ## Stash minimal metadata.
 metadata(sce) <- list(date = Sys.Date())
 ## Report the size of each slot in bytes.
-lapply(coerceS4ToList(sce), object_size)
+lapply(coerceToList(sce), object_size)
 object_size(sce)
 stopifnot(object_size(sce) < limit)
 validObject(sce)

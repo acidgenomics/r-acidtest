@@ -2,7 +2,7 @@
 #'
 #' Example `SummarizedExperiment` containing transcript-level RNA-seq data.
 #'
-#' @note Updated 2020-01-28.
+#' @note Updated 2020-02-05.
 #' @usage data(SummarizedExperiment_transcripts)
 #' @return `SummarizedExperiment`.
 #'

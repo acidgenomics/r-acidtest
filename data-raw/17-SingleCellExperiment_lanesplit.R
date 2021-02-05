@@ -1,55 +1,33 @@
 ## FIXME REWORK THIS.
-
+## FIXME TAKE THE SINGLECELLEXPERIMENT OBJECT AND REWORK THE IDS.
 suppressPackageStartupMessages({
-    library(magrittr)
     library(usethis)
     library(pryr)
-    library(SummarizedExperiment)
+    library(SingleCellExperiment)
     library(basejump)
 })
 ## Restrict to 1 MB.
 ## Use `pryr::object_size()` instead of `utils::object.size()`.
 limit <- structure(1e6, class = "object_size")
-organism <- "Homo sapiens"
-release <- 102L
-tx2gene <- makeTx2GeneFromEnsembl(
-    organism = organism,
-    release = release,
-    ignoreVersion = FALSE
+data(SingleCellExperiment)
+sce <- SingleCellExperiment
+stopifnot(
+    object_size(sce) < limit,
+    identical(dim(sce), c(500L, 100L))
 )
-## Pick transcripts that have gene overlaps, to test our `aggregate()` code.
-## FIXME NEED TO INCLUDE VERSION HERE...
-transcripts <- c(
-    "ENST00000494424",
-    "ENST00000496771",
-    "ENST00000612152",
-    "ENST00000371584",
-    "ENST00000371588",
-    "ENST00000413082"
-)
-stopifnot(all(transcripts %in% tx2gene[["txId"]]))
-samples <- paste0("sample", seq_len(4L))
-counts <- matrix(
-    data = seq_len(length(transcripts) * length(samples)),
-    byrow = TRUE,
-    nrow = length(transcripts),
-    ncol = length(samples),
-    dimnames = list(transcripts, samples)
-)
-rowData <- tx2gene %>%
-    as("DataFrame") %>%
-    .[
-        match(x = rownames(counts), table = .[["txId"]]),
-        ,
-        drop = FALSE
-    ]
-se <- SummarizedExperiment(
-    assays = list(counts = counts),
-    rowData = rowData,
-    metadata = list(date = Sys.Date())
-)
+
+
+
+## Simulate lane-split single-cell barcodes here.
+
+## FIXME NEED AN AGGREGATE COLUMN TO DEFINE THE MAPPINGS.
+
+
+
+
+
 ## Size checks.
-lapply(coerceS4ToList(se), object_size)
+lapply(coerceToList(se), object_size)
 object_size(se)
 stopifnot(object_size(se) < limit)
 validObject(se)

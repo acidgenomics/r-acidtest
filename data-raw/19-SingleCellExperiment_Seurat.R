@@ -63,7 +63,7 @@ metadata(sce) <- list(date = Sys.Date())
 keep <- !grepl(pattern = "^vst", x = colnames(mcols(rowRanges(sce))))
 mcols(rowRanges(sce)) <- mcols(rowRanges(sce))[keep]
 ## Report the size of each slot in bytes.
-lapply(coerceS4ToList(sce), object_size)
+lapply(coerceToList(sce), object_size)
 object_size(sce)
 stopifnot(object_size(sce) < limit)
 validObject(sce)
