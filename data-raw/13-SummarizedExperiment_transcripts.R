@@ -9,12 +9,14 @@ suppressPackageStartupMessages({
 ## Use `pryr::object_size()` instead of `utils::object.size()`.
 limit <- structure(1e6, class = "object_size")
 organism <- "Homo sapiens"
-release <- 99L
-tx2gene <-
-    makeTx2GeneFromEnsembl(organism, release = release) %>%
-    as("DataFrame") %>%
-    set_colnames(c("txId", "geneID"))
+release <- 102L
+tx2gene <- makeTx2GeneFromEnsembl(
+    organism = organism,
+    release = release,
+    ignoreVersion = FALSE
+)
 ## Pick transcripts that have gene overlaps, to test our `aggregate()` code.
+## FIXME NEED TO INCLUDE VERSION HERE...
 transcripts <- c(
     "ENST00000494424",
     "ENST00000496771",

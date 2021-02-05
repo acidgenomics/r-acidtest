@@ -6,8 +6,9 @@
 #' identifiers and Ensembl annotations.
 #'
 #' @note Updated 2020-01-28.
-#' @return `RangedSummarizedExperiment`.
 #' @usage data(RangedSummarizedExperiment)
+#' @return `RangedSummarizedExperiment`.
+#'
 #' @examples
 #' if (requireNamespace("SummarizedExperiment", quietly = TRUE)) {
 #'     data(RangedSummarizedExperiment)

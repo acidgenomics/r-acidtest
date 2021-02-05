@@ -3,8 +3,9 @@
 #' Example `GRanges` object.
 #'
 #' @note Updated 2020-01-28.
-#' @return `GRanges`.
 #' @usage data(GRanges)
+#' @return `GRanges`.
+#'
 #' @examples
 #' if (requireNamespace("GenomicRanges", quietly = TRUE)) {
 #'     data(GRanges)
