@@ -1,3 +1,13 @@
+## AcidTest 0.4.2 (2021-02-05)
+
+### New data
+
+- Saved `SingleCellExperiment_lanesplit` example object.
+
+### Minor changes
+
+- Resaved objects, including transcript versions where applicable.
+
 ## AcidTest 0.4.1 (2021-01-14)
 
 ### Minor changes
