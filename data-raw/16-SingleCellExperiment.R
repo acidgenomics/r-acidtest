@@ -1,25 +1,14 @@
-#' Gene-level SingleCellExperiment example
-#'
-#' @note Updated 2020-03-16.
-#'
-#' @details
-#' Splatter params are derived from:
-#' https://github.com/mikelove/zinbwave-deseq2/blob/master/
-#'     zinbwave-deseq2.knit.md
-
+## Splatter params are derived from:
+## https://github.com/mikelove/zinbwave-deseq2/blob/master/
+##     zinbwave-deseq2.knit.md
 suppressPackageStartupMessages({
     library(usethis)
     library(pryr)
     library(SingleCellExperiment)
-    library(basejump)
     library(splatter)
+    library(basejump)
 })
-
-## Restrict to 2 MB.
-## Use `pryr::object_size()` instead of `utils::object.size()`.
-limit <- structure(2e6, class = "object_size")
-organism <- "Homo sapiens"
-release <- 99L
+limit <- structure(1e6, class = "object_size")
 ## Use splatter to generate an example dataset with simulated counts.
 ## Note: These DE params are natural log scale.
 params <- newSplatParams() %>%
@@ -50,14 +39,14 @@ counts <- counts(sce)
 counts <- as(counts, "sparseMatrix")
 assays(sce) <- list(counts = counts)
 ## Prepare row data.
-rowRanges <- makeGRangesFromEnsembl(organism, release = release)
+rowRanges <- makeGRangesFromEnsembl(
+    organism = "Homo sapiens",
+    release = 100L,
+    level = "genes",
+    ignoreVersion = FALSE
+)
+rowRanges <- rowRanges[sort(names(rowRanges))]
 rowRanges <- rowRanges[seq_len(nrow(sce)), ]
-colnames(mcols(rowRanges)) <-
-    camelCase(
-        object = colnames(mcols(rowRanges)),
-        strict = TRUE
-    )
-## Relevel the factor columns, to save disk space.
 rowRanges <- droplevels(rowRanges)
 ## Note that we're keeping the original rownames from dds_small, and they won't
 ## match the `geneId` column in rowRanges. This is intentional, for unit tests.
