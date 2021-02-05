@@ -33,7 +33,8 @@ colData(sce) <- DataFrame(
         rep(x = lanes, times = length(barcodes) * length(samples)),
         sep = "_"
     ),
-    "aggregate" = rep(x = samples, each = length(barcodes) * length(lanes))
+    "aggregate" = rep(x = samples, each = length(barcodes) * length(lanes)),
+    row.names = colnames(sce)
 )
 SingleCellExperiment_lanesplit <- sce
 use_data(SingleCellExperiment_lanesplit, compress = "xz", overwrite = TRUE)
