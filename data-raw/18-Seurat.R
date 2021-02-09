@@ -59,6 +59,7 @@ rowRanges <- makeGRangesFromEnsembl(
     genomeBuild = "GRCh37",
     ignoreVersion = TRUE
 )
+rowRanges <- as(rowRanges, "GRanges")
 x <- rownames(Seurat)
 table <- make.unique(as.character(rowRanges$geneName))
 names(rowRanges) <- table

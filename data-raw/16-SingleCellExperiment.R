@@ -45,6 +45,7 @@ rowRanges <- makeGRangesFromEnsembl(
     level = "genes",
     ignoreVersion = FALSE
 )
+rowRanges <- as(rowRanges, "GRanges")
 rowRanges <- rowRanges[sort(names(rowRanges))]
 rowRanges <- rowRanges[seq_len(nrow(sce)), ]
 rowRanges <- droplevels(rowRanges)

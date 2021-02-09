@@ -10,6 +10,7 @@ gr <- makeGRangesFromEnsembl(
     release = 87L,
     ignoreVersion = TRUE
 )
+gr <- as(gr, "GRanges")
 gr <- gr[sort(names(gr))]
 gr <- head(gr, n = 5L)
 cols <- c("geneId", "geneName")

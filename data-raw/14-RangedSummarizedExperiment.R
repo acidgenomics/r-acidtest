@@ -26,6 +26,7 @@ rowRanges <- makeGRangesFromEnsembl(
     release = 100L,
     ignoreVersion = FALSE
 )
+rowRanges <- as(rowRanges, "GRanges")
 rowRanges <- rowRanges[sort(names(rowRanges))]
 ## Subset to match the number of rows in the example.
 rowRanges <- rowRanges[seq_len(nrow(rse)), ]
