@@ -1,3 +1,9 @@
+## AcidTest 0.4.3 (2021-02-12)
+
+- Resaved some objects: `GRanges` (now an expected unclassed `EnsemblGenes`),
+  `RangedSummarizedExperiment`, `Seurat`, `SingleCellExperiment`,
+  `SingleCellExperiment_Seurat`, and `SingleCellExperiment_lanesplit`.
+
 ## AcidTest 0.4.2 (2021-02-05)
 
 ### New data

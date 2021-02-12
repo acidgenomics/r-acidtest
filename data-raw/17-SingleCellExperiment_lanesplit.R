@@ -1,11 +1,11 @@
 suppressPackageStartupMessages({
+    library(devtools)
     library(usethis)
     library(pryr)
     library(SingleCellExperiment)
     library(basejump)
 })
-## Restrict to 1 MB.
-## Use `pryr::object_size()` instead of `utils::object.size()`.
+load_all()
 limit <- structure(1e6, class = "object_size")
 data(SingleCellExperiment)
 sce <- SingleCellExperiment

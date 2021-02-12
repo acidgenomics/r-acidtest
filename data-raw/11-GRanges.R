@@ -1,5 +1,6 @@
 suppressPackageStartupMessages({
     library(usethis)
+    library(pryr)
     library(GenomicRanges)
     library(basejump)
 })
