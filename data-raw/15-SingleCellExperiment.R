@@ -8,6 +8,7 @@
 #'     zinbwave-deseq2.knit.md
 
 suppressPackageStartupMessages({
+    library(magrittr)
     library(usethis)
     library(pryr)
     library(SingleCellExperiment)

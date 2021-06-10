@@ -1,5 +1,6 @@
 ## NOTE Can simplify internal code here following pointillism update.
 suppressPackageStartupMessages({
+    library(magrittr)
     library(devtools)
     library(usethis)
     library(pryr)
