@@ -1,14 +1,24 @@
 suppressPackageStartupMessages({
     library(usethis)
+    library(pryr)
     library(GenomicRanges)
     library(basejump)
 })
-GRanges <- makeGRangesFromEnsembl("Homo sapiens", release = 87L)
-GRanges <- head(GRanges, n = 5L)
-mcols <- mcols(GRanges)
-colnames(mcols) <- camelCase(object = colnames(mcols), strict = TRUE)
-mcols <- mcols[, c("geneId", "geneName")]
-mcols[["geneId"]] <- as.character(mcols[["geneId"]])
-mcols[["geneName"]] <- as.character(mcols[["geneName"]])
-mcols(GRanges) <- mcols
+limit <- structure(1e6, class = "object_size")
+gr <- makeGRangesFromEnsembl(
+    organism = "Homo sapiens",
+    level = "genes",
+    release = 87L,
+    ignoreVersion = TRUE
+)
+gr <- as(gr, "GRanges")
+gr <- gr[sort(names(gr))]
+gr <- head(gr, n = 5L)
+cols <- c("geneId", "geneName")
+mcols(gr) <- mcols(gr)[, cols]
+gr <- droplevels(gr)
+lapply(coerceToList(gr), object_size)
+object_size(gr)
+stopifnot(object_size(gr) < limit)
+GRanges <- gr
 use_data(GRanges, compress = "xz", overwrite = TRUE)

@@ -1,8 +1,8 @@
 Package: AcidTest
 Title: Acid Genomics Test Data
 Description: Reference data for Acid Genomics unit tests.
-Version: 0.4.1
-Date: 2020-01-15
+Version: 0.4.3
+Date: 2020-02-12
 Authors@R: c(
     person(
         "Michael", "Steinbaugh",
@@ -18,7 +18,7 @@ URL:
     https://r.acidgenomics.com/packages/acidtest/,
     https://github.com/acidgenomics/r-acidtest/
 BugReports: https://github.com/acidgenomics/r-acidtest/issues/
-License: GPL-3
+License: AGPL-3
 Encoding: UTF-8
 LazyData: false
 Depends: R (>= 4.0)
