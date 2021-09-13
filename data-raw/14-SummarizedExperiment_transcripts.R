@@ -1,11 +1,4 @@
-## FIXME Ensure this contains rowData.
-## FIXME Ensure this contains colData.
-## FIXME Take out magrittr calls.
-
-
-
 suppressPackageStartupMessages({
-    library(magrittr)
     library(usethis)
     library(lobstr)
     library(SummarizedExperiment)
@@ -43,17 +36,16 @@ counts <- matrix(
     ncol = length(samples),
     dimnames = list(transcripts, samples)
 )
-rowData <- tx2gene %>%
-    as("DataFrame") %>%
-    .[
-        match(x = rownames(counts), table = .[["txId"]]),
-        ,
-        drop = FALSE
-    ]
+assays <- SimpleList("counts" = counts)
+rowData <- as(tx2gene, "DataFrame")
+rowData <- rowData[
+    match(x = rownames(assays[[1L]]), table = rowData[["txId"]]),
+    ,
+    drop = FALSE
+]
 se <- SummarizedExperiment(
-    assays = list(counts = counts),
-    rowData = rowData,
-    metadata = list(date = Sys.Date())
+    assays = assays,
+    rowData = rowData
 )
 ## Size checks.
 lapply(coerceToList(se), obj_size)
