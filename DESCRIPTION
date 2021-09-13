@@ -34,5 +34,5 @@ Suggests:
     dplyr,
     tibble
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 Additional_repositories: https://r.acidgenomics.com
