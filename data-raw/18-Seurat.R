@@ -1,28 +1,12 @@
-## FIXME Can we update UMAP to latest version here?
-
 suppressPackageStartupMessages({
     library(usethis)
     library(lobstr)
     library(basejump)
-    library(reticulate)
     library(Seurat)
     library(pointillism)
 })
 ## Restrict object size to 1 MB.
 limit <- structure(1e6, class = "object_size")
-use_condaenv(condaenv = "umap-learn@0.5.1", required = TRUE)
-py_config()
-## nolint start
-## macOS 11.5.2 (2021-09-13):
-##
-## python:         /opt/koopa/app/conda/4.10.3/envs/umap-learn@0.5.1/bin/python
-## libpython:      /opt/koopa/app/conda/4.10.3/envs/umap-learn@0.5.1/lib/libpython3.9.dylib
-## pythonhome:     /opt/koopa/app/conda/4.10.3/envs/umap-learn@0.5.1:/opt/koopa/app/conda/4.10.3/envs/umap-learn@0.5.1
-## version:        3.9.7 | packaged by conda-forge | (default, Sep  2 2021, 17:58:46)  [Clang 11.1.0 ]
-## numpy:          /opt/koopa/app/conda/4.10.3/envs/umap-learn@0.5.1/lib/python3.9/site-packages/numpy
-## numpy_version:  1.20.3
-## nolint end
-stopifnot(py_module_available(module = "umap"))
 ## Location of example data moved from Seurat to SeuratObject in v4.0.
 data(pbmc_small, package = "SeuratObject")
 ## The Seurat wiki describes the changes in v3.0+.
@@ -35,8 +19,6 @@ stopifnot(obj_size(Seurat) < limit)
 ## umap-learn v0.5.1.
 Seurat <- RunUMAP(
     object = Seurat,
-    ## Note that this now defaults to "uwot" in Seurat 3.1.
-    umap.method = "umap-learn",
     dims = seq_len(10L)
 )
 ## Slot row ranges into the Seurat object.
