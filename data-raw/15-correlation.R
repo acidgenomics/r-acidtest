@@ -14,13 +14,13 @@ cor[["matrix_x"]] <- matrix(data = cor[["vector_x"]], nrow = nrow, ncol = ncol)
 cor[["matrix_y"]] <- matrix(data = cor[["vector_y"]], nrow = nrow, ncol = ncol)
 se1 <- SummarizedExperiment(
     assays = list(
-        assay1 = cor[["matrix_x"]],
-        assay2 = cor[["matrix_y"]]
+        "assay1" = cor[["matrix_x"]],
+        "assay2" = cor[["matrix_y"]]
     )
 )
 se2 <- SummarizedExperiment(
     assays = list(
-        assay = cor[["matrix_y"]]
+        "assay" = cor[["matrix_y"]]
     )
 )
 cor[["SummarizedExperiment_x"]] <- se1

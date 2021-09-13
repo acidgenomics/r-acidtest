@@ -1,13 +1,7 @@
-## FIXME Remove usage of pryr, in favor of lobstr.
-## FIXME Take out magrittr calls.
-
-
-
 ## Splatter params are derived from:
 ## https://github.com/mikelove/zinbwave-deseq2/blob/master/
 ##     zinbwave-deseq2.knit.md
 suppressPackageStartupMessages({
-    library(magrittr)
     library(usethis)
     library(lobstr)
     library(SingleCellExperiment)
@@ -17,13 +11,13 @@ suppressPackageStartupMessages({
 limit <- structure(1e6, class = "object_size")
 ## Use splatter to generate an example dataset with simulated counts.
 ## Note: These DE params are natural log scale.
-params <- newSplatParams() %>%
-    setParam(name = "batchCells", value = 100L) %>%
-    setParam(name = "nGenes", value = 500L) %>%
-    setParam(name = "de.facLoc", value = 1L) %>%
-    setParam(name = "de.facScale", value = 0.25) %>%
+params <- newSplatParams() |>
+    setParam(name = "batchCells", value = 100L) |>
+    setParam(name = "nGenes", value = 500L) |>
+    setParam(name = "de.facLoc", value = 1L) |>
+    setParam(name = "de.facScale", value = 0.25) |>
     ## Add more dropout (to test zinbwave weights and DE).
-    setParam(name = "dropout.type", value = "experiment") %>%
+    setParam(name = "dropout.type", value = "experiment") |>
     setParam(name = "dropout.mid", value = 3L)
 sce <- splatSimulate(
     params = params,
@@ -43,7 +37,7 @@ sce <- autopadZeros(sce, rownames = TRUE, colnames = TRUE)
 ## Just slot the raw counts, as a sparse matrix.
 counts <- counts(sce)
 counts <- as(counts, "sparseMatrix")
-assays(sce) <- list(counts = counts)
+assays(sce) <- list("counts" = counts)
 ## Prepare row data.
 rowRanges <- makeGRangesFromEnsembl(
     organism = "Homo sapiens",
@@ -52,8 +46,7 @@ rowRanges <- makeGRangesFromEnsembl(
     ignoreVersion = FALSE
 )
 rowRanges <- as(rowRanges, "GRanges")
-rowRanges <- rowRanges[sort(names(rowRanges))]
-rowRanges <- rowRanges[seq_len(nrow(sce)), ]
+rowRanges <- rowRanges[head(sort(names(rowRanges)), n = nrow(sce))]
 rowRanges <- droplevels(rowRanges)
 ## Note that we're keeping the original rownames from dds_small, and they won't
 ## match the `geneId` column in rowRanges. This is intentional, for unit tests.
