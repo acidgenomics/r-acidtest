@@ -1,28 +1,16 @@
-## FIXME Take out magrittr calls.
-
-
-
-## NOTE Can simplify code here following pointillism update.
 suppressPackageStartupMessages({
-    library(magrittr)
-    library(devtools)
     library(usethis)
     library(lobstr)
+    library(devtools)
     library(pointillism)
 })
 load_all()
 limit <- structure(1e6, class = "object_size")
 data(Seurat)
-## NOTE Consider reworking coercion method to use strict lower camel case
-## for names in colData and rowData.
 sce <- as(Seurat, "SingleCellExperiment")
 colnames(mcols(rowRanges(sce)))
-##  [1] "broadClass"                "entrezId"
-##  [3] "geneBiotype"               "geneId"
-##  [5] "geneName"                  "seqCoordSystem"
-##  [7] "vst.mean"                  "vst.variance"
-##  [9] "vst.variance.expected"     "vst.variance.standardized"
-## [11] "vst.variable"
+## [1] "broadClass"     "entrezId"       "geneBiotype"    "geneId"
+## [5] "geneName"       "seqCoordSystem"
 colnames(mcols(rowRanges(sce))) <-
     camelCase(colnames(mcols(rowRanges(sce))), strict = TRUE)
 sce <- convertSymbolsToGenes(sce)
@@ -54,7 +42,7 @@ stopifnot(identical(reducedDimNames(sce), c("PCA", "TSNE", "UMAP")))
 reducedDims(sce) <- reducedDims(sce)["UMAP"]
 reducedDimNames(sce) <- camelCase(reducedDimNames(sce), strict = TRUE)
 ## Column data.
-cd <- colData(sce) %>% .[, "groups", drop = FALSE]
+cd <- colData(sce)[, "groups", drop = FALSE]
 cd[["sampleId"]] <- factor(gsub("g", "sample", camelCase(cd[["groups"]])))
 cd <- cd[, "sampleId", drop = FALSE]
 colData(sce) <- cd
