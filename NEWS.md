@@ -1,3 +1,9 @@
+## AcidTest 0.4.4 (2021-09-13)
+
+- Resaved all objects.
+- `SummarizedExperiment` and `SummarizedExperiment_transcripts` now contain
+  metadata defined in `rowData`.
+
 ## AcidTest 0.4.3 (2021-02-12)
 
 - Resaved some objects: `GRanges` (now an expected unclassed `EnsemblGenes`),
