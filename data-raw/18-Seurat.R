@@ -1,6 +1,6 @@
 suppressPackageStartupMessages({
     library(usethis)
-    library(pryr)
+    library(lobstr)
     library(reticulate)
     library(Seurat)
     library(basejump)
@@ -37,8 +37,7 @@ data(pbmc_small, package = "SeuratObject")
 ## The Seurat wiki describes the changes in v3.0+.
 ## https://github.com/satijalab/seurat/wiki
 Seurat <- UpdateSeuratObject(pbmc_small)
-object_size(Seurat)
-stopifnot(object_size(Seurat) < limit)
+stopifnot(obj_size(Seurat) < limit)
 ## Add UMAP dimensional reduction to example object.
 ## Alternatively, can use `features` here instead.
 Seurat <- RunUMAP(
@@ -62,10 +61,9 @@ stopifnot(all(x %in% table))
 which <- match(x = x, table = table)
 rowRanges <- rowRanges[which]
 rowRanges <- droplevels(rowRanges)
-stopifnot(object_size(rowRanges) < limit)
+stopifnot(obj_size(rowRanges) < limit)
 ## NOTE This method is defined in pointillism.
 rowRanges(Seurat) <- rowRanges
-object_size(Seurat)
-stopifnot(object_size(Seurat) < limit)
+stopifnot(obj_size(Seurat) < limit)
 validObject(Seurat)
 use_data(Seurat, compress = "xz", overwrite = TRUE)

@@ -1,7 +1,7 @@
 suppressPackageStartupMessages({
     library(devtools)
     library(usethis)
-    library(pryr)
+    library(lobstr)
     library(SingleCellExperiment)
     library(basejump)
 })
@@ -11,7 +11,7 @@ data(SingleCellExperiment)
 sce <- SingleCellExperiment
 sce <- sce[seq_len(100L), seq_len(32L)]
 sce <- droplevels(sce)
-stopifnot(object_size(sce) < limit)
+stopifnot(obj_size(sce) < limit)
 ## 2 samples * 4 lane splits * 4 barcodes = 32.
 samples <- paste("sample", seq_len(2L), sep = "_")
 lanes <- paste0("L00", seq_len(4L))

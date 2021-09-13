@@ -1,10 +1,15 @@
+## FIXME Remove usage of pryr, in favor of lobstr.
+## FIXME Take out magrittr calls.
+
+
+
 ## Splatter params are derived from:
 ## https://github.com/mikelove/zinbwave-deseq2/blob/master/
 ##     zinbwave-deseq2.knit.md
 suppressPackageStartupMessages({
     library(magrittr)
     library(usethis)
-    library(pryr)
+    library(lobstr)
     library(SingleCellExperiment)
     library(splatter)
     library(basejump)
@@ -57,9 +62,8 @@ rowRanges(sce) <- rowRanges
 ## Stash minimal metadata.
 metadata(sce) <- list(date = Sys.Date())
 ## Report the size of each slot in bytes.
-lapply(coerceToList(sce), object_size)
-object_size(sce)
-stopifnot(object_size(sce) < limit)
+lapply(coerceToList(sce), obj_size)
+stopifnot(obj_size(sce) < limit)
 validObject(sce)
 SingleCellExperiment <- sce
 use_data(SingleCellExperiment, compress = "xz", overwrite = TRUE)

@@ -1,12 +1,17 @@
+## FIXME Ensure this contains rowData.
+## FIXME Ensure this contains colData.
+## FIXME Take out magrittr calls.
+
+
+
 suppressPackageStartupMessages({
     library(magrittr)
     library(usethis)
-    library(pryr)
+    library(lobstr)
     library(SummarizedExperiment)
     library(basejump)
 })
 ## Restrict to 1 MB.
-## Use `pryr::object_size()` instead of `utils::object.size()`.
 limit <- structure(1e6, class = "object_size")
 tx2gene <- makeTx2GeneFromEnsembl(
     organism = "Homo sapiens",
@@ -51,9 +56,8 @@ se <- SummarizedExperiment(
     metadata = list(date = Sys.Date())
 )
 ## Size checks.
-lapply(coerceToList(se), object_size)
-object_size(se)
-stopifnot(object_size(se) < limit)
+lapply(coerceToList(se), obj_size)
+stopifnot(obj_size(se) < limit)
 validObject(se)
 SummarizedExperiment_transcripts <- se
 use_data(SummarizedExperiment_transcripts, compress = "xz", overwrite = TRUE)

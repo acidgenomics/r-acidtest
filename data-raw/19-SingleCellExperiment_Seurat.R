@@ -1,9 +1,13 @@
+## FIXME Take out magrittr calls.
+
+
+
 ## NOTE Can simplify code here following pointillism update.
 suppressPackageStartupMessages({
     library(magrittr)
     library(devtools)
     library(usethis)
-    library(pryr)
+    library(lobstr)
     library(pointillism)
 })
 load_all()
@@ -61,9 +65,8 @@ metadata(sce) <- list("date" = Sys.Date())
 keep <- !grepl(pattern = "^vst", x = colnames(mcols(rowRanges(sce))))
 mcols(rowRanges(sce)) <- mcols(rowRanges(sce))[keep]
 ## Report the size of each slot in bytes.
-lapply(coerceToList(sce), object_size)
-object_size(sce)
-stopifnot(object_size(sce) < limit)
+lapply(coerceToList(sce), obj_size)
+stopifnot(obj_size(sce) < limit)
 validObject(sce)
 SingleCellExperiment_Seurat <- sce
 use_data(SingleCellExperiment_Seurat, compress = "xz", overwrite = TRUE)

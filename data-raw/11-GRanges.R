@@ -1,6 +1,6 @@
 suppressPackageStartupMessages({
     library(usethis)
-    library(pryr)
+    library(lobstr)
     library(GenomicRanges)
     library(basejump)
 })
@@ -17,8 +17,7 @@ gr <- head(gr, n = 5L)
 cols <- c("geneId", "geneName")
 mcols(gr) <- mcols(gr)[, cols]
 gr <- droplevels(gr)
-lapply(coerceToList(gr), object_size)
-object_size(gr)
-stopifnot(object_size(gr) < limit)
+lapply(coerceToList(gr), obj_size)
+stopifnot(obj_size(gr) < limit)
 GRanges <- gr
 use_data(GRanges, compress = "xz", overwrite = TRUE)
