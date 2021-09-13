@@ -1,35 +1,26 @@
+## FIXME Can we update UMAP to latest version here?
+
 suppressPackageStartupMessages({
     library(usethis)
     library(lobstr)
+    library(basejump)
     library(reticulate)
     library(Seurat)
-    library(basejump)
     library(pointillism)
 })
 ## Restrict object size to 1 MB.
 limit <- structure(1e6, class = "object_size")
-## umap-learn@0.5.0 conda environment warning:
-## Now we're ready to check and see if UMAP is available.
-##
-## New warning: Tensorflow not installed; ParametricUMAP will be unavailable.
-##
-## Consider adding tensorflow to the bioconda recipe?
-## > use_condaenv(condaenv = "umap-learn@0.5.0", required = TRUE)
-## https://github.com/conda-forge/umap-learn-feedstock/issues/29
-##
-## NOTE Need to add tensorflow 2.3.2 (Python 3.8) to Bioconda first, then
-## add this to the umap-learn recipe to better support 0.5.0 update.
-use_condaenv(condaenv = "umap-learn@0.4.6", required = TRUE)
+use_condaenv(condaenv = "umap-learn@0.5.1", required = TRUE)
 py_config()
 ## nolint start
-## macOS 10.15.7 (2021-01-14):
+## macOS 11.5.2 (2021-09-13):
 ##
-## python:         /opt/koopa/app/conda/4.9.2/envs/umap-learn@0.4.6/bin/python
-## libpython:      /opt/koopa/app/conda/4.9.2/envs/umap-learn@0.4.6/lib/libpython3.8.dylib
-## pythonhome:     /opt/koopa/app/conda/4.9.2/envs/umap-learn@0.4.6:/opt/koopa/app/conda/4.9.2/envs/umap-learn@0.4.6
-## version:        3.8.6 | packaged by conda-forge | (default, Dec 26 2020, 04:50:20)  [Clang 11.0.0 ]
-## numpy:          /opt/koopa/app/conda/4.9.2/envs/umap-learn@0.4.6/lib/python3.8/site-packages/numpy
-## numpy_version:  1.19.5
+## python:         /opt/koopa/app/conda/4.10.3/envs/umap-learn@0.5.1/bin/python
+## libpython:      /opt/koopa/app/conda/4.10.3/envs/umap-learn@0.5.1/lib/libpython3.9.dylib
+## pythonhome:     /opt/koopa/app/conda/4.10.3/envs/umap-learn@0.5.1:/opt/koopa/app/conda/4.10.3/envs/umap-learn@0.5.1
+## version:        3.9.7 | packaged by conda-forge | (default, Sep  2 2021, 17:58:46)  [Clang 11.1.0 ]
+## numpy:          /opt/koopa/app/conda/4.10.3/envs/umap-learn@0.5.1/lib/python3.9/site-packages/numpy
+## numpy_version:  1.20.3
 ## nolint end
 stopifnot(py_module_available(module = "umap"))
 ## Location of example data moved from Seurat to SeuratObject in v4.0.
@@ -40,6 +31,8 @@ Seurat <- UpdateSeuratObject(pbmc_small)
 stopifnot(obj_size(Seurat) < limit)
 ## Add UMAP dimensional reduction to example object.
 ## Alternatively, can use `features` here instead.
+## NOTE This step can crash R when using `umap.method = "umap-learn` with
+## umap-learn v0.5.1.
 Seurat <- RunUMAP(
     object = Seurat,
     ## Note that this now defaults to "uwot" in Seurat 3.1.
