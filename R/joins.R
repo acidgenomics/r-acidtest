@@ -1,3 +1,6 @@
+## FIXME Rework this.
+
+
 #' @inherit dplyr::band_instruments description return title
 #' @note Updated 2020-01-28.
 #' @return `DataFrame`.
