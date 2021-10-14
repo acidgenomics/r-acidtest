@@ -5,7 +5,7 @@
 \alias{data.frame}
 \title{Data frame}
 \format{
-An object of class \code{data.frame} with 4 rows and 4 columns.
+An object of class \code{data.frame} with 4 rows and 2 columns.
 }
 \usage{
 data(data.frame)
@@ -17,7 +17,7 @@ data(data.frame)
 Example \code{data.frame} object.
 }
 \note{
-Updated 2020-01-28.
+Updated 2021-10-14.
 }
 \examples{
 data(data.frame)

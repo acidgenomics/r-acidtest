@@ -5,7 +5,7 @@
 \alias{data.table}
 \title{Data table}
 \format{
-An object of class \code{data.table} (inherits from \code{data.frame}) with 4 rows and 5 columns.
+An object of class \code{data.table} (inherits from \code{data.frame}) with 4 rows and 3 columns.
 }
 \usage{
 data(data.table)
@@ -17,7 +17,7 @@ data(data.table)
 Example \code{data.table} object.
 }
 \note{
-Updated 2020-01-28.
+Updated 2021-10-14.
 }
 \examples{
 if (requireNamespace("data.table", quietly = TRUE)) {
