@@ -1,6 +1,6 @@
 #' @inherit dplyr::band_instruments description return title
 #' @note Updated 2020-01-28.
-#' @return `DFrame`.
+#' @return `DataFrame`.
 #' @seealso `help(topic = "band_instruments", package = "dplyr")`
 #' @usage data(band_instruments)
 #' @examples
@@ -15,7 +15,7 @@
 
 #' @inherit dplyr::band_members description return title
 #' @note Updated 2020-01-28.
-#' @return `DFrame`.
+#' @return `DataFrame`.
 #' @seealso `help(topic = "band_members", package = "dplyr")`
 #' @usage data(band_members)
 #' @examples

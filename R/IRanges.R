@@ -1,3 +1,7 @@
+## FIXME Rename to IntegerRanges.
+
+
+
 #' Integer ranges
 #'
 #' Examples `IRanges` object.

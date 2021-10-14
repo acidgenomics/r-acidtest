@@ -1,15 +1,15 @@
-#' Data frame
+#' S4 data frame
 #'
-#' Example Bioconductor S4 `DFrame` object.
+#' Example Bioconductor S4 `DataFrame` object.
 #'
-#' @note Updated 2020-01-28.
-#' @usage data(DFrame)
-#' @return `DFrame`.
+#' @note Updated 2021-10-14.
+#' @usage data(DataFrame)
+#' @return `DataFrame`.
 #'
 #' @examples
 #' if (requireNamespace("S4Vectors", quietly = TRUE)) {
-#'     data(DFrame)
-#'     class(DFrame)
-#'     DFrame
+#'     data(DataFrame)
+#'     class(DataFrame)
+#'     DataFrame
 #' }
-"DFrame"
+"DataFrame"

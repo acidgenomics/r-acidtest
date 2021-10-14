@@ -1,3 +1,7 @@
+## FIXME Rename to tibble.
+
+
+
 #' Tibble
 #'
 #' Example `tbl_df` object.

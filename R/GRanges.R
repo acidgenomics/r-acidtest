@@ -1,3 +1,7 @@
+## FIXME Rename to GenomicRanges.
+
+
+
 #' Genomic ranges
 #'
 #' Example `GRanges` object.
