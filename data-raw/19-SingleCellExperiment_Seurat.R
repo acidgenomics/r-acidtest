@@ -1,4 +1,5 @@
 suppressPackageStartupMessages({
+    library(goalie)
     library(usethis)
     library(lobstr)
     library(devtools)
@@ -11,47 +12,17 @@ sce <- as(Seurat, "SingleCellExperiment")
 colnames(mcols(rowRanges(sce)))
 ## [1] "broadClass"     "entrezId"       "geneBiotype"    "geneId"
 ## [5] "geneName"       "seqCoordSystem"
-colnames(mcols(rowRanges(sce))) <-
-    camelCase(colnames(mcols(rowRanges(sce))), strict = TRUE)
 sce <- convertSymbolsToGenes(sce)
-colnames(mcols(rowRanges(sce))) <-
-    camelCase(
-        object = colnames(mcols(rowRanges(sce))),
-        strict = TRUE
-    )
 colnames(mcols(rowRanges(sce)))
-##  [1] "broadClass"              "entrezId"
-##  [3] "geneBiotype"             "geneId"
-##  [5] "geneName"                "seqCoordSystem"
-##  [7] "vstMean"                 "vstVariance"
-##  [9] "vstVarianceExpected"     "vstVarianceStandardized"
-## [11] "vstVariable"
+## [1] "broadClass"     "entrezId"       "geneBiotype"    "geneId"
+## [5] "geneName"       "seqCoordSystem"
 colnames(colData(sce))
 ## [1] "orig.ident"      "nCount_RNA"      "nFeature_RNA"    "RNA_snn_res.0.8"
 ## [5] "letter.idents"   "groups"          "RNA_snn_res.1"   "ident"
-colnames(colData(sce)) <-
-    camelCase(colnames(colData(sce)), strict = TRUE)
-colnames(colData(sce))
-## [1] "origIdent"    "nCountRna"    "nFeatureRna"  "rnaSnnRes0x8" "letterIdents"
-## [6] "groups"       "rnaSnnRes1"   "ident"
-stopifnot(identical(assayNames(sce), c("counts", "logcounts")))
-## Dimensionality reduction.
-## NOTE Coercion method should automatically coerce dim names to lower
-## camel case?
-stopifnot(identical(reducedDimNames(sce), c("PCA", "TSNE", "UMAP")))
-reducedDims(sce) <- reducedDims(sce)["UMAP"]
-reducedDimNames(sce) <- camelCase(reducedDimNames(sce), strict = TRUE)
-## Column data.
-cd <- colData(sce)[, "groups", drop = FALSE]
-cd[["sampleId"]] <- factor(gsub("g", "sample", camelCase(cd[["groups"]])))
-cd <- cd[, "sampleId", drop = FALSE]
-colData(sce) <- cd
-## Metadata.
-metadata(sce) <- list("date" = Sys.Date())
-## Row ranges.
-## Drop "vst*" columns.
-keep <- !grepl(pattern = "^vst", x = colnames(mcols(rowRanges(sce))))
-mcols(rowRanges(sce)) <- mcols(rowRanges(sce))[keep]
+assert(
+    identical(assayNames(sce), c("counts", "logcounts")),
+    identical(reducedDimNames(sce), c("PCA", "TSNE", "UMAP"))
+)
 ## Report the size of each slot in bytes.
 lapply(coerceToList(sce), obj_size)
 stopifnot(obj_size(sce) < limit)
