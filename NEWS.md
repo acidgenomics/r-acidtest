@@ -1,5 +1,8 @@
 ## AcidTest 0.5.0 (UNRELEASED)
 
+- Resaved all objects following Bioconductor 3.14 release.
+- Renamed `SingleCellExperiment` to `SingleCellExperiment_splatter`.
+
 ## AcidTest 0.4.4 (2021-09-13)
 
 - Resaved all objects.
