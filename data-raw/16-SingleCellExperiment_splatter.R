@@ -58,5 +58,5 @@ metadata(sce) <- list(date = Sys.Date())
 lapply(coerceToList(sce), obj_size)
 stopifnot(obj_size(sce) < limit)
 validObject(sce)
-SingleCellExperiment <- sce
-use_data(SingleCellExperiment, compress = "xz", overwrite = TRUE)
+SingleCellExperiment_splatter <- sce
+use_data(SingleCellExperiment_splatter, compress = "xz", overwrite = TRUE)

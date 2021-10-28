@@ -7,8 +7,8 @@ suppressPackageStartupMessages({
 })
 load_all()
 limit <- structure(1e6, class = "object_size")
-data(SingleCellExperiment)
-sce <- SingleCellExperiment
+data(SingleCellExperiment_splatter)
+sce <- SingleCellExperiment_splatter
 sce <- sce[seq_len(100L), seq_len(32L)]
 sce <- droplevels(sce)
 stopifnot(obj_size(sce) < limit)
