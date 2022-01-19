@@ -1,3 +1,15 @@
+## FIXME Need to resave Seurat example object. Now seeing this error:
+##
+## Loading required package: SeuratObject
+## Warning in library(package, lib.loc = lib.loc, character.only = TRUE, logical.return = TRUE,  :
+##   there is no package called ‘SeuratObject’
+## Calls: <Anonymous> ... tryCatchList -> tryCatchOne -> doTryCatch -> library
+## Error in .requirePackage(package) :
+##   unable to find required package ‘SeuratObject’
+## Calls: <Anonymous> ... .findInheritedMethods -> getClass -> getClassDef -> .requirePackage
+
+
+
 suppressPackageStartupMessages({
     library(usethis)
     library(lobstr)
