@@ -1,8 +1,8 @@
 #' Seurat
 #'
-#' Example `Seurat` (v3) object.
+#' Example `Seurat` (v4) object.
 #'
-#' @note Updated 2020-01-28.
+#' @note Updated 2022-03-04.
 #' @usage data(Seurat)
 #' @return `Seurat`.
 #'

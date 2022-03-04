@@ -2,12 +2,14 @@
 #'
 #' Example `SingleCellExperiment` containing gene-level RNA-seq data.
 #'
-#' @note Updated 2020-01-28.
+#' @note Updated 2022-03-04.
 #' @usage data(SingleCellExperiment_Seurat)
 #' @return `SingleCellExperiment`.
 #'
 #' @seealso
-#' - `data(pbmc_small, package = "Seurat")`.
+#' ```r
+#' `data(pbmc_small, package = "Seurat")`.
+#' ```
 #'
 #' @examples
 #' if (requireNamespace("SingleCellExperiment", quietly = TRUE)) {

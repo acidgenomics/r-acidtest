@@ -32,6 +32,8 @@ Suggests:
     SingleCellExperiment,
     SummarizedExperiment,
     data.table,
+    monocle3,
+    pointillism,
     tibble
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2

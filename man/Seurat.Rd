@@ -14,10 +14,10 @@ data(Seurat)
 \code{Seurat}.
 }
 \description{
-Example \code{Seurat} (v3) object.
+Example \code{Seurat} (v4) object.
 }
 \note{
-Updated 2020-01-28.
+Updated 2022-03-04.
 }
 \examples{
 if (requireNamespace("Seurat", quietly = TRUE)) {
