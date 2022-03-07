@@ -3,7 +3,7 @@
 #' Example `SingleCellExperiment` containing gene-level RNA-seq data simulated
 #' by the splatter package.
 #'
-#' @note Updated 2021-10-28.
+#' @note Updated 2022-03-07.
 #' @usage data(SingleCellExperiment_splatter)
 #' @return `SingleCellExperiment`.
 #'

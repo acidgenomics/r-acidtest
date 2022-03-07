@@ -9,27 +9,27 @@ suppressPackageStartupMessages({
     library(basejump)
 })
 limit <- structure(1e6, class = "object_size")
-## Use splatter to generate an example dataset with simulated counts.
-## Note: These DE params are natural log scale.
-params <- newSplatParams() |>
-    setParam(name = "batchCells", value = 100L) |>
-    setParam(name = "nGenes", value = 500L) |>
-    setParam(name = "de.facLoc", value = 1L) |>
-    setParam(name = "de.facScale", value = 0.25) |>
-    ## Add more dropout (to test zinbwave weights and DE).
-    setParam(name = "dropout.type", value = "experiment") |>
-    setParam(name = "dropout.mid", value = 3L)
-sce <- splatSimulate(
-    params = params,
-    group.prob = c(0.5, 0.5),
-    method = "groups"
-)
+sce <-
+    newSplatParams() |>
+    setParams(
+        "batchCells" = 400L,
+        "nGenes" = 100L,
+        "seed" = 1L
+    ) |>
+    splatSimulate(
+        group.prob = rep(0.25, times = 4L),
+        method = "groups"
+    )
 ## Sanitize the dimnames into camel case.
 sce <- camelCase(sce, rownames = TRUE, colnames = TRUE, strict = TRUE)
 colData(sce) <- camelCase(colData(sce))
 ## Prepare column data.
 colData(sce) <- DataFrame(
-    "sampleId" = factor(gsub("group", "sample", camelCase(sce$group))),
+    "sampleId" = factor(gsub(
+        pattern = "group",
+        replacement = "sample",
+        x = camelCase(colData(sce)[["group"]])
+    )),
     row.names = colnames(sce)
 )
 ## Pad the zeros in rows and columns.
@@ -53,9 +53,9 @@ rowRanges <- droplevels(rowRanges)
 names(rowRanges) <- rownames(sce)
 rowRanges(sce) <- rowRanges
 ## Stash minimal metadata.
-metadata(sce) <- list(date = Sys.Date())
+metadata(sce) <- list("date" = Sys.Date())
 ## Report the size of each slot in bytes.
-lapply(coerceToList(sce), obj_size)
+lapply(X = coerceToList(sce), FUN = obj_size)
 stopifnot(obj_size(sce) < limit)
 validObject(sce)
 SingleCellExperiment_splatter <- sce
