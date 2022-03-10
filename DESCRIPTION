@@ -36,7 +36,6 @@ Suggests:
     pointillism,
     tibble
 Remotes:
-    cole-trapnell-lab/leidenbase,
     cole-trapnell-lab/monocle3
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
