@@ -2,12 +2,10 @@ suppressPackageStartupMessages({
     library(goalie)
     library(usethis)
     library(lobstr)
-    library(devtools)
     library(pointillism)
 })
-load_all()
-limit <- structure(1e6, class = "object_size")
-data(Seurat)
+limit <- structure(1e6L, class = "object_size")
+data(Seurat, package = "pointillism")
 sce <- as(Seurat, "SingleCellExperiment")
 colnames(mcols(rowRanges(sce)))
 ## [1] "broadClass"     "entrezId"       "geneBiotype"    "geneId"
@@ -27,5 +25,5 @@ assert(
 lapply(coerceToList(sce), obj_size)
 stopifnot(obj_size(sce) < limit)
 validObject(sce)
-SingleCellExperiment_Seurat <- sce
+SingleCellExperiment_Seurat <- sce  # nolint
 use_data(SingleCellExperiment_Seurat, compress = "xz", overwrite = TRUE)

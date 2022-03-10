@@ -2,7 +2,7 @@
 
 - Resaved all objects following Bioconductor 3.14 release.
 - Renamed `SingleCellExperiment` to `SingleCellExperiment_splatter`.
-- Migrated objects previously saved in pointillism here.
+- Migrated example Seurat object back to pointillism.
 
 # AcidTest 0.4.4 (2021-09-13)
 
