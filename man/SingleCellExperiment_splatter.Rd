@@ -5,7 +5,7 @@
 \alias{SingleCellExperiment_splatter}
 \title{Single cell experiment}
 \format{
-An object of class \code{SingleCellExperiment} with 500 rows and 100 columns.
+An object of class \code{SingleCellExperiment} with 100 rows and 400 columns.
 }
 \usage{
 data(SingleCellExperiment_splatter)
@@ -18,7 +18,7 @@ Example \code{SingleCellExperiment} containing gene-level RNA-seq data simulated
 by the splatter package.
 }
 \note{
-Updated 2021-10-28.
+Updated 2022-03-07.
 }
 \examples{
 if (requireNamespace("SingleCellExperiment", quietly = TRUE)) {

@@ -3,8 +3,8 @@
 #' Example `SingleCellExperiment` containing gene-level RNA-seq data and
 #' lane-split technical replicates.
 #'
-#' @note Updated 2020-02-05.
-#' @usage data(SingleCellExperiment)
+#' @note Updated 2022-03-10.
+#' @usage data(SingleCellExperiment_lanesplit)
 #' @return `SingleCellExperiment`.
 #'
 #' @examples

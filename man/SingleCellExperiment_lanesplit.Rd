@@ -8,7 +8,7 @@
 An object of class \code{SingleCellExperiment} with 100 rows and 32 columns.
 }
 \usage{
-data(SingleCellExperiment)
+data(SingleCellExperiment_lanesplit)
 }
 \value{
 \code{SingleCellExperiment}.
@@ -18,7 +18,7 @@ Example \code{SingleCellExperiment} containing gene-level RNA-seq data and
 lane-split technical replicates.
 }
 \note{
-Updated 2020-02-05.
+Updated 2022-03-10.
 }
 \examples{
 if (requireNamespace("SingleCellExperiment", quietly = TRUE)) {
