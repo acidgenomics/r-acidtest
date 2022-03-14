@@ -1,6 +1,6 @@
 ## Splatter params are derived from:
 ## https://github.com/mikelove/zinbwave-deseq2/blob/master/
-##     zinbwave-deseq2.knit.md
+## zinbwave-deseq2.knit.md
 suppressPackageStartupMessages({
     library(usethis)
     library(lobstr)

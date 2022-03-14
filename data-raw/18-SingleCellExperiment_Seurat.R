@@ -25,5 +25,5 @@ assert(
 lapply(coerceToList(sce), obj_size)
 stopifnot(obj_size(sce) < limit)
 validObject(sce)
-SingleCellExperiment_Seurat <- sce  # nolint
+SingleCellExperiment_Seurat <- sce # nolint
 use_data(SingleCellExperiment_Seurat, compress = "xz", overwrite = TRUE)

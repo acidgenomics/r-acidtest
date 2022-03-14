@@ -1,7 +1,7 @@
 suppressPackageStartupMessages({
     library(usethis)
 })
-data.frame <-  # nolint
+data.frame <- # nolint
     data.frame(
         "genotype" = factor(
             x = c(

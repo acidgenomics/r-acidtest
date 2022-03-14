@@ -1,7 +1,7 @@
 suppressPackageStartupMessages({
     library(usethis)
 })
-data.frame <-  # nolint
+data.frame <- # nolint
     head(datasets::USArrests)
 matrix <-
     as.matrix(data.frame)

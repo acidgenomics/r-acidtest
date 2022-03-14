@@ -4,9 +4,9 @@ suppressPackageStartupMessages({
     library(S4Vectors)
 })
 data(
-     band_instruments,
-     band_members,
-     package = "dplyr"
+    band_instruments,
+    band_members,
+    package = "dplyr"
 )
 join <- list(
     "instruments" = as(band_instruments, "DataFrame"),

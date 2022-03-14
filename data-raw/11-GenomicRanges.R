@@ -19,5 +19,5 @@ mcols(gr) <- mcols(gr)[, cols]
 gr <- droplevels(gr)
 lapply(coerceToList(gr), obj_size)
 stopifnot(obj_size(gr) < limit)
-GenomicRanges <- gr  # nolint
+GenomicRanges <- gr # nolint
 use_data(GenomicRanges, compress = "xz", overwrite = TRUE)

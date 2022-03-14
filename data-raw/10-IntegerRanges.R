@@ -8,5 +8,5 @@ object <- IRanges(
     names = letters[seq_len(3L)]
 )
 mcols(object) <- DataFrame(score = seq(3L))
-IntegerRanges <- object  # nolint
+IntegerRanges <- object # nolint
 use_data(IntegerRanges, compress = "xz", overwrite = TRUE)
