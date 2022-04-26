@@ -2,6 +2,7 @@ suppressPackageStartupMessages({
     library(goalie)
     library(usethis)
     library(lobstr)
+    library(basejump)
     library(pointillism)
 })
 limit <- structure(1e6L, class = "object_size")

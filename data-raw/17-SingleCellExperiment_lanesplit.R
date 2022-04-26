@@ -10,7 +10,7 @@ limit <- structure(1e6, class = "object_size")
 data(SingleCellExperiment_splatter)
 sce <- SingleCellExperiment_splatter
 sce <- sce[seq_len(100L), seq_len(32L)]
-sce <- droplevels(sce)
+sce <- droplevels2(sce)
 stopifnot(obj_size(sce) < limit)
 ## 2 samples * 4 lane splits * 4 barcodes = 32.
 samples <- paste("sample", seq_len(2L), sep = "_")

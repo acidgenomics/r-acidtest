@@ -47,7 +47,7 @@ rowRanges <- makeGRangesFromEnsembl(
 )
 rowRanges <- as(rowRanges, "GRanges")
 rowRanges <- rowRanges[head(sort(names(rowRanges)), n = nrow(sce))]
-rowRanges <- droplevels(rowRanges)
+rowRanges <- droplevels2(rowRanges)
 ## Note that we're keeping the original rownames from dds_small, and they won't
 ## match the `geneId` column in rowRanges. This is intentional, for unit tests.
 names(rowRanges) <- rownames(sce)

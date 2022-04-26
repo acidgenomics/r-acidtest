@@ -2,7 +2,7 @@ Package: AcidTest
 Title: Acid Genomics Test Data
 Description: Reference data for Acid Genomics unit tests.
 Version: 0.5.1.9000
-Date: 2022-03-14
+Date: 2022-04-25
 Authors@R: c(
     person(
         "Michael", "Steinbaugh",
@@ -21,7 +21,7 @@ BugReports: https://github.com/acidgenomics/r-acidtest/issues/
 License: AGPL-3
 Encoding: UTF-8
 LazyData: false
-Depends: R (>= 4.1)
+Depends: R (>= 4.2)
 Suggests:
     AcidSingleCell,
     GenomicRanges,

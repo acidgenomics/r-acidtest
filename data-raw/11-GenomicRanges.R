@@ -16,7 +16,7 @@ gr <- gr[sort(names(gr))]
 gr <- head(gr, n = 5L)
 cols <- c("geneId", "geneName")
 mcols(gr) <- mcols(gr)[, cols]
-gr <- droplevels(gr)
+gr <- droplevels2(gr)
 lapply(coerceToList(gr), obj_size)
 stopifnot(obj_size(gr) < limit)
 GenomicRanges <- gr # nolint
