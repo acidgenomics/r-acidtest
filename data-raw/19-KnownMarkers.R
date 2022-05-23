@@ -6,9 +6,10 @@ suppressPackageStartupMessages({
 })
 ## nolint end
 data(cellTypeMarkersList, package = "AcidSingleCell")
-data(SeuratMarkersPerCluster, package = "pointillism")
+## This refers to SeuratMarkersPerCluster object.
+data(smpc, package = "pointillism")
 object <- KnownMarkers(
-    markers = SeuratMarkersPerCluster,
+    markers = smpc,
     known = cellTypeMarkersList[["homoSapiens"]]
 )
 KnownMarkers <- object # nolint

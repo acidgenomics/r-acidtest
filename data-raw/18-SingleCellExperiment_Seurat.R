@@ -7,8 +7,8 @@ suppressPackageStartupMessages({
 })
 ## nolint end
 limit <- structure(1e6L, class = "object_size")
-data(Seurat, package = "pointillism")
-sce <- as(Seurat, "SingleCellExperiment")
+data(seurat, package = "pointillism")
+sce <- as(seurat, "SingleCellExperiment")
 colnames(mcols(rowRanges(sce)))
 ## [1] "broadClass"     "entrezId"       "geneBiotype"    "geneId"
 ## [5] "geneName"       "seqCoordSystem"
