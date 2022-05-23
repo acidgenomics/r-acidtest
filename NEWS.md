@@ -1,3 +1,7 @@
+# AcidTest 0.6.1 (2022-05-23)
+
+- Resaved all example objects.
+
 # AcidTest 0.6.0 (2022-05-05)
 
 - Now requiring R 4.2 / Bioconductor 3.15.
