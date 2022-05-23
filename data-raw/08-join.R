@@ -1,8 +1,10 @@
+## nolint start
 suppressPackageStartupMessages({
     library(usethis)
     library(dplyr)
     library(S4Vectors)
 })
+## nolint end
 data(
     band_instruments,
     band_members,

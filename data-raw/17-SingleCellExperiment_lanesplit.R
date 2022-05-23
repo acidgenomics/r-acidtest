@@ -1,17 +1,18 @@
+## nolint start
 suppressPackageStartupMessages({
     library(devtools)
     library(usethis)
-    library(lobstr)
     library(SingleCellExperiment)
     library(basejump)
 })
+## nolint end
 load_all()
-limit <- structure(1e6, class = "object_size")
+limit <- structure(1e6L, class = "object_size")
 data(SingleCellExperiment_splatter)
 sce <- SingleCellExperiment_splatter
 sce <- sce[seq_len(100L), seq_len(32L)]
 sce <- droplevels2(sce)
-stopifnot(obj_size(sce) < limit)
+stopifnot(object.size(sce) < limit)
 ## 2 samples * 4 lane splits * 4 barcodes = 32.
 samples <- paste("sample", seq_len(2L), sep = "_")
 lanes <- paste0("L00", seq_len(4L))
@@ -38,5 +39,5 @@ colData(sce) <- DataFrame(
     ),
     row.names = colnames(sce)
 )
-SingleCellExperiment_lanesplit <- sce
+SingleCellExperiment_lanesplit <- sce # nolint
 use_data(SingleCellExperiment_lanesplit, compress = "xz", overwrite = TRUE)

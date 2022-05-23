@@ -1,14 +1,16 @@
 ## Splatter params are derived from:
 ## https://github.com/mikelove/zinbwave-deseq2/blob/master/
 ## zinbwave-deseq2.knit.md
+
+## nolint start
 suppressPackageStartupMessages({
     library(usethis)
-    library(lobstr)
     library(SingleCellExperiment)
     library(splatter)
     library(basejump)
 })
-limit <- structure(1e6, class = "object_size")
+## nolint end
+limit <- structure(1e6L, class = "object_size")
 sce <-
     newSplatParams() |>
     setParams(
@@ -55,8 +57,9 @@ rowRanges(sce) <- rowRanges
 ## Stash minimal metadata.
 metadata(sce) <- list("date" = Sys.Date())
 ## Report the size of each slot in bytes.
-lapply(X = coerceToList(sce), FUN = obj_size)
-stopifnot(obj_size(sce) < limit)
-validObject(sce)
-SingleCellExperiment_splatter <- sce
+stopifnot(
+    object.size(sce) < limit,
+    validObject(sce)
+)
+SingleCellExperiment_splatter <- sce # nolint
 use_data(SingleCellExperiment_splatter, compress = "xz", overwrite = TRUE)

@@ -1,11 +1,11 @@
+## nolint start
 suppressPackageStartupMessages({
     library(usethis)
-    library(lobstr)
     library(SummarizedExperiment)
     library(basejump)
 })
-## Restrict to 1 MB.
-limit <- structure(1e6, class = "object_size")
+## nolint end
+limit <- structure(1e6L, class = "object_size")
 tx2gene <- makeTx2GeneFromEnsembl(
     organism = "Homo sapiens",
     release = 100L,
@@ -46,9 +46,9 @@ se <- SummarizedExperiment(
     assays = assays,
     rowData = rowData
 )
-## Size checks.
-lapply(coerceToList(se), obj_size)
-stopifnot(obj_size(se) < limit)
-validObject(se)
-SummarizedExperiment_transcripts <- se
+stopifnot(
+    object.size(se) < limit,
+    validObject(se)
+)
+SummarizedExperiment_transcripts <- se # nolint
 use_data(SummarizedExperiment_transcripts, compress = "xz", overwrite = TRUE)

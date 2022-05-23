@@ -1,7 +1,9 @@
+## nolint start
 suppressPackageStartupMessages({
     library(usethis)
     library(SummarizedExperiment)
 })
+## nolint end
 nrow <- 10L
 ncol <- 10L
 n <- nrow * ncol

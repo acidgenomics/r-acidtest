@@ -1,10 +1,11 @@
+## nolint start
 suppressPackageStartupMessages({
     library(goalie)
     library(usethis)
-    library(lobstr)
     library(basejump)
     library(pointillism)
 })
+## nolint end
 limit <- structure(1e6L, class = "object_size")
 data(Seurat, package = "pointillism")
 sce <- as(Seurat, "SingleCellExperiment")
@@ -22,9 +23,9 @@ assert(
     identical(assayNames(sce), c("counts", "logcounts")),
     identical(reducedDimNames(sce), c("PCA", "TSNE", "UMAP"))
 )
-## Report the size of each slot in bytes.
-lapply(coerceToList(sce), obj_size)
-stopifnot(obj_size(sce) < limit)
-validObject(sce)
+stopifnot(
+    object.size(sce) < limit,
+    validObject(sce)
+)
 SingleCellExperiment_Seurat <- sce # nolint
 use_data(SingleCellExperiment_Seurat, compress = "xz", overwrite = TRUE)

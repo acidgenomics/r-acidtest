@@ -1,22 +1,23 @@
+## nolint start
 suppressPackageStartupMessages({
     library(usethis)
-    library(lobstr)
     library(SummarizedExperiment)
     library(basejump)
     library(DESeq2)
 })
-limit <- structure(1e6, class = "object_size")
+## nolint end
+limit <- structure(1e6L, class = "object_size")
 ## Generate example DESeqDataSet using DESeq2.
 ## Note that we're using simulated counts here.
 dds <- makeExampleDESeqDataSet(n = 500L, m = 12L, betaSD = 1L)
 stopifnot(
-    obj_size(dds) < limit,
+    object.size(dds) < limit,
     validObject(dds)
 )
 ## Coerce to RangedSummarizedExperiment.
 ## Need to change rows to actual gene identifiers here, and slot colData.
 rse <- as(dds, "RangedSummarizedExperiment")
-stopifnot(obj_size(rse) < limit)
+stopifnot(object.size(rse) < limit)
 ## Pad the dimnames so they sort correctly.
 rse <- autopadZeros(rse, rownames = TRUE)
 ## Row data. Include real `geneId`, `geneName` columns to test mapping.
@@ -41,11 +42,9 @@ rowRanges(rse) <- rowRanges
 metadata(rse)[["date"]] <- Sys.Date()
 ## Define the interesting groups.
 interestingGroups(rse) <- "condition"
-## Size check.
-lapply(coerceToList(rse), obj_size)
 stopifnot(
-    obj_size(rse) < limit,
+    object.size(rse) < limit,
     validObject(rse)
 )
-RangedSummarizedExperiment <- rse
+RangedSummarizedExperiment <- rse # nolint
 use_data(RangedSummarizedExperiment, compress = "xz", overwrite = TRUE)

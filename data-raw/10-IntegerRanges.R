@@ -1,7 +1,9 @@
+## nolint start
 suppressPackageStartupMessages({
     library(usethis)
     library(IRanges)
 })
+## nolint end
 object <- IRanges(
     c(1L, 10L, 20L),
     width = 5L,

@@ -1,10 +1,11 @@
-## Order was randomized using `sample()`.
+## nolint start
 suppressPackageStartupMessages({
     library(usethis)
 })
+## nolint end
 nrow <- 8L
 ncol <- 4L
-matrix_lfc <- # nolint
+object <-
     matrix(
         ## nolint start
         data = c(
@@ -22,4 +23,5 @@ matrix_lfc <- # nolint
             sprintf("contrast%02d", seq_len(ncol))
         )
     )
+matrix_lfc <- object # nolint
 use_data(matrix_lfc, compress = "xz", overwrite = TRUE)

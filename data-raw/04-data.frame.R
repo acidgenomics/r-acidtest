@@ -1,7 +1,9 @@
+## nolint start
 suppressPackageStartupMessages({
     library(usethis)
 })
-data.frame <- # nolint
+## nolint end
+object <-
     data.frame(
         "genotype" = factor(
             x = c(
@@ -28,4 +30,5 @@ data.frame <- # nolint
             "sample4"
         )
     )
+data.frame <- object # nolint
 use_data(data.frame, compress = "xz", overwrite = TRUE)
