@@ -1,5 +1,3 @@
-## FIXME Rework this.
-
 ## nolint start
 suppressPackageStartupMessages({
     library(devtools)
