@@ -1,31 +1,35 @@
+## FIXME Rework this.
+
 ## nolint start
 suppressPackageStartupMessages({
-    library(goalie)
+    library(devtools)
     library(usethis)
+    library(goalie)
     library(basejump)
     library(pointillism)
 })
 ## nolint end
+load_all()
 limit <- structure(1e6L, class = "object_size")
-data(seurat, package = "pointillism")
-sce <- as(seurat, "SingleCellExperiment")
-colnames(mcols(rowRanges(sce)))
+data(Seurat)
+object <- as(Seurat, "SingleCellExperiment")
+colnames(mcols(rowRanges(object)))
 ## [1] "broadClass"     "entrezId"       "geneBiotype"    "geneId"
 ## [5] "geneName"       "seqCoordSystem"
-sce <- convertSymbolsToGenes(sce)
-colnames(mcols(rowRanges(sce)))
+object <- convertSymbolsToGenes(object)
+colnames(mcols(rowRanges(object)))
 ## [1] "broadClass"     "entrezId"       "geneBiotype"    "geneId"
 ## [5] "geneName"       "seqCoordSystem"
-colnames(colData(sce))
+colnames(colData(object))
 ## [1] "orig.ident"      "nCount_RNA"      "nFeature_RNA"    "RNA_snn_res.0.8"
 ## [5] "letter.idents"   "groups"          "RNA_snn_res.1"   "ident"
 assert(
-    identical(assayNames(sce), c("counts", "logcounts")),
-    identical(reducedDimNames(sce), c("PCA", "TSNE", "UMAP"))
+    identical(assayNames(object), c("counts", "logcounts")),
+    identical(reducedDimNames(object), c("PCA", "TSNE", "UMAP"))
 )
 stopifnot(
-    object.size(sce) < limit,
-    validObject(sce)
+    object.size(object) < limit,
+    validObject(object)
 )
-SingleCellExperiment_Seurat <- sce # nolint
+SingleCellExperiment_Seurat <- object # nolint
 use_data(SingleCellExperiment_Seurat, compress = "xz", overwrite = TRUE)

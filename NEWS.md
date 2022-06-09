@@ -1,3 +1,8 @@
+# AcidTest 0.7.0 (2022-06-09)
+
+- Migrated `Seurat` and `SeuratMarkersPerCluster` objects back here from
+  pointillism, to avoid `data` NAMESPACE issues with `rcmdcheck`.
+
 # AcidTest 0.6.1 (2022-05-23)
 
 - Resaved all example objects.
