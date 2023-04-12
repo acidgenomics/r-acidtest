@@ -1,3 +1,7 @@
+# AcidTest 0.7.1 (2023-04-12)
+
+- Resaved all example objects.
+
 # AcidTest 0.7.0 (2022-06-09)
 
 - Migrated `Seurat` and `SeuratMarkersPerCluster` objects back here from
