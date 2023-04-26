@@ -8,5 +8,5 @@ suppressPackageStartupMessages({
 load_all()
 data(data.frame)
 object <- DataFrame(data.frame)
-DataFrame <- object # nolint
-use_data(DataFrame, compress = "xz", overwrite = TRUE)
+DFrame <- object # nolint
+use_data(DFrame, compress = "xz", overwrite = TRUE)

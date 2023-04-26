@@ -19,5 +19,5 @@ cols <- c("geneId", "geneName")
 mcols(object) <- mcols(object)[, cols]
 object <- droplevels2(object)
 stopifnot(object.size(object) < limit)
-GenomicRanges <- object # nolint
-use_data(GenomicRanges, compress = "xz", overwrite = TRUE)
+GRanges <- object # nolint
+use_data(GRanges, compress = "xz", overwrite = TRUE)
