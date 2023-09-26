@@ -6,7 +6,7 @@ suppressPackageStartupMessages({
 })
 ## nolint end
 limit <- structure(1e6L, class = "object_size")
-tx2gene <- makeTx2GeneFromEnsembl(
+t2g <- makeTx2GeneFromEnsembl(
     organism = "Homo sapiens",
     release = 100L,
     ignoreVersion = FALSE
@@ -25,8 +25,8 @@ genes <- c(
     "ENSG00000000419.12"
 )
 stopifnot(
-    all(transcripts %in% tx2gene[["txId"]]),
-    all(genes %in% tx2gene[["geneId"]])
+    all(transcripts %in% t2g[["txId"]]),
+    all(genes %in% t2g[["geneId"]])
 )
 samples <- paste0("sample", seq_len(4L))
 counts <- matrix(
@@ -37,7 +37,7 @@ counts <- matrix(
     dimnames = list(transcripts, samples)
 )
 assays <- SimpleList("counts" = counts)
-rowData <- as(tx2gene, "DataFrame")
+rowData <- as(t2g, "DataFrame")
 rowData <- rowData[
     match(x = rownames(assays[[1L]]), table = rowData[["txId"]]), ,
     drop = FALSE
