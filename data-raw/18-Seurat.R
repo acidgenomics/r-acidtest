@@ -1,13 +1,12 @@
-## The Seurat wiki describes the changes in v3.0+.
-## https://github.com/satijalab/seurat/wiki
 ## nolint start
 suppressPackageStartupMessages({
     library(usethis)
     library(basejump)
-    library(pointillism)
-    library(Seurat)
+    library(pointillism) # 0.7.0
+    library(Seurat) # 4.9.9.9067
     library(SeuratObject)
 })
+options("Seurat.object.assay.version" = "v5")
 ## nolint end
 limit <- structure(1e6L, class = "object_size")
 data(pbmc_small, package = "SeuratObject")
