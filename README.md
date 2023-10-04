@@ -1,5 +1,7 @@
 # AcidTest
 
+![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)
+
 Reference data for [Acid Genomics][] unit tests.
 
 ## Installation
