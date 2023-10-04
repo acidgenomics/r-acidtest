@@ -11,14 +11,14 @@ load_all()
 limit <- structure(1e6L, class = "object_size")
 data(Seurat)
 object <- as(Seurat, "SingleCellExperiment")
-colnames(mcols(rowRanges(object)))
+## > colnames(mcols(rowRanges(object)))
 ## [1] "broadClass"     "entrezId"       "geneBiotype"    "geneId"
 ## [5] "geneName"       "seqCoordSystem"
 object <- convertSymbolsToGenes(object)
-colnames(mcols(rowRanges(object)))
+## > colnames(mcols(rowRanges(object)))
 ## [1] "broadClass"     "entrezId"       "geneBiotype"    "geneId"
 ## [5] "geneName"       "seqCoordSystem"
-colnames(colData(object))
+## > colnames(colData(object))
 ## [1] "orig.ident"      "nCount_RNA"      "nFeature_RNA"    "RNA_snn_res.0.8"
 ## [5] "letter.idents"   "groups"          "RNA_snn_res.1"   "ident"
 assert(

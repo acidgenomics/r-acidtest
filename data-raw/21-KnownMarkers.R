@@ -1,5 +1,6 @@
 ## nolint start
 suppressPackageStartupMessages({
+    library(devtools)
     library(usethis)
     library(AcidSingleCell)
     library(pointillism)

@@ -6,7 +6,7 @@ suppressPackageStartupMessages({
 })
 ## nolint end
 limit <- structure(1e6L, class = "object_size")
-t2g <- makeTx2GeneFromEnsembl(
+t2g <- makeTxToGeneFromEnsembl(
     organism = "Homo sapiens",
     release = 100L,
     ignoreVersion = FALSE
