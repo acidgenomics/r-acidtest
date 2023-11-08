@@ -11,6 +11,6 @@
 #'     data(DFrameList)
 #'     class(DFrameList)
 #'     is(DFrameList, "DFrameList")
-#'     DFrameList
+#'     print(DFrameList)
 #' }
 "DFrameList"
