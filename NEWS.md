@@ -1,5 +1,9 @@
 # Release notes
 
+## AcidTest 0.9.0 (2023-11-08)
+
+- Added `DFrameList`, `GRangesList`, and `SplitDFrameList` objects.
+
 ## AcidTest 0.8.0 (2023-10-04)
 
 - Resaved all example objects.
