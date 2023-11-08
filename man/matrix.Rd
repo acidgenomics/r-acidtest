@@ -22,6 +22,6 @@ Updated 2020-01-28.
 \examples{
 data(matrix)
 class(matrix)
-matrix
+print(matrix)
 }
 \keyword{datasets}

@@ -9,5 +9,5 @@
 #' @examples
 #' data(data.frame)
 #' class(data.frame)
-#' data.frame
+#' print(data.frame)
 "data.frame"

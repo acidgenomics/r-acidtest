@@ -23,7 +23,7 @@ Updated 2020-01-28.
 if (requireNamespace("SummarizedExperiment", quietly = TRUE)) {
     data(SummarizedExperiment)
     class(SummarizedExperiment)
-    SummarizedExperiment
+    print(SummarizedExperiment)
 }
 }
 \keyword{datasets}

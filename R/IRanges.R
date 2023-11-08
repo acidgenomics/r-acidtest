@@ -11,6 +11,6 @@
 #'     data(IRanges)
 #'     class(IRanges)
 #'     is(IRanges, "IRanges")
-#'     IRanges
+#'     print(IRanges)
 #' }
 "IRanges"

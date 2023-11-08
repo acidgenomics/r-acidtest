@@ -11,6 +11,6 @@
 #'     data(DFrame)
 #'     class(DFrame)
 #'     is(DFrame, "DFrame")
-#'     DFrame
+#'     print(DFrame)
 #' }
 "DFrame"

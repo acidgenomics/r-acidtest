@@ -9,5 +9,5 @@
 #' @examples
 #' data(matrix)
 #' class(matrix)
-#' matrix
+#' print(matrix)
 "matrix"

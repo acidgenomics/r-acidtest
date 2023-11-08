@@ -24,7 +24,7 @@ if (requireNamespace("IRanges", quietly = TRUE)) {
     data(IRanges)
     class(IRanges)
     is(IRanges, "IRanges")
-    IRanges
+    print(IRanges)
 }
 }
 \keyword{datasets}

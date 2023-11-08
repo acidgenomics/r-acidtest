@@ -24,7 +24,7 @@ if (requireNamespace("GenomicRanges", quietly = TRUE)) {
     data(GRanges)
     class(GRanges)
     is(GRanges, "GRanges")
-    GRanges
+    print(GRanges)
 }
 }
 \keyword{datasets}

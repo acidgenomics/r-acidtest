@@ -24,7 +24,7 @@ Updated 2022-03-07.
 if (requireNamespace("SingleCellExperiment", quietly = TRUE)) {
     data(SingleCellExperiment_splatter)
     class(SingleCellExperiment_splatter)
-    SingleCellExperiment_splatter
+    print(SingleCellExperiment_splatter)
 }
 }
 \seealso{

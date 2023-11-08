@@ -23,7 +23,7 @@ Updated 2021-10-14.
 if (requireNamespace("data.table", quietly = TRUE)) {
     data(data.table)
     class(data.table)
-    data.table
+    print(data.table)
 }
 }
 \keyword{datasets}

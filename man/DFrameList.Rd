@@ -24,7 +24,7 @@ if (requireNamespace("IRanges", quietly = TRUE)) {
     data(DFrameList)
     class(DFrameList)
     is(DFrameList, "DFrameList")
-    DFrameList
+    print(DFrameList)
 }
 }
 \keyword{datasets}

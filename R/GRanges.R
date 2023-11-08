@@ -11,6 +11,6 @@
 #'     data(GRanges)
 #'     class(GRanges)
 #'     is(GRanges, "GRanges")
-#'     GRanges
+#'     print(GRanges)
 #' }
 "GRanges"

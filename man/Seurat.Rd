@@ -20,7 +20,9 @@ Example \code{Seurat} (v4) object.
 Updated 2022-06-09.
 }
 \examples{
-data(Seurat)
-print(Seurat)
+if (requireNamespace("Seurat", quietly = TRUE)) {
+    data(Seurat)
+    print(Seurat)
+}
 }
 \keyword{datasets}

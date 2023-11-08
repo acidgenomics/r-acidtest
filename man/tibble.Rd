@@ -24,7 +24,7 @@ if (requireNamespace("tibble", quietly = TRUE)) {
     data(tibble)
     class(tibble)
     tibble::is_tibble(tibble)
-    tibble
+    print(tibble)
 }
 }
 \keyword{datasets}

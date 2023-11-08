@@ -15,6 +15,6 @@
 #' if (requireNamespace("SingleCellExperiment", quietly = TRUE)) {
 #'     data(SingleCellExperiment_Seurat)
 #'     class(SingleCellExperiment_Seurat)
-#'     SingleCellExperiment_Seurat
+#'     print(SingleCellExperiment_Seurat)
 #' }
 "SingleCellExperiment_Seurat"

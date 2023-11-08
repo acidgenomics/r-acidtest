@@ -13,6 +13,6 @@
 #' if (requireNamespace("SummarizedExperiment", quietly = TRUE)) {
 #'     data(RangedSummarizedExperiment)
 #'     class(RangedSummarizedExperiment)
-#'     RangedSummarizedExperiment
+#'     print(RangedSummarizedExperiment)
 #' }
 "RangedSummarizedExperiment"

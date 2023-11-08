@@ -23,7 +23,7 @@ Updated 2022-03-04.
 if (requireNamespace("SingleCellExperiment", quietly = TRUE)) {
     data(SingleCellExperiment_Seurat)
     class(SingleCellExperiment_Seurat)
-    SingleCellExperiment_Seurat
+    print(SingleCellExperiment_Seurat)
 }
 }
 \seealso{

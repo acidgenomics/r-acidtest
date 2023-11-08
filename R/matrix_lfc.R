@@ -9,5 +9,5 @@
 #' @examples
 #' data(matrix_lfc)
 #' class(matrix_lfc)
-#' matrix_lfc
+#' print(matrix_lfc)
 "matrix_lfc"

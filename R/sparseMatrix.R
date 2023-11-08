@@ -10,6 +10,6 @@
 #' if (requireNamespace("Matrix", quietly = TRUE)) {
 #'     data(sparseMatrix)
 #'     class(sparseMatrix)
-#'     sparseMatrix
+#'     print(sparseMatrix)
 #' }
 "sparseMatrix"

@@ -22,6 +22,6 @@ Updated 2021-10-14.
 \examples{
 data(data.frame)
 class(data.frame)
-data.frame
+print(data.frame)
 }
 \keyword{datasets}

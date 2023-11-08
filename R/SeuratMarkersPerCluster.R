@@ -13,6 +13,8 @@
 #' @return `SeuratMarkersPerCluster`.
 #'
 #' @examples
-#' data(SeuratMarkersPerCluster)
-#' print(SeuratMarkersPerCluster)
+#' if (requireNamespace("pointillism", quietly = TRUE)) {
+#'     data(SeuratMarkersPerCluster)
+#'     print(SeuratMarkersPerCluster)
+#' }
 "SeuratMarkersPerCluster"

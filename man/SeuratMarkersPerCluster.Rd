@@ -20,7 +20,9 @@ Example \code{SeuratMarkersPerCluster} object
 Updated 2022-06-09.
 }
 \examples{
-data(SeuratMarkersPerCluster)
-print(SeuratMarkersPerCluster)
+if (requireNamespace("pointillism", quietly = TRUE)) {
+    data(SeuratMarkersPerCluster)
+    print(SeuratMarkersPerCluster)
+}
 }
 \keyword{datasets}

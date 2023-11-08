@@ -5,6 +5,8 @@
 #' @return `KnownMarkers`.
 #'
 #' @examples
-#' data(KnownMarkers)
-#' print(KnownMarkers)
+#' if (requireNamespace("AcidSingleCell", quietly = TRUE)) {
+#'     data(KnownMarkers)
+#'     print(KnownMarkers)
+#' }
 "KnownMarkers"

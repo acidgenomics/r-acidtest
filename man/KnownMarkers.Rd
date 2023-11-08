@@ -20,7 +20,9 @@ Known markers example
 Updated 2022-03-04.
 }
 \examples{
-data(KnownMarkers)
-print(KnownMarkers)
+if (requireNamespace("AcidSingleCell", quietly = TRUE)) {
+    data(KnownMarkers)
+    print(KnownMarkers)
+}
 }
 \keyword{datasets}

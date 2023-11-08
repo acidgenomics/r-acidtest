@@ -11,6 +11,6 @@
 #' if (requireNamespace("SingleCellExperiment", quietly = TRUE)) {
 #'     data(SingleCellExperiment_lanesplit)
 #'     class(SingleCellExperiment_lanesplit)
-#'     SingleCellExperiment_lanesplit
+#'     print(SingleCellExperiment_lanesplit)
 #' }
 "SingleCellExperiment_lanesplit"

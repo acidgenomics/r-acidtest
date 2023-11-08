@@ -10,6 +10,6 @@
 #' if (requireNamespace("SummarizedExperiment", quietly = TRUE)) {
 #'     data(SummarizedExperiment)
 #'     class(SummarizedExperiment)
-#'     SummarizedExperiment
+#'     print(SummarizedExperiment)
 #' }
 "SummarizedExperiment"

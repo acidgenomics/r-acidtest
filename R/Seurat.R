@@ -7,6 +7,8 @@
 #' @return `Seurat`.
 #'
 #' @examples
-#' data(Seurat)
-#' print(Seurat)
+#' if (requireNamespace("Seurat", quietly = TRUE)) {
+#'     data(Seurat)
+#'     print(Seurat)
+#' }
 "Seurat"

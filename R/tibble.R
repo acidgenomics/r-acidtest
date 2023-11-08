@@ -11,6 +11,6 @@
 #'     data(tibble)
 #'     class(tibble)
 #'     tibble::is_tibble(tibble)
-#'     tibble
+#'     print(tibble)
 #' }
 "tibble"

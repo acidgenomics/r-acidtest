@@ -24,7 +24,7 @@ if (requireNamespace("S4Vectors", quietly = TRUE)) {
     data(DFrame)
     class(DFrame)
     is(DFrame, "DFrame")
-    DFrame
+    print(DFrame)
 }
 }
 \keyword{datasets}

@@ -1,3 +1,6 @@
+## NOTE pkgdown currently generates warning related to ncol (deprecated) usage
+## instead of ncols.
+
 #' S4 split data frame list
 #'
 #' Example Bioconductor S4 `SplitDFrameList` object.

@@ -23,7 +23,7 @@ Updated 2029-01-28.
 if (requireNamespace("Matrix", quietly = TRUE)) {
     data(sparseMatrix)
     class(sparseMatrix)
-    sparseMatrix
+    print(sparseMatrix)
 }
 }
 \keyword{datasets}
