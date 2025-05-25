@@ -1,6 +1,7 @@
-## AcidTest 0.9.0 (2025-05-25)
+## AcidTest 0.9.1 (2025-05-25)
 
 - Decreased R dependency version from 4.3 back to 4.0.
+- Now formatting code with air.
 
 ## AcidTest 0.9.0 (2023-11-08)
 
