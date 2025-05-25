@@ -1,4 +1,6 @@
-# Release notes
+## AcidTest 0.9.0 (2025-05-25)
+
+- Decreased R dependency version from 4.3 back to 4.0.
 
 ## AcidTest 0.9.0 (2023-11-08)
 

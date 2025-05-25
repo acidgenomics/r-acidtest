@@ -39,7 +39,8 @@ counts <- matrix(
 assays <- SimpleList("counts" = counts)
 rowData <- as(t2g, "DataFrame")
 rowData <- rowData[
-    match(x = rownames(assays[[1L]]), table = rowData[["txId"]]), ,
+    match(x = rownames(assays[[1L]]), table = rowData[["txId"]]),
+    ,
     drop = FALSE
 ]
 se <- SummarizedExperiment(
