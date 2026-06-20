@@ -8,7 +8,8 @@ suppressPackageStartupMessages({
 })
 options("Seurat.object.assay.version" = "v5")
 ## nolint end
-limit <- structure(1e6L, class = "object_size")
+limit <- 1e6L
+class(limit) <- "object_size"
 data(pbmc_small, package = "SeuratObject")
 object <- pbmc_small
 object <- UpdateSeuratObject(object)
@@ -25,7 +26,7 @@ rowRanges <- as(rowRanges, "GRanges")
 rn <- rownames(object)
 table <- make.unique(as.character(mcols(rowRanges)[["geneName"]]))
 names(rowRanges) <- table
-stopifnot(all(rn %in% table))
+stopifnot(rn %in% table)
 which <- match(x = rn, table = table)
 rowRanges <- rowRanges[which]
 rowRanges <- droplevels2(rowRanges)

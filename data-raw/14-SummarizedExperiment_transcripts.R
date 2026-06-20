@@ -5,7 +5,8 @@ suppressPackageStartupMessages({
     library(basejump)
 })
 ## nolint end
-limit <- structure(1e6L, class = "object_size")
+limit <- 1e6L
+class(limit) <- "object_size"
 t2g <- makeTxToGeneFromEnsembl(
     organism = "Homo sapiens",
     release = 100L,
@@ -25,8 +26,8 @@ genes <- c(
     "ENSG00000000419.12"
 )
 stopifnot(
-    all(transcripts %in% t2g[["txId"]]),
-    all(genes %in% t2g[["geneId"]])
+    transcripts %in% t2g[["txId"]],
+    genes %in% t2g[["geneId"]]
 )
 samples <- paste0("sample", seq_len(4L))
 counts <- matrix(
