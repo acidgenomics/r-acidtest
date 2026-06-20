@@ -7,7 +7,8 @@ suppressPackageStartupMessages({
 })
 ## nolint end
 load_all()
-limit <- structure(1e6L, class = "object_size")
+limit <- 1e6L
+class(limit) <- "object_size"
 data(SingleCellExperiment_splatter)
 sce <- SingleCellExperiment_splatter
 sce <- sce[seq_len(100L), seq_len(32L)]
