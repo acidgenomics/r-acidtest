@@ -1,8 +1,4 @@
+# This file intentionally minimal — see ~/.config/git/ignore for global patterns.
 !data/
 !data/*.rda
 !data-raw/
-.RData
-.Rcheck
-.Rhistory
-.Rproj.user
-docs/
