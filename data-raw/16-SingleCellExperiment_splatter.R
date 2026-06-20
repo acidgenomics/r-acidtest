@@ -10,7 +10,8 @@ suppressPackageStartupMessages({
     library(basejump)
 })
 ## nolint end
-limit <- structure(1e6L, class = "object_size")
+limit <- 1e6L
+class(limit) <- "object_size"
 sce <-
     newSplatParams() |>
     setParams(
@@ -30,7 +31,8 @@ colData(sce) <- DataFrame(
     "sampleId" = factor(gsub(
         pattern = "group",
         replacement = "sample",
-        x = camelCase(colData(sce)[["group"]])
+        x = camelCase(colData(sce)[["group"]]),
+        fixed = TRUE
     )),
     row.names = colnames(sce)
 )

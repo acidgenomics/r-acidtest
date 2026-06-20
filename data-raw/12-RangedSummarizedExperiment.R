@@ -6,7 +6,8 @@ suppressPackageStartupMessages({
     library(DESeq2)
 })
 ## nolint end
-limit <- structure(1e6L, class = "object_size")
+limit <- 1e6L
+class(limit) <- "object_size"
 ## Generate example DESeqDataSet using DESeq2.
 ## Note that we're using simulated counts here.
 dds <- makeExampleDESeqDataSet(n = 500L, m = 12L, betaSD = 1L)

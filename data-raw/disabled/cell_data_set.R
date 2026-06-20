@@ -23,7 +23,8 @@ reticulate::use_condaenv(
     condaenv = "umap-learn@0.5.2",
     required = TRUE
 )
-limit <- structure(2e6L, class = "object_size")
+limit <- 2e6L
+class(limit) <- "object_size"
 prefix <- "http://staff.washington.edu/hpliner/data"
 ## Don't time out after 60 seconds here.
 ## The University of Washington staff website is currently pretty slow.

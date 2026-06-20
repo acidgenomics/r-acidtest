@@ -5,7 +5,8 @@ suppressPackageStartupMessages({
     library(basejump)
 })
 ## nolint end
-limit <- structure(1e6L, class = "object_size")
+limit <- 1e6L
+class(limit) <- "object_size"
 object <- makeGRangesFromEnsembl(
     organism = "Homo sapiens",
     level = "genes",
