@@ -8,7 +8,8 @@ suppressPackageStartupMessages({
 })
 ## nolint end
 load_all()
-limit <- structure(1e6L, class = "object_size")
+limit <- 1e6L
+class(limit) <- "object_size"
 data(Seurat)
 object <- as(Seurat, "SingleCellExperiment")
 ## > colnames(mcols(rowRanges(object)))

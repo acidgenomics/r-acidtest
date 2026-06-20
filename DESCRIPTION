@@ -1,8 +1,8 @@
 Package: AcidTest
 Title: Acid Genomics Test Data
 Description: Reference data for Acid Genomics unit tests.
-Version: 0.9.1
-Date: 2025-05-25
+Version: 0.9.2
+Date: 2026-06-19
 Authors@R: c(
     person(
         "Michael", "Steinbaugh",
@@ -18,7 +18,7 @@ URL:
     https://r.acidgenomics.com/packages/acidtest/,
     https://github.com/acidgenomics/r-acidtest/
 BugReports: https://github.com/acidgenomics/r-acidtest/issues/
-License: AGPL-3
+License: Apache License (>= 2)
 Encoding: UTF-8
 LazyData: false
 Depends: R (>= 4.0)
@@ -35,5 +35,7 @@ Suggests:
     pointillism,
     tibble
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+Config/roxygen2/version: 8.0.0
+Config/testthat/edition: 3
+Config/testthat/parallel: true
 Additional_repositories: https://r.acidgenomics.com

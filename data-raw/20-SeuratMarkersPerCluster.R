@@ -15,7 +15,7 @@ smpc <- withCallingHandlers(
         ranges = rowRanges(object)
     ),
     warning = function(w) {
-        if (grepl("cannot compute exact p-value with ties", w)) {
+        if (grepl("cannot compute exact p-value with ties", w, fixed = TRUE)) {
             invokeRestart("muffleWarning")
         } else {
             w
